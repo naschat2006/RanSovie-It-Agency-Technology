@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'AlinurBanglaborno';
+  src: url('/fonts/AlinurBanglaborno.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html.font-bangla, 
+html.font-bangla body,
+html.font-bangla h1, html.font-bangla h2, html.font-bangla h3, html.font-bangla h4, html.font-bangla h5, html.font-bangla h6,
+html.font-bangla p, html.font-bangla a, html.font-bangla span, html.font-bangla button {
+  font-family: 'AlinurBanglaborno', sans-serif !important;
+}
+
+/* ==========================================================================
+   Typographic Hierarchy & Contrast Adjustments (Universal Frontend Constitutional Fixes)
+   ========================================================================== */
+
+/* Prevent orphan trailing words on display headings globally */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/* Ensure optical rendering adjustments for headings in dark mode */
+.dark h1, .dark h2, .dark h3, .dark h4 {
+  color: #ffffff !important;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Improve dark mode readability by upgrading generic dim grays to premium high-contrast slate shades */
+.dark .text-gray-600,
+.dark .text-gray-500,
+.dark .text-gray-400,
+.dark p.text-gray-600,
+.dark p.text-gray-500,
+.dark p.text-gray-400,
+.dark span.text-gray-400 {
+  color: #cbd5e1 !important; /* slate-300 (Premium, highly readable off-white) */
+}
+
+.dark .text-gray-300,
+.dark p.text-gray-300,
+.dark span.text-gray-300 {
+  color: #f1f5f9 !important; /* slate-100 (Brightest body text) */
+}
+
+/* Optimize Eyebrow Header text styling */
+.text-brandGold.uppercase {
+  letter-spacing: 0.15em !important;
+  font-weight: 700 !important;
+}
+
+/* Clear hierarchy sizes */
+h1 {
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  letter-spacing: -0.01em;
+}

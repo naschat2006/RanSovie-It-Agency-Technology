@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Marketing | RanSovie IT Agency & Technology</title>
+  <meta name="description" content="RanSovie It Agency & Technology - Strategic Design, Advanced Tech & Targeted Growth. We engineer bespoke digital solutions that transform bold visions into market-leading realities." />
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ransovie.com" />
+  <meta property="og:title" content="RanSovie IT Agency & Technology" />
+  <meta property="og:description" content="Strategic Design, Advanced Tech & Targeted Growth." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" />
+  
+  <!-- Favicon Placeholder -->
+  <link rel="icon" href="https://via.placeholder.com/32x32.png?text=RS" type="image/png" />
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandNavyDark: '#090D16',
+            brandNavyCard: '#111827',
+            brandGold: '#D4AF37',
+            brandRed: '#EF4444',
+            brandBlack: '#000000',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom CSS Styles -->
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    
+    .glassmorphism {
+      background: rgba(9, 13, 22, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .glassmorphism-light {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .bg-tech-gradient {
+      background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.12), transparent 50%),
+                  radial-gradient(circle at bottom left, rgba(239, 68, 68, 0.08), transparent 50%);
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      border-color: #D4AF37;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-brandNavyDark dark:text-white transition-colors duration-300 antialiased overflow-x-hidden selection:bg-brandGold selection:text-brandBlack">
+
+      <!-- Navigation Bar -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <a href="/index.html" class="flex items-center gap-3 group">
+          <div class="relative w-11 h-11 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+            <img src="/images/ransovie-logo.svg" alt="RanSovie Logo" class="w-full h-full object-contain filter drop-shadow-[0_2px_10px_rgba(212,175,55,0.4)]" />
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-lg tracking-tight leading-tight text-white group-hover:text-brandGold transition-colors">RanSovie</span>
+            <span class="text-[9px] font-semibold text-brandGold tracking-widest uppercase">IT Agency & Technology</span>
+          </div>
+        </a>
+        
+        <!-- Desktop Links -->
+        <div class="hidden lg:flex items-center space-x-7">
+          <a href="/index.html" class="hover:text-brandGold transition-colors text-sm font-semibold tracking-wide">Home</a>
+          
+          <!-- Services Dropdown (Clean, name-only without bulky paragraphs) -->
+          <div class="relative group" id="services-nav-group">
+            <a href="/services.html" class="inline-flex items-center gap-1.5 hover:text-brandGold transition-colors text-sm font-semibold tracking-wide py-2">
+              <span>Services</span>
+              <i class="fa-solid fa-chevron-down text-[11px] transition-transform duration-200 group-hover:rotate-180 text-gray-400 group-hover:text-brandGold"></i>
+            </a>
+            
+            <!-- Clean Dropdown Menu -->
+            <div class="invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 absolute left-0 top-full w-72 bg-white dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800 rounded-2xl shadow-2xl p-3 z-50">
+              <div class="space-y-1.5">
+                
+                <!-- 1. Web Development -->
+                <a href="/web-development.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-red-500/10 dark:hover:bg-red-500/15 group/item transition-colors">
+                  <div class="w-9 h-9 rounded-lg bg-red-500/10 text-brandRed flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brandRed group-hover/item:text-white transition-colors">
+                    <i class="fa-solid fa-code"></i>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-brandRed transition-colors">Web Development</div>
+                    <div class="text-[11px] text-gray-500 dark:text-gray-400">Custom Apps & Systems</div>
+                  </div>
+                </a>
+
+                <!-- 2. Graphic Design -->
+                <a href="/graphic-design.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-yellow-500/10 dark:hover:bg-yellow-500/15 group/item transition-colors">
+                  <div class="w-9 h-9 rounded-lg bg-yellow-500/10 text-brandGold flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brandGold group-hover/item:text-brandBlack transition-colors">
+                    <i class="fa-solid fa-pen-nib"></i>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-brandGold transition-colors">Graphic Design</div>
+                    <div class="text-[11px] text-gray-500 dark:text-gray-400">Brand Identity & UI/UX</div>
+                  </div>
+                </a>
+
+                <!-- 3. Digital Marketing -->
+                <a href="/digital-marketing.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-green-500/10 dark:hover:bg-green-500/15 group/item transition-colors">
+                  <div class="w-9 h-9 rounded-lg bg-green-500/10 text-green-500 flex items-center justify-center text-sm shrink-0 group-hover/item:bg-green-500 group-hover/item:text-white transition-colors">
+                    <i class="fa-solid fa-chart-line"></i>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-green-500 transition-colors">Digital Marketing</div>
+                    <div class="text-[11px] text-gray-500 dark:text-gray-400">SEO, Ads & Growth</div>
+                  </div>
+                </a>
+
+              </div>
+
+              <!-- Dropdown Footer -->
+              <div class="mt-2 pt-2 border-t border-gray-100 dark:border-gray-800">
+                <a href="/services.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-bold text-brandGold hover:bg-brandGold/10 transition-colors">
+                  <span>View Services Hub</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="/portfolio.html" class="hover:text-brandGold transition-colors text-sm font-semibold tracking-wide">Portfolio</a>
+          <a href="/about.html" class="hover:text-brandGold transition-colors text-sm font-semibold tracking-wide">About</a>
+          <a href="/blog.html" class="hover:text-brandGold transition-colors text-sm font-semibold tracking-wide">Blog</a>
+          <a href="/contact.html" class="hover:text-brandGold transition-colors text-sm font-semibold tracking-wide">Contact</a>
+        </div>
+        
+        <!-- Actions -->
+        <div class="hidden lg:flex items-center space-x-6">
+          <button id="lang-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-brandNavyCard text-xs font-bold transition-all shadow-sm hover:border-brandGold focus:outline-none" title="Switch Language / ভাষা পরিবর্তন (EN / BN)"><i class="fa-solid fa-globe text-[11px] text-brandGold"></i><span id="lang-badge-en" class="text-brandGold font-black">EN</span><span class="text-gray-400 text-[10px]">/</span><span id="lang-badge-bn" class="text-gray-500 dark:text-gray-400 font-medium">BN</span></button>
+          
+          <button id="theme-toggle" class="hover:text-brandGold transition-colors p-2.5 rounded-full bg-gray-200 dark:bg-brandNavyCard shadow-inner focus:outline-none" aria-label="Toggle Dark Mode">
+            <i id="theme-icon" class="fa-solid fa-sun w-4 h-4 flex items-center justify-center"></i>
+          </button>
+          
+          <a href="/contact.html" class="bg-brandRed hover:bg-red-600 text-white px-6 py-2.5 rounded text-sm font-bold transition-all shadow-lg shadow-brandRed/30 hover:-translate-y-0.5">
+            Start a Project
+          </a>
+        </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <div class="lg:hidden flex items-center gap-3">
+          <button id="lang-toggle-mobile-header" class="flex items-center gap-1 px-2.5 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-brandNavyCard text-xs font-bold hover:text-brandGold transition-colors" title="Switch Language (EN / BN)"><span id="lang-badge-en-mobile" class="text-brandGold font-black">EN</span><span class="text-gray-400 text-[10px]">/</span><span id="lang-badge-bn-mobile" class="text-gray-500 dark:text-gray-400 font-medium">BN</span></button>
+          <button id="theme-toggle-mobile" class="hover:text-brandGold transition-colors p-2.5 rounded-full bg-gray-200 dark:bg-brandNavyCard" aria-label="Toggle Dark Mode">
+            <i id="theme-icon-mobile" class="fa-solid fa-sun w-4 h-4 flex items-center justify-center"></i>
+          </button>
+          <button id="mobile-menu-btn" class="text-2xl focus:outline-none hover:text-brandGold transition-colors">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white dark:bg-brandNavyCard border-t border-gray-200 dark:border-gray-800 shadow-2xl transition-all max-h-[85vh] overflow-y-auto">
+      <div class="px-4 py-6 flex flex-col space-y-2">
+         <a href="/index.html" class="block px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-semibold transition-colors">Home</a>
+         
+         <!-- Mobile Services Accordion (Clean & Direct) -->
+         <div class="rounded-lg overflow-hidden">
+           <button id="mobile-services-toggle" type="button" class="w-full flex items-center justify-between px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-semibold transition-colors text-left">
+             <span class="flex items-center gap-2">
+               <span>Services</span>
+               <span class="text-[10px] px-2 py-0.5 rounded bg-brandGold/20 text-brandGold font-bold">3 Pages</span>
+             </span>
+             <i id="mobile-services-icon" class="fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
+           </button>
+           <div id="mobile-services-menu" class="hidden pl-3 pr-2 py-2 space-y-1.5 bg-gray-50/80 dark:bg-brandNavyDark/50 rounded-lg mt-1 border border-gray-100 dark:border-gray-800">
+             
+             <!-- 1. Web Dev -->
+             <a href="/web-development.html" class="flex items-center gap-2.5 px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 font-semibold text-sm text-brandRed transition-colors">
+               <i class="fa-solid fa-code text-xs"></i> 1. Web Development
+             </a>
+
+             <!-- 2. Graphic Design -->
+             <a href="/graphic-design.html" class="flex items-center gap-2.5 px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 font-semibold text-sm text-brandGold transition-colors">
+               <i class="fa-solid fa-pen-nib text-xs"></i> 2. Graphic Design
+             </a>
+
+             <!-- 3. Digital Marketing -->
+             <a href="/digital-marketing.html" class="flex items-center gap-2.5 px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 font-semibold text-sm text-green-500 transition-colors">
+               <i class="fa-solid fa-chart-line text-xs"></i> 3. Digital Marketing
+             </a>
+
+             <div class="pt-2 border-t border-gray-200 dark:border-gray-700">
+               <a href="/services.html" class="text-xs font-bold text-brandGold hover:underline block text-center py-1">
+                 View All Services Hub →
+               </a>
+             </div>
+
+           </div>
+         </div>
+
+         <a href="/portfolio.html" class="block px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-semibold transition-colors">Portfolio</a>
+         <a href="/about.html" class="block px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-semibold transition-colors">About</a>
+         <a href="/blog.html" class="block px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-semibold transition-colors">Blog</a>
+         <a href="/contact.html" class="block px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-semibold transition-colors">Contact</a>
+         
+         <div class="h-px bg-gray-200 dark:bg-gray-800 my-2"></div>
+         
+         <button id="lang-toggle-mobile" class="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-brandGold px-4 py-3"><i class="fa-solid fa-globe text-brandGold"></i><span>Language:</span><span id="lang-badge-drawer" class="font-bold text-brandGold">EN / BN</span></button>
+         
+         <a href="/contact.html" class="block mt-4 text-center bg-brandRed text-white px-5 py-3.5 rounded-lg font-bold shadow-lg">Start a Project</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content: Digital Marketing Dedicated Page -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 relative z-10 bg-white dark:bg-brandNavyDark min-h-screen pt-36">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Breadcrumb -->
+      <div class="flex items-center gap-2 text-xs font-semibold text-gray-500 mb-8">
+        <a href="/index.html" class="hover:text-brandGold">Home</a>
+        <span>/</span>
+        <a href="/services.html" class="hover:text-brandGold">Services</a>
+        <span>/</span>
+        <span class="text-green-500">Digital Marketing</span>
+      </div>
+
+      <!-- Hero Section -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-green-500/10 text-green-500 text-xs font-mono font-bold uppercase tracking-wider mb-6">
+            <i class="fa-solid fa-chart-line"></i> Growth Practice
+          </div>
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+            Digital Marketing, <br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-400">SEO & Paid Advertising</span>
+          </h1>
+          <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-medium mb-8">
+            Data-driven growth marketing campaigns that drive qualified traffic, accelerate conversions, and generate measurable return on ad spend (ROAS).
+          </p>
+          <div class="flex flex-wrap gap-4 items-center">
+            <a href="/contact.html" class="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-xl font-bold text-base transition-all shadow-xl shadow-green-600/30">
+              Launch Growth Campaign
+            </a>
+            <a href="/portfolio.html" class="px-8 py-4 border border-gray-300 dark:border-gray-700 hover:border-green-500 rounded-xl font-bold text-base transition-all">
+              View Case Studies
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="p-8 rounded-3xl bg-gray-50 dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800 shadow-xl">
+            <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-trophy text-green-500"></i> Performance Targets
+            </h3>
+            <div class="space-y-3 text-sm">
+              <div class="p-3.5 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-800 flex justify-between items-center">
+                <span>Target ROAS</span>
+                <span class="font-bold text-green-500">4.5x - 6.0x Multiplier</span>
+              </div>
+              <div class="p-3.5 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-800 flex justify-between items-center">
+                <span>SEO Ranking Timeline</span>
+                <span class="font-bold text-brandGold">3 to 6 Month Milestones</span>
+              </div>
+              <div class="p-3.5 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-800 flex justify-between items-center">
+                <span>Analytics & Attribution</span>
+                <span class="font-bold text-brandRed">GA4 Server-Side Tracking</span>
+              </div>
+              <div class="p-3.5 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-800 flex justify-between items-center">
+                <span>Reporting</span>
+                <span class="font-bold text-gray-400">Weekly Real-Time Dashboards</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Specific Marketing Capabilities Grid -->
+      <div class="mb-20">
+        <h2 class="text-2xl sm:text-3xl font-extrabold mb-8 text-center sm:text-left">Marketing Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="p-7 rounded-2xl bg-gray-50 dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800">
+            <div class="w-12 h-12 rounded-xl bg-green-500/10 text-green-500 flex items-center justify-center text-xl mb-5">
+              <i class="fa-solid fa-magnifying-glass-chart"></i>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Search Engine Optimization</h3>
+            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              Technical SEO audits, keyword research, on-page optimization, quality backlink strategy, and local SEO.
+            </p>
+          </div>
+
+          <div class="p-7 rounded-2xl bg-gray-50 dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800">
+            <div class="w-12 h-12 rounded-xl bg-green-500/10 text-green-500 flex items-center justify-center text-xl mb-5">
+              <i class="fa-solid fa-rectangle-ad"></i>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Meta & Google Ads (PPC)</h3>
+            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              High-converting search, display, shopping, and video campaigns across Google, Facebook, Instagram, and TikTok.
+            </p>
+          </div>
+
+          <div class="p-7 rounded-2xl bg-gray-50 dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800">
+            <div class="w-12 h-12 rounded-xl bg-green-500/10 text-green-500 flex items-center justify-center text-xl mb-5">
+              <i class="fa-solid fa-share-nodes"></i>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Social Media Growth</h3>
+            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              Organic social management, viral short-form video production, community engagement, and brand building.
+            </p>
+          </div>
+
+          <div class="p-7 rounded-2xl bg-gray-50 dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800">
+            <div class="w-12 h-12 rounded-xl bg-green-500/10 text-green-500 flex items-center justify-center text-xl mb-5">
+              <i class="fa-solid fa-filter-circle-dollar"></i>
+            </div>
+            <h3 class="text-lg font-bold mb-2">CRO & Sales Funnels</h3>
+            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              Landing page conversion rate optimization, automated email nurturing sequences, and lead capture funnels.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Platforms & Tooling -->
+      <div class="mb-20 p-8 sm:p-10 rounded-3xl bg-gray-50 dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800">
+        <h3 class="text-xl font-bold mb-6">Platforms & Analytics Tooling</h3>
+        <div class="flex flex-wrap gap-3">
+          <span class="px-4 py-2 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-700 text-xs sm:text-sm font-semibold">Google Ads</span>
+          <span class="px-4 py-2 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-700 text-xs sm:text-sm font-semibold">Meta Ads Manager</span>
+          <span class="px-4 py-2 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-700 text-xs sm:text-sm font-semibold">Google Analytics 4</span>
+          <span class="px-4 py-2 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-700 text-xs sm:text-sm font-semibold">SEMrush</span>
+          <span class="px-4 py-2 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-700 text-xs sm:text-sm font-semibold">Ahrefs</span>
+          <span class="px-4 py-2 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-700 text-xs sm:text-sm font-semibold">Klaviyo</span>
+          <span class="px-4 py-2 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-700 text-xs sm:text-sm font-semibold">Hotjar</span>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="rounded-3xl bg-green-500/10 border border-green-500/30 p-10 text-center">
+        <h3 class="text-2xl sm:text-3xl font-extrabold mb-4">Accelerate Your Traffic & Revenue</h3>
+        <p class="text-gray-600 dark:text-gray-300 max-w-xl mx-auto mb-8 text-sm sm:text-base">
+          Get a free digital marketing and SEO audit tailored specifically to your website.
+        </p>
+        <a href="/contact.html" class="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl shadow-lg transition-all inline-block">
+          Request Marketing Audit
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Floating Elements -->
+  <!-- Back to Top Button -->
+  <button id="btt-btn" class="fixed bottom-24 right-6 z-40 w-12 h-12 bg-white dark:bg-brandNavyCard border border-gray-200 dark:border-gray-700 hover:border-brandGold dark:hover:border-brandGold text-gray-800 dark:text-white hover:text-brandGold dark:hover:text-brandGold rounded-full flex items-center justify-center text-xl shadow-lg opacity-0 pointer-events-none transition-all duration-300 focus:outline-none" aria-label="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Comprehensive Footer -->
+  <footer class="bg-brandBlack text-white pt-24 border-t border-gray-900 overflow-hidden relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Newsletter Subscription -->
+      <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-8 md:p-14 mb-20 flex flex-col lg:flex-row items-center justify-between gap-10 relative overflow-hidden shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-r from-brandGold/5 to-transparent pointer-events-none"></div>
+        <div class="relative z-10 lg:w-1/2 text-center lg:text-left">
+          <h3 class="text-3xl md:text-4xl font-bold mb-4 text-white">Stay ahead of the curve.</h3>
+          <p class="text-gray-400 font-medium text-lg">Subscribe to our newsletter for the latest insights in strategy, tech, and design.</p>
+        </div>
+        <div class="relative z-10 lg:w-1/2 w-full">
+          <form action="https://formspree.io/f/placeholder" method="POST" class="flex flex-col sm:flex-row gap-3">
+            <input type="email" name="email" placeholder="Enter your email address" required class="flex-1 bg-brandBlack border border-gray-700 focus:border-brandGold focus:ring-1 focus:ring-brandGold rounded-lg px-5 py-4 text-white outline-none transition-colors font-medium placeholder-gray-600">
+            <button type="submit" class="bg-brandRed hover:bg-red-600 text-white px-8 py-4 rounded-lg font-bold transition-colors shadow-lg shadow-brandRed/20 whitespace-nowrap">Subscribe Now</button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Footer Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+        
+        <!-- Column 1: Brand -->
+        <div class="lg:col-span-4">
+          <a href="/index.html" class="flex items-center gap-3 mb-6 group">
+            <div class="relative w-12 h-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+              <img src="/images/ransovie-logo.svg" alt="RanSovie Logo" class="w-full h-full object-contain filter drop-shadow-[0_2px_12px_rgba(212,175,55,0.4)]" />
+            </div>
+            <div class="flex flex-col">
+              <span class="font-bold text-2xl tracking-tight text-white leading-tight group-hover:text-brandGold transition-colors">RanSovie</span>
+              <span class="text-xs text-brandGold font-semibold uppercase tracking-widest">IT Agency & Technology</span>
+            </div>
+          </a>
+          <p class="text-gray-400 mb-8 leading-relaxed font-medium pr-4">
+            Strategic Design, Advanced Tech & Targeted Growth. We partner with ambitious leaders to build exceptional digital experiences.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" aria-label="LinkedIn" class="w-11 h-11 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-brandGold hover:bg-gray-800 transition-all border border-gray-800 hover:border-brandGold"><i class="fa-brands fa-linkedin-in text-lg"></i></a>
+            <a href="#" aria-label="Twitter" class="w-11 h-11 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-brandGold hover:bg-gray-800 transition-all border border-gray-800 hover:border-brandGold"><i class="fa-brands fa-twitter text-lg"></i></a>
+            <a href="#" aria-label="Instagram" class="w-11 h-11 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-brandGold hover:bg-gray-800 transition-all border border-gray-800 hover:border-brandGold"><i class="fa-brands fa-instagram text-lg"></i></a>
+            <a href="#" aria-label="Facebook" class="w-11 h-11 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-brandGold hover:bg-gray-800 transition-all border border-gray-800 hover:border-brandGold"><i class="fa-brands fa-facebook-f text-lg"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2: Quick Links -->
+        <div class="lg:col-span-2 lg:col-start-6">
+          <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Explore</h4>
+          <ul class="space-y-4 text-gray-400 font-medium">
+            <li><a href="/index.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Home</a></li>
+            <li><a href="/services.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Services</a></li>
+            <li><a href="/about.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">About</a></li>
+            <li><a href="/portfolio.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Portfolio</a></li>
+            <li><a href="/blog.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Blog</a></li>
+            <li><a href="/contact.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3: Legal -->
+        <div class="lg:col-span-2">
+          <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Legal</h4>
+          <ul class="space-y-4 text-gray-400 font-medium">
+            <li><a href="#" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Refund Policy</a></li>
+            <li><a href="#" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Cookie Policy</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 4: Contact -->
+        <div class="lg:col-span-3" id="contact">
+          <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Get in Touch</h4>
+          <ul class="space-y-5 text-gray-400 mb-8 font-medium">
+            <li class="flex items-start gap-4">
+              <i class="fa-solid fa-location-dot mt-1 text-brandGold text-lg"></i>
+              <span class="leading-relaxed">123 Innovation Drive, Tech District, City 1000</span>
+            </li>
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-envelope text-brandGold text-lg"></i>
+              <a href="mailto:contact@ransovie.com" class="hover:text-brandGold transition-colors">contact@ransovie.com</a>
+            </li>
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-phone text-brandGold text-lg"></i>
+              <a href="tel:+1234567890" class="hover:text-brandGold transition-colors">+1 (234) 567-890</a>
+            </li>
+          </ul>
+          <a href="https://calendly.com/placeholder" target="_blank" rel="noopener noreferrer" class="inline-block border-2 border-brandGold text-brandGold hover:bg-brandGold hover:text-brandBlack px-8 py-3 rounded-lg font-bold transition-all shadow-[0_0_15px_rgba(212,175,55,0.15)] hover:shadow-[0_0_25px_rgba(212,175,55,0.3)]">
+            Book a 15-Min Call
+          </a>
+        </div>
+      </div>
+      
+      <!-- Bottom Bar -->
+      <div class="border-t border-gray-900 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-500 text-sm font-medium">
+        <p>&copy; 2026 RanSovie It Agency & Technology. All rights reserved.</p>
+        <p class="tracking-wide flex items-center gap-2">
+          <i class="fa-solid fa-bolt text-brandGold"></i>
+          A Zaidan Enterprise
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla JavaScript Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      // 1. Dark/Light Mode Toggle (LocalStorage & System Preference)
+      const htmlEl = document.documentElement;
+      const themeBtns = [document.getElementById('theme-toggle'), document.getElementById('theme-toggle-mobile')];
+      const themeIcons = [document.getElementById('theme-icon'), document.getElementById('theme-icon-mobile')];
+      
+      // Theme and Language handling is managed centrally by /theme-lang.js
+
+      // 3. Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          const isHidden = mobileMenu.classList.contains('hidden');
+          if (isHidden) {
+            mobileMenu.classList.remove('hidden');
+            mobileMenuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+          } else {
+            mobileMenu.classList.add('hidden');
+            mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          }
+        });
+        
+        // Close menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
+
+            // 3.1 Mobile Services Accordion Toggle
+      const mobileServicesToggle = document.getElementById('mobile-services-toggle');
+      const mobileServicesMenu = document.getElementById('mobile-services-menu');
+      const mobileServicesIcon = document.getElementById('mobile-services-icon');
+      if (mobileServicesToggle && mobileServicesMenu) {
+        mobileServicesToggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isMenuHidden = mobileServicesMenu.classList.contains('hidden');
+          if (isMenuHidden) {
+            mobileServicesMenu.classList.remove('hidden');
+            if (mobileServicesIcon) mobileServicesIcon.classList.add('rotate-180');
+          } else {
+            mobileServicesMenu.classList.add('hidden');
+            if (mobileServicesIcon) mobileServicesIcon.classList.remove('rotate-180');
+          }
+        });
+      }
+
+      // 4. Language Switcher (Cross-Page Persistent)
+      const langBtns = [
+        document.getElementById('lang-toggle'),
+        document.getElementById('lang-toggle-mobile'),
+        document.getElementById('lang-toggle-mobile-header')
+      ].filter(Boolean);
+
+      const syncLang = (lang) => {
+        langBtns.forEach(btn => {
+          if (btn.id === 'lang-toggle-mobile') {
+            btn.innerText = `Language: ${lang}`;
+          } else {
+            btn.innerText = lang;
+          }
+          btn.setAttribute('title', `Current language: ${lang}. Click to switch to ${lang === 'EN' ? 'BN' : 'EN'}`);
+        });
+      };
+
+      const savedLang = localStorage.lang || 'EN';
+      syncLang(savedLang);
+
+      langBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const currentLang = localStorage.lang || 'EN';
+          const newLang = currentLang === 'EN' ? 'BN' : 'EN';
+          localStorage.lang = newLang;
+          syncLang(newLang);
+          if (typeof window.showSuccessToast === 'function') {
+            window.showSuccessToast({
+              title: newLang === 'BN' ? 'ভাষা পরিবর্তিত হয়েছে' : 'Language Switched',
+              message: newLang === 'BN' ? 'বাংলা সংস্করণ সক্রিয় করা হয়েছে (BN)' : 'English language version activated (EN)',
+              type: 'general'
+            });
+          }
+        });
+      });
+
+      // 5. Live Statistics Counter (Intersection Observer)
+      const counters = document.querySelectorAll('.counter-value');
+      const duration = 2000; // 2 seconds
+      const interval = 20; // ms
+      const steps = duration / interval;
+      
+      const startCounters = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = +counter.getAttribute('data-target');
+            const inc = target / steps;
+            let count = 0;
+            
+            const updateCount = setInterval(() => {
+              count += inc;
+              if (count >= target) {
+                counter.innerText = target;
+                clearInterval(updateCount);
+              } else {
+                counter.innerText = Math.ceil(count);
+              }
+            }, interval);
+            
+            observer.unobserve(counter); // only run once
+          }
+        });
+      };
+      
+      const counterObserver = new IntersectionObserver(startCounters, { threshold: 0.5 });
+      counters.forEach(counter => counterObserver.observe(counter));
+
+      // 6. Back to Top Button
+      const bttBtn = document.getElementById('btt-btn');
+      if (bttBtn) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 400) {
+            bttBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+            bttBtn.classList.add('opacity-100', 'translate-y-0');
+          } else {
+            bttBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+            bttBtn.classList.remove('opacity-100', 'translate-y-0');
+          }
+        });
+        
+        bttBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+      
+    });
+  </script>
+  <!-- RanSovie IT Agency & Technology AI Assistant (RanSovie AI) -->
+  <script src="/chatbot.js" defer></script>
+</body>
+</html>

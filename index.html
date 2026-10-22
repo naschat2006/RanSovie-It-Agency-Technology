@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RanSovie It Agency & Technology | Strategic Design & Tech</title>
+  <meta name="description" content="RanSovie It Agency & Technology - Strategic Design, Advanced Tech & Targeted Growth." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Immediate Theme Initializer -->
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandNavyDark: '#0B1120',
+            brandNavyCard: '#111827',
+            brandGold: '#D4AF37',
+            brandGoldHover: '#FBBF24',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom CSS Styles -->
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
+      border-color: #D4AF37;
+    }
+    
+    .text-gradient {
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(to right, #D4AF37, #FDE047);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 dark:bg-brandNavyDark dark:text-gray-100 transition-colors duration-300 antialiased overflow-x-hidden">
+
+  <!-- Navigation Bar -->
+  <nav id="navbar" class="bg-white dark:bg-brandNavyDark sticky top-0 z-50 shadow-sm border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="/index.html" class="flex items-center gap-3 group">
+          <div class="relative w-11 h-11 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+            <img src="/images/ransovie-logo.svg" alt="RanSovie Logo" class="w-full h-full object-contain filter drop-shadow-[0_2px_8px_rgba(212,175,55,0.35)]" />
+          </div>
+          <div class="flex flex-col">
+            <span class="font-extrabold text-brandNavyDark dark:text-white text-lg tracking-tight leading-tight group-hover:text-brandGold transition-colors">RanSovie</span>
+            <span class="text-[9px] font-semibold text-gray-500 dark:text-brandGold tracking-widest uppercase">IT Agency & Technology</span>
+          </div>
+        </a>
+        
+        <!-- Desktop Links -->
+        <div class="hidden lg:flex items-center space-x-7">
+          <a href="/index.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Home</a>
+          
+          <!-- Services Dropdown (Clean, name-only without bulky paragraphs) -->
+          <div class="relative group" id="services-nav-group">
+            <a href="/services.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition flex items-center gap-1.5 py-4">
+              <span>Services</span>
+              <i class="fa-solid fa-chevron-down text-[11px] transition-transform duration-200 group-hover:rotate-180 text-gray-400 group-hover:text-brandGold"></i>
+            </a>
+            
+            <!-- Clean Dropdown Menu -->
+            <div class="invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 absolute left-0 top-full w-72 bg-white dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800 rounded-2xl shadow-2xl p-3 z-50">
+              <div class="space-y-1.5">
+                
+                <!-- 1. Web Development -->
+                <a href="/web-development.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-red-500/10 dark:hover:bg-red-500/15 group/item transition-colors">
+                  <div class="w-9 h-9 rounded-lg bg-red-500/10 text-brandRed flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brandRed group-hover/item:text-white transition-colors">
+                    <i class="fa-solid fa-code"></i>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-brandRed transition-colors">Web Development</div>
+                    <div class="text-[11px] text-gray-500 dark:text-gray-400">Custom Apps & Systems</div>
+                  </div>
+                </a>
+
+                <!-- 2. Graphic Design -->
+                <a href="/graphic-design.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-yellow-500/10 dark:hover:bg-yellow-500/15 group/item transition-colors">
+                  <div class="w-9 h-9 rounded-lg bg-yellow-500/10 text-brandGold flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brandGold group-hover/item:text-brandBlack transition-colors">
+                    <i class="fa-solid fa-pen-nib"></i>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-brandGold transition-colors">Graphic Design</div>
+                    <div class="text-[11px] text-gray-500 dark:text-gray-400">Brand Identity & UI/UX</div>
+                  </div>
+                </a>
+
+                <!-- 3. Digital Marketing -->
+                <a href="/digital-marketing.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-green-500/10 dark:hover:bg-green-500/15 group/item transition-colors">
+                  <div class="w-9 h-9 rounded-lg bg-green-500/10 text-green-500 flex items-center justify-center text-sm shrink-0 group-hover/item:bg-green-500 group-hover/item:text-white transition-colors">
+                    <i class="fa-solid fa-chart-line"></i>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-green-500 transition-colors">Digital Marketing</div>
+                    <div class="text-[11px] text-gray-500 dark:text-gray-400">SEO, Ads & Growth</div>
+                  </div>
+                </a>
+
+              </div>
+
+              <!-- Dropdown Footer -->
+              <div class="mt-2 pt-2 border-t border-gray-100 dark:border-gray-800">
+                <a href="/services.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-bold text-brandGold hover:bg-brandGold/10 transition-colors">
+                  <span>View Services Hub</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="/portfolio.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Portfolio</a>
+          <a href="/pricing.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Pricing</a>
+          <a href="/about.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">About Us</a>
+          <a href="/contact.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Contact Us</a>
+          <a href="/blog.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Blog</a>
+        </div>
+        
+        <!-- Actions (Language + Theme + CTA) -->
+        <div class="hidden lg:flex items-center space-x-4">
+          <!-- Language Toggle (EN / BN) -->
+          <button id="lang-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-brandNavyCard text-xs font-bold transition-all shadow-sm hover:border-brandGold focus:outline-none" title="Switch Language / ভাষা পরিবর্তন (EN / BN)">
+            <i class="fa-solid fa-globe text-[11px] text-brandGold"></i>
+            <span id="lang-badge-en" class="text-brandGold font-black">EN</span>
+            <span class="text-gray-400 text-[10px]">/</span>
+            <span id="lang-badge-bn" class="text-gray-500 dark:text-gray-400 font-medium">BN</span>
+          </button>
+          
+          <button id="theme-toggle" class="hover:text-brandGold transition-colors p-2.5 rounded-full bg-gray-100 dark:bg-brandNavyCard text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 shadow-inner focus:outline-none" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+            <i id="theme-icon" class="fa-solid fa-sun w-4 h-4 flex items-center justify-center"></i>
+          </button>
+
+          <a href="/contact.html?type=quote" class="bg-brandGold hover:bg-yellow-500 text-brandNavyDark font-bold px-5 py-2.5 rounded text-sm transition shadow-lg flex items-center gap-2">
+            Request a Quote
+          </a>
+        </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <div class="lg:hidden flex items-center gap-2">
+          <button id="lang-toggle-mobile-header" class="flex items-center gap-1 px-2.5 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-brandNavyCard text-xs font-bold hover:text-brandGold transition-colors" title="Switch Language (EN / BN)">
+            <span id="lang-badge-en-mobile" class="text-brandGold font-black">EN</span>
+            <span class="text-gray-400 text-[10px]">/</span>
+            <span id="lang-badge-bn-mobile" class="text-gray-500 dark:text-gray-400 font-medium">BN</span>
+          </button>
+          <button id="theme-toggle-mobile" class="hover:text-brandGold transition-colors p-2 rounded-full bg-gray-100 dark:bg-brandNavyCard text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700" aria-label="Toggle Dark Mode">
+            <i id="theme-icon-mobile" class="fa-solid fa-sun w-4 h-4 flex items-center justify-center"></i>
+          </button>
+          <button id="mobile-menu-btn" class="p-1.5 text-2xl text-brandNavyDark dark:text-white focus:outline-none hover:text-brandGold transition-colors">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-brandNavyCard border-b border-gray-200 dark:border-gray-800 shadow-xl px-4 py-6 space-y-3 transition-all">
+      <a href="/index.html" class="block px-4 py-2 text-brandGold font-bold rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Home</a>
+      <div class="px-4 py-2">
+        <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Services</span>
+        <div class="mt-2 space-y-1 pl-2 border-l-2 border-brandGold/40">
+          <a href="/web-development.html" class="block py-1 text-sm text-gray-700 dark:text-gray-300 hover:text-brandGold">Web Development</a>
+          <a href="/graphic-design.html" class="block py-1 text-sm text-gray-700 dark:text-gray-300 hover:text-brandGold">Graphic Design</a>
+          <a href="/digital-marketing.html" class="block py-1 text-sm text-gray-700 dark:text-gray-300 hover:text-brandGold">Digital Marketing</a>
+          <a href="/services.html" class="block py-1 text-xs text-brandGold font-semibold">View All Services →</a>
+        </div>
+      </div>
+      <a href="/portfolio.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">Portfolio</a>
+      <a href="/pricing.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">Pricing</a>
+      <a href="/about.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">About Us</a>
+      <a href="/contact.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">Contact Us</a>
+      <div class="pt-3 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between px-4">
+        <button id="lang-toggle-mobile" class="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-brandGold">
+          <i class="fa-solid fa-globe text-brandGold"></i>
+          <span>Language:</span>
+          <span id="lang-badge-drawer" class="font-bold text-brandGold">EN / BN</span>
+        </button>
+        <a href="/contact.html?type=quote" class="bg-brandGold text-brandNavyDark font-bold px-4 py-2 rounded text-xs shadow">Request Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-brandNavyDark text-white relative overflow-hidden py-16 lg:py-24">
+    <div class="absolute inset-0 z-0 opacity-10">
+      <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+      </svg>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
+        
+        <!-- Left Content -->
+        <div class="w-full lg:w-1/2 text-center lg:text-left">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-tight">
+            EMPOWERING BRANDS WITH <br class="hidden lg:block" />
+            <span class="text-gradient">CODE, DESIGN & GROWTH</span>
+          </h1>
+          <p class="text-gray-300 text-base sm:text-lg mb-8 max-w-xl mx-auto lg:mx-0 font-medium">
+            We are a Full-Service Digital Agency focusing on Strategic Design, Advanced Tech, and Targeted Growth.
+          </p>
+          <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+            <a href="/services.html" class="bg-brandGold text-brandNavyDark font-bold px-8 py-3.5 rounded-lg hover:bg-yellow-500 transition shadow-lg shadow-brandGold/20">Explore Services</a>
+            <a href="/portfolio.html" class="border border-brandGold/70 text-brandGold font-bold px-8 py-3.5 rounded-lg hover:bg-brandGold/10 transition">See Our Work</a>
+          </div>
+        </div>
+        
+        <!-- Right Image -->
+        <div class="w-full lg:w-1/2 relative">
+          <!-- Ambient Glow -->
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-brandGold/20 blur-[80px] rounded-full -z-10"></div>
+          
+          <img src="/src/assets/images/hero_agency_tech_1788153476741.jpg" alt="Technology Illustration" class="w-full h-auto rounded-xl relative z-10 mx-auto" style="mix-blend-mode: lighten; mask-image: linear-gradient(to bottom, black 80%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-extrabold text-brandNavyDark mb-16 tracking-tight">Core Services</h2>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <a href="/graphic-design.html" class="block border border-brandGold/30 bg-white rounded-xl p-10 shadow-sm card-hover flex flex-col items-center text-center transition-all">
+          <div class="w-16 h-16 rounded flex items-center justify-center text-brandNavyDark text-4xl mb-6 relative">
+            <i class="fa-solid fa-paint-brush relative z-10 text-brandNavyDark"></i>
+            <div class="absolute inset-0 bg-brandGold rotate-3 rounded blur-sm opacity-50"></div>
+          </div>
+          <h3 class="text-lg font-extrabold text-brandNavyDark mb-2 uppercase tracking-wide">BRAND DESIGN</h3>
+          <p class="text-sm text-gray-600 font-medium">Create impactful visual identities and branding strategies.</p>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="/web-development.html" class="block border border-brandGold/30 bg-white rounded-xl p-10 shadow-sm card-hover flex flex-col items-center text-center transition-all">
+          <div class="w-16 h-16 rounded flex items-center justify-center text-brandNavyDark text-4xl mb-6 relative">
+            <i class="fa-solid fa-code relative z-10 text-brandNavyDark"></i>
+            <div class="absolute inset-0 bg-brandGold -rotate-3 rounded blur-sm opacity-50"></div>
+          </div>
+          <h3 class="text-lg font-extrabold text-brandNavyDark mb-2 uppercase tracking-wide">WEB DEVELOPMENT</h3>
+          <p class="text-sm text-gray-600 font-medium">Build robust, responsive, and innovative websites.</p>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="/digital-marketing.html" class="block border border-brandGold/30 bg-white rounded-xl p-10 shadow-sm card-hover flex flex-col items-center text-center transition-all">
+          <div class="w-16 h-16 rounded flex items-center justify-center text-brandNavyDark text-4xl mb-6 relative">
+            <i class="fa-solid fa-chart-line relative z-10 text-brandNavyDark"></i>
+            <div class="absolute inset-0 bg-brandGold rotate-3 rounded blur-sm opacity-50"></div>
+          </div>
+          <h3 class="text-lg font-extrabold text-brandNavyDark mb-2 uppercase tracking-wide">GROWTH MARKETING</h3>
+          <p class="text-sm text-gray-600 font-medium">Drive business scalability and market reach.</p>
+        </a>
+
+        <!-- Card 4 -->
+        <a href="/services.html" class="block border border-brandGold/30 bg-white rounded-xl p-10 shadow-sm card-hover flex flex-col items-center text-center transition-all">
+          <div class="w-16 h-16 rounded flex items-center justify-center text-brandNavyDark text-4xl mb-6 relative">
+            <i class="fa-solid fa-mobile-screen relative z-10 text-brandNavyDark"></i>
+            <div class="absolute inset-0 bg-brandGold -rotate-3 rounded blur-sm opacity-50"></div>
+          </div>
+          <h3 class="text-lg font-extrabold text-brandNavyDark mb-2 uppercase tracking-wide">APP DEVELOPMENT</h3>
+          <p class="text-sm text-gray-600 font-medium">Develop engaging and intuitive mobile applications.</p>
+        </a>
+
+        <!-- Card 5 -->
+        <a href="/graphic-design.html" class="block border border-brandGold/30 bg-white rounded-xl p-10 shadow-sm card-hover flex flex-col items-center text-center transition-all">
+          <div class="w-16 h-16 rounded flex items-center justify-center text-brandNavyDark text-4xl mb-6 relative">
+            <i class="fa-solid fa-object-group relative z-10 text-brandNavyDark"></i>
+            <div class="absolute inset-0 bg-brandGold rotate-3 rounded blur-sm opacity-50"></div>
+          </div>
+          <h3 class="text-lg font-extrabold text-brandNavyDark mb-2 uppercase tracking-wide">UI/UX DESIGN</h3>
+          <p class="text-sm text-gray-600 font-medium">Design seamless user experiences.</p>
+        </a>
+
+        <!-- Card 6 -->
+        <a href="/web-development.html" class="block border border-brandGold/30 bg-white rounded-xl p-10 shadow-sm card-hover flex flex-col items-center text-center transition-all">
+          <div class="w-16 h-16 rounded flex items-center justify-center text-brandNavyDark text-4xl mb-6 relative">
+            <i class="fa-solid fa-network-wired relative z-10 text-brandNavyDark"></i>
+            <div class="absolute inset-0 bg-brandGold -rotate-3 rounded blur-sm opacity-50"></div>
+          </div>
+          <h3 class="text-lg font-extrabold text-brandNavyDark mb-2 uppercase tracking-wide">API INTEGRATION</h3>
+          <p class="text-sm text-gray-600 font-medium">Ensure efficient data flow and system interoperability.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h3 class="text-sm font-bold text-gray-500 mb-2 uppercase tracking-widest">Featured Projects</h3>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-brandNavyDark mb-4 tracking-tight">Explore Our Success Stories</h2>
+      <p class="text-gray-500 mb-16 font-medium">Explore our recent web and app success stories</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+        <!-- Project 1 -->
+        <div class="group cursor-pointer">
+          <div class="rounded-xl overflow-hidden shadow-sm mb-4 border border-gray-200 aspect-[4/3] bg-gray-100 relative group-hover:shadow-lg transition-all">
+             <img src="/src/assets/images/hero_web_dev_1788153516769.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+             <div class="absolute inset-0 bg-brandNavyDark/0 group-hover:bg-brandNavyDark/20 transition-colors flex items-center justify-center">
+               <span class="bg-white text-brandNavyDark text-xs font-bold px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all">View Details</span>
+             </div>
+          </div>
+          <h4 class="font-extrabold text-brandNavyDark text-[15px] group-hover:text-brandGold transition-colors">E-commerce Platform for Retailer X</h4>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="group cursor-pointer">
+          <div class="rounded-xl overflow-hidden shadow-sm mb-4 border border-gray-200 aspect-[4/3] bg-brandNavyDark relative group-hover:shadow-lg transition-all">
+             <img src="/src/assets/images/hero_design_uiux_1788153499618.jpg" class="w-full h-full object-cover opacity-80 mix-blend-overlay group-hover:scale-105 transition-transform duration-500">
+             <div class="absolute inset-0 flex items-center justify-center text-brandGold text-5xl">
+               <i class="fa-brands fa-figma"></i>
+             </div>
+             <div class="absolute inset-0 bg-brandNavyDark/0 group-hover:bg-brandNavyDark/20 transition-colors"></div>
+          </div>
+          <h4 class="font-extrabold text-brandNavyDark text-[15px] group-hover:text-brandGold transition-colors">Brand Re-Design for Client Y</h4>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="group cursor-pointer">
+          <div class="rounded-xl overflow-hidden shadow-sm mb-4 border border-gray-200 aspect-[4/3] bg-brandNavyDark relative group-hover:shadow-lg transition-all">
+             <img src="/src/assets/images/hero_agency_tech_1788153476741.jpg" class="w-full h-full object-cover opacity-80 mix-blend-overlay group-hover:scale-105 transition-transform duration-500">
+             <div class="absolute inset-0 flex items-center justify-center text-brandGold text-5xl">
+               <i class="fa-solid fa-code"></i>
+             </div>
+             <div class="absolute inset-0 bg-brandNavyDark/0 group-hover:bg-brandNavyDark/20 transition-colors"></div>
+          </div>
+          <h4 class="font-extrabold text-brandNavyDark text-[15px] group-hover:text-brandGold transition-colors">Custom Web App for Client Z</h4>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="group cursor-pointer">
+          <div class="rounded-xl overflow-hidden shadow-sm mb-4 border border-gray-200 aspect-[4/3] bg-gray-100 relative group-hover:shadow-lg transition-all">
+             <img src="/src/assets/images/hero_growth_ads_1788153532291.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+             <div class="absolute inset-0 bg-brandNavyDark/0 group-hover:bg-brandNavyDark/20 transition-colors flex items-center justify-center">
+               <span class="bg-white text-brandNavyDark text-xs font-bold px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all">View Details</span>
+             </div>
+          </div>
+          <h4 class="font-extrabold text-brandNavyDark text-[15px] group-hover:text-brandGold transition-colors">Growth Marketing for Startup A</h4>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="group cursor-pointer">
+          <div class="rounded-xl overflow-hidden shadow-sm mb-4 border border-gray-200 aspect-[4/3] bg-brandNavyDark relative group-hover:shadow-lg transition-all">
+             <img src="/src/assets/images/hero_design_uiux_1788153499618.jpg" class="w-full h-full object-cover opacity-80 mix-blend-overlay group-hover:scale-105 transition-transform duration-500">
+             <div class="absolute inset-0 flex items-center justify-center text-brandGold text-5xl">
+               <i class="fa-solid fa-mobile-screen"></i>
+             </div>
+             <div class="absolute inset-0 bg-brandNavyDark/0 group-hover:bg-brandNavyDark/20 transition-colors"></div>
+          </div>
+          <h4 class="font-extrabold text-brandNavyDark text-[15px] group-hover:text-brandGold transition-colors">App Development for Retailer B</h4>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="group cursor-pointer">
+          <div class="rounded-xl overflow-hidden shadow-sm mb-4 border border-gray-200 aspect-[4/3] bg-brandNavyDark relative group-hover:shadow-lg transition-all">
+             <img src="/src/assets/images/hero_agency_tech_1788153476741.jpg" class="w-full h-full object-cover opacity-80 mix-blend-overlay group-hover:scale-105 transition-transform duration-500">
+             <div class="absolute inset-0 flex items-center justify-center text-brandGold text-5xl">
+               <i class="fa-solid fa-network-wired"></i>
+             </div>
+             <div class="absolute inset-0 bg-brandNavyDark/0 group-hover:bg-brandNavyDark/20 transition-colors"></div>
+          </div>
+          <h4 class="font-extrabold text-brandNavyDark text-[15px] group-hover:text-brandGold transition-colors">API Integration for Enterprise C</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-brandNavyDark mb-4 tracking-tight">Testimonials</h2>
+      <p class="text-gray-500 mb-16 font-medium">Explore our satisfied clients</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+        <!-- Testimonial 1 -->
+        <div class="p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition bg-white flex flex-col justify-between">
+          <div>
+            <i class="fa-solid fa-quote-left text-brandGold text-3xl mb-6"></i>
+            <p class="text-gray-700 text-[15px] mb-8 font-medium italic leading-relaxed">"Their expertise and dedication transformed our business."</p>
+          </div>
+          <div class="flex items-center justify-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gray-200 overflow-hidden shrink-0 border border-gray-200">
+              <img src="https://i.pravatar.cc/100?img=33" alt="Client" class="w-full h-full object-cover">
+            </div>
+            <div class="text-left">
+              <h5 class="font-bold text-brandNavyDark text-[13px]">Hafize Ramis</h5>
+              <p class="text-[11px] text-gray-500 font-semibold">Satisfied Company</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition bg-white flex flex-col justify-between">
+          <div>
+            <i class="fa-solid fa-quote-left text-brandGold text-3xl mb-6"></i>
+            <p class="text-gray-700 text-[15px] mb-8 font-medium italic leading-relaxed">"We are extremely happy with the seamless UI/UX design and the outstanding support team."</p>
+          </div>
+          <div class="flex items-center justify-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gray-200 overflow-hidden shrink-0 border border-gray-200">
+              <img src="https://i.pravatar.cc/100?img=11" alt="Client" class="w-full h-full object-cover">
+            </div>
+            <div class="text-left">
+              <h5 class="font-bold text-brandNavyDark text-[13px]">Name Names</h5>
+              <p class="text-[11px] text-gray-500 font-semibold">Business Inc</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition bg-white flex flex-col justify-between">
+          <div>
+            <i class="fa-solid fa-quote-left text-brandGold text-3xl mb-6"></i>
+            <p class="text-gray-700 text-[15px] mb-8 font-medium italic leading-relaxed">"Highly recommended! The web development process was incredibly smooth and professional."</p>
+          </div>
+          <div class="flex items-center justify-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gray-200 overflow-hidden shrink-0 border border-gray-200">
+              <img src="https://i.pravatar.cc/100?img=68" alt="Client" class="w-full h-full object-cover">
+            </div>
+            <div class="text-left">
+              <h5 class="font-bold text-brandNavyDark text-[13px]">Name Shaimer</h5>
+              <p class="text-[11px] text-gray-500 font-semibold">Tech Company</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex justify-center gap-2 mt-8">
+        <span class="w-2 h-2 rounded-full bg-brandGold"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion Section -->
+  <section id="faq" class="py-24 bg-slate-50/70 border-t border-b border-gray-100 relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold tracking-widest text-brandGold uppercase block mb-3">Frequently Asked Questions</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brandNavyDark tracking-tight mb-4">
+          Everything You Need to Know About Our Process & Pricing
+        </h2>
+        <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+          Clear, transparent answers to our engagement models, milestones, sprint timelines, and pricing guarantees before we write the first line of code.
+        </p>
+
+        <!-- Category Filter Tabs & Search Controls -->
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <!-- Category Tabs (Interactive Segmented Control) -->
+          <div class="flex items-center flex-wrap justify-center gap-1.5 p-1.5 bg-gray-200/70 rounded-xl w-full sm:w-auto" role="tablist" aria-label="FAQ Categories">
+            <button type="button" class="faq-filter-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 bg-brandNavyDark text-white shadow-sm" data-category="all">
+              All Questions <span class="ml-1 opacity-70">(8)</span>
+            </button>
+            <button type="button" class="faq-filter-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 text-gray-700 hover:text-brandNavyDark hover:bg-white/70" data-category="process">
+              Process & Timeline
+            </button>
+            <button type="button" class="faq-filter-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 text-gray-700 hover:text-brandNavyDark hover:bg-white/70" data-category="pricing">
+              Pricing & Billing
+            </button>
+            <button type="button" class="faq-filter-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 text-gray-700 hover:text-brandNavyDark hover:bg-white/70" data-category="support">
+              Scope & Warranty
+            </button>
+          </div>
+
+          <!-- Quick Accordion Action -->
+          <div class="flex items-center gap-2 self-end sm:self-center">
+            <button id="faq-expand-all" type="button" class="text-xs font-semibold text-gray-600 hover:text-brandNavyDark transition flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-gray-200 bg-white shadow-2xs hover:border-brandGold">
+              <i class="fa-solid fa-arrows-up-down text-[10px] text-brandGold"></i>
+              <span id="faq-expand-text">Expand All</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Accordion List -->
+      <div class="space-y-4" id="faq-accordion-list">
+
+        <!-- FAQ Item 1: Process -->
+        <div class="faq-item bg-white rounded-xl border border-gray-200/90 shadow-2xs transition-all duration-200 hover:border-brandGold/60 overflow-hidden" data-category="process">
+          <button type="button" class="faq-toggle w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 font-bold text-brandNavyDark text-base sm:text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brandGold" aria-expanded="true" aria-controls="faq-answer-1">
+            <div class="flex flex-col text-left">
+              <div class="flex items-center gap-2 text-[11px] font-semibold text-brandGold uppercase tracking-wider mb-1">
+                <span>Process & Workflow</span>
+                <span aria-hidden="true">·</span>
+                <span>Delivery Methodology</span>
+              </div>
+              <span class="faq-question-text text-gray-900 group-hover:text-brandGold transition-colors">
+                What is RanSovie IT Agency & Technology’s step-by-step project delivery process?
+              </span>
+            </div>
+            <span class="w-9 h-9 rounded-full bg-gray-50 flex items-center justify-center shrink-0 transition-all duration-300 text-gray-500 border border-gray-200 faq-icon rotate-180 bg-brandGold/15 text-brandNavyDark border-brandGold/40">
+              <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </span>
+          </button>
+          <div id="faq-answer-1" class="faq-content transition-all duration-300 ease-in-out px-6 sm:px-7 pb-6 sm:pb-7 text-gray-600 text-sm sm:text-[15px] leading-relaxed border-t border-gray-100/80 pt-4" style="max-height: 1000px; opacity: 1;">
+            <p class="mb-4">
+              We execute every engagement using a battle-tested 4-phase agile delivery framework engineered for speed, predictability, and high code quality:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+              <div class="p-3.5 rounded-lg bg-gray-50 border border-gray-100">
+                <span class="font-bold text-brandNavyDark block mb-1 text-xs sm:text-sm">
+                  <i class="fa-solid fa-compass text-brandGold mr-1.5"></i> 1. Discovery & Strategy (Days 1–5)
+                </span>
+                <span class="text-xs text-gray-600">Stakeholder roadmap alignment, tech stack selection, user journey maps, and measurable milestone definitions.</span>
+              </div>
+              <div class="p-3.5 rounded-lg bg-gray-50 border border-gray-100">
+                <span class="font-bold text-brandNavyDark block mb-1 text-xs sm:text-sm">
+                  <i class="fa-solid fa-palette text-brandGold mr-1.5"></i> 2. UI/UX Prototyping (Weeks 1–2)
+                </span>
+                <span class="text-xs text-gray-600">High-fidelity Figma tokens, interactive click-through designs, and UX usability sign-offs before coding.</span>
+              </div>
+              <div class="p-3.5 rounded-lg bg-gray-50 border border-gray-100">
+                <span class="font-bold text-brandNavyDark block mb-1 text-xs sm:text-sm">
+                  <i class="fa-solid fa-code text-brandGold mr-1.5"></i> 3. Agile Engineering (Weeks 2–6)
+                </span>
+                <span class="text-xs text-gray-600">Production-grade full-stack implementation with weekly staging preview URLs and automated unit tests.</span>
+              </div>
+              <div class="p-3.5 rounded-lg bg-gray-50 border border-gray-100">
+                <span class="font-bold text-brandNavyDark block mb-1 text-xs sm:text-sm">
+                  <i class="fa-solid fa-rocket text-brandGold mr-1.5"></i> 4. QA, Launch & Handover (Final Sprint)
+                </span>
+                <span class="text-xs text-gray-600">95+ Google Core Web Vitals audit, technical SEO indexing, DNS switch, and complete 100% IP code transfer.</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 font-medium">
+              You receive weekly Friday sprint demos and private dashboard access throughout the lifecycle.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2: Pricing -->
+        <div class="faq-item bg-white rounded-xl border border-gray-200/90 shadow-2xs transition-all duration-200 hover:border-brandGold/60 overflow-hidden" data-category="pricing">
+          <button type="button" class="faq-toggle w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 font-bold text-brandNavyDark text-base sm:text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brandGold" aria-expanded="false" aria-controls="faq-answer-2">
+            <div class="flex flex-col text-left">
+              <div class="flex items-center gap-2 text-[11px] font-semibold text-brandGold uppercase tracking-wider mb-1">
+                <span>Pricing & Billing</span>
+                <span aria-hidden="true">·</span>
+                <span>Payment Terms</span>
+              </div>
+              <span class="faq-question-text text-gray-900 group-hover:text-brandGold transition-colors">
+                How does RanSovie structure project pricing and payment milestones?
+              </span>
+            </div>
+            <span class="w-9 h-9 rounded-full bg-gray-50 flex items-center justify-center shrink-0 transition-all duration-300 text-gray-500 border border-gray-200 faq-icon">
+              <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </span>
+          </button>
+          <div id="faq-answer-2" class="faq-content transition-all duration-300 ease-in-out px-6 sm:px-7 pb-6 sm:pb-7 text-gray-600 text-sm sm:text-[15px] leading-relaxed border-t border-gray-100/80 pt-4 hidden" style="max-height: 0; opacity: 0;">
+            <p class="mb-3">
+              We stand for 100% price certainty with transparent, milestone-tied billing. We provide three engagement frameworks:
+            </p>
+            <ul class="space-y-2 mb-4">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-brandGold text-sm mt-1 shrink-0"></i>
+                <div>
+                  <strong class="text-brandNavyDark">Fixed-Milestone Contracts:</strong> Typical deliverables are split into 3 clear payments: <strong>40%</strong> on project kickoff & architecture, <strong>30%</strong> after interactive UI/UX sign-off, and <strong>30%</strong> upon final QA approval prior to live domain release.
+                </div>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-brandGold text-sm mt-1 shrink-0"></i>
+                <div>
+                  <strong class="text-brandNavyDark">Standard Monthly Retainers:</strong> Choose between our Basic (<span class="font-bold text-brandNavyDark">$499/mo</span>) or Professional (<span class="font-bold text-brandNavyDark">$999/mo</span>) plans for continuous feature development, SEO optimization, and proactive maintenance.
+                </div>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-brandGold text-sm mt-1 shrink-0"></i>
+                <div>
+                  <strong class="text-brandNavyDark">Flexible Payment Channels:</strong> We accept global wire transfers (USD/EUR/GBP), Stripe international credit cards, and regional direct banking (bKash, Nagad, SSLCommerz) with formal tax invoices.
+                </div>
+              </li>
+            </ul>
+            <p class="text-xs text-gray-500 font-medium">
+              Every dollar is documented in a formal Statement of Work (SOW) with defined acceptance criteria.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3: Timelines -->
+        <div class="faq-item bg-white rounded-xl border border-gray-200/90 shadow-2xs transition-all duration-200 hover:border-brandGold/60 overflow-hidden" data-category="process">
+          <button type="button" class="faq-toggle w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 font-bold text-brandNavyDark text-base sm:text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brandGold" aria-expanded="false" aria-controls="faq-answer-3">
+            <div class="flex flex-col text-left">
+              <div class="flex items-center gap-2 text-[11px] font-semibold text-brandGold uppercase tracking-wider mb-1">
+                <span>Process & Workflow</span>
+                <span aria-hidden="true">·</span>
+                <span>Timelines</span>
+              </div>
+              <span class="faq-question-text text-gray-900 group-hover:text-brandGold transition-colors">
+                How long does a typical digital project take from kickoff to launch?
+              </span>
+            </div>
+            <span class="w-9 h-9 rounded-full bg-gray-50 flex items-center justify-center shrink-0 transition-all duration-300 text-gray-500 border border-gray-200 faq-icon">
+              <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </span>
+          </button>
+          <div id="faq-answer-3" class="faq-content transition-all duration-300 ease-in-out px-6 sm:px-7 pb-6 sm:pb-7 text-gray-600 text-sm sm:text-[15px] leading-relaxed border-t border-gray-100/80 pt-4 hidden" style="max-height: 0; opacity: 0;">
+            <p class="mb-3">
+              Delivery schedules are determined by architectural scope, but our agile process ensures industry-leading turnarounds:
+            </p>
+            <div class="space-y-2 mb-4">
+              <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-gray-100 text-xs sm:text-sm">
+                <span class="font-bold text-brandNavyDark"><i class="fa-solid fa-pen-nib text-brandGold mr-2"></i> Brand Identity & Design System</span>
+                <span class="font-semibold text-gray-600">7 – 14 business days</span>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-gray-100 text-xs sm:text-sm">
+                <span class="font-bold text-brandNavyDark"><i class="fa-solid fa-laptop-code text-brandGold mr-2"></i> High-Converting Business Web Portal</span>
+                <span class="font-semibold text-gray-600">3 – 5 weeks</span>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-gray-100 text-xs sm:text-sm">
+                <span class="font-bold text-brandNavyDark"><i class="fa-solid fa-server text-brandGold mr-2"></i> Full-Stack SaaS & Custom E-Commerce</span>
+                <span class="font-semibold text-gray-600">6 – 10 weeks</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500">
+              Need rapid go-to-market? Ask about our <strong>Expedited Sprint Track</strong> for targeted MVPs launched in under 14 days.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4: IP & Hidden Fees -->
+        <div class="faq-item bg-white rounded-xl border border-gray-200/90 shadow-2xs transition-all duration-200 hover:border-brandGold/60 overflow-hidden" data-category="pricing">
+          <button type="button" class="faq-toggle w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 font-bold text-brandNavyDark text-base sm:text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brandGold" aria-expanded="false" aria-controls="faq-answer-4">
+            <div class="flex flex-col text-left">
+              <div class="flex items-center gap-2 text-[11px] font-semibold text-brandGold uppercase tracking-wider mb-1">
+                <span>Pricing & Ownership</span>
+                <span aria-hidden="true">·</span>
+                <span>No Lock-In</span>
+              </div>
+              <span class="faq-question-text text-gray-900 group-hover:text-brandGold transition-colors">
+                Are there any hidden costs, recurring hosting fees, or vendor lock-in?
+              </span>
+            </div>
+            <span class="w-9 h-9 rounded-full bg-gray-50 flex items-center justify-center shrink-0 transition-all duration-300 text-gray-500 border border-gray-200 faq-icon">
+              <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </span>
+          </button>
+          <div id="faq-answer-4" class="faq-content transition-all duration-300 ease-in-out px-6 sm:px-7 pb-6 sm:pb-7 text-gray-600 text-sm sm:text-[15px] leading-relaxed border-t border-gray-100/80 pt-4 hidden" style="max-height: 0; opacity: 0;">
+            <p class="mb-3">
+              <strong>Zero vendor lock-in, zero hidden fees.</strong> We believe in complete transparency and full client sovereignty:
+            </p>
+            <ul class="space-y-2 mb-3 text-sm">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-lock-open text-brandGold mt-1 shrink-0"></i>
+                <span><strong>100% Intellectual Property Ownership:</strong> You retain complete legal ownership of all source code, Figma source files, 3D assets, and copyright from day one upon final invoice settlement.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-cloud text-brandGold mt-1 shrink-0"></i>
+                <span><strong>Direct Cloud Accounts:</strong> Hosting infrastructure (e.g. Vercel, AWS, Google Cloud, Cloudflare) is provisioned directly under your organization's credentials so you pay wholesale hosting costs directly.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-file-invoice text-brandGold mt-1 shrink-0"></i>
+                <span><strong>No Surprise Invoices:</strong> Any potential third-party API costs (e.g. Twilio, OpenAI, Google Maps) are scoped and approved in writing prior to integration.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5: Revisions & Scope -->
+        <div class="faq-item bg-white rounded-xl border border-gray-200/90 shadow-2xs transition-all duration-200 hover:border-brandGold/60 overflow-hidden" data-category="support">
+          <button type="button" class="faq-toggle w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 font-bold text-brandNavyDark text-base sm:text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brandGold" aria-expanded="false" aria-controls="faq-answer-5">
+            <div class="flex flex-col text-left">
+              <div class="flex items-center gap-2 text-[11px] font-semibold text-brandGold uppercase tracking-wider mb-1">
+                <span>Deliverables & Revisions</span>
+                <span aria-hidden="true">·</span>
+                <span>Flexibility</span>
+              </div>
+              <span class="faq-question-text text-gray-900 group-hover:text-brandGold transition-colors">
+                How do you handle client feedback, revisions, and scope adjustments?
+              </span>
+            </div>
+            <span class="w-9 h-9 rounded-full bg-gray-50 flex items-center justify-center shrink-0 transition-all duration-300 text-gray-500 border border-gray-200 faq-icon">
+              <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </span>
+          </button>
+          <div id="faq-answer-5" class="faq-content transition-all duration-300 ease-in-out px-6 sm:px-7 pb-6 sm:pb-7 text-gray-600 text-sm sm:text-[15px] leading-relaxed border-t border-gray-100/80 pt-4 hidden" style="max-height: 0; opacity: 0;">
+            <p class="mb-3">
+              We design collaboratively and maintain an iterative feedback loop so the final outcome surpasses expectations:
+            </p>
+            <ul class="space-y-2 mb-3">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-brandGold mt-1 shrink-0"></i>
+                <span><strong>Included Revisions:</strong> Every project package includes up to <strong>3 structured rounds of revisions</strong> during both the UI/UX design phase and the staging build phase.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-brandGold mt-1 shrink-0"></i>
+                <span><strong>Interactive Review Tools:</strong> Leave pinpoint visual comments directly inside our shared Figma boards and staging review URLs without endless back-and-forth emails.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-brandGold mt-1 shrink-0"></i>
+                <span><strong>Mid-Project Scope Changes:</strong> If your business requirements evolve, we calculate an itemized change request with exact hours and cost before initiating any non-scoped features.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 6: Post-launch Warranty -->
+        <div class="faq-item bg-white rounded-xl border border-gray-200/90 shadow-2xs transition-all duration-200 hover:border-brandGold/60 overflow-hidden" data-category="support">
+          <button type="button" class="faq-toggle w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 font-bold text-brandNavyDark text-base sm:text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brandGold" aria-expanded="false" aria-controls="faq-answer-6">
+            <div class="flex flex-col text-left">
+              <div class="flex items-center gap-2 text-[11px] font-semibold text-brandGold uppercase tracking-wider mb-1">
+                <span>Support & Warranty</span>
+                <span aria-hidden="true">·</span>
+                <span>Post-Launch Peace of Mind</span>
+              </div>
+              <span class="faq-question-text text-gray-900 group-hover:text-brandGold transition-colors">
+                What warranty and post-launch support do you provide after deployment?
+              </span>
+            </div>
+            <span class="w-9 h-9 rounded-full bg-gray-50 flex items-center justify-center shrink-0 transition-all duration-300 text-gray-500 border border-gray-200 faq-icon">
+              <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </span>
+          </button>
+          <div id="faq-answer-6" class="faq-content transition-all duration-300 ease-in-out px-6 sm:px-7 pb-6 sm:pb-7 text-gray-600 text-sm sm:text-[15px] leading-relaxed border-t border-gray-100/80 pt-4 hidden" style="max-height: 0; opacity: 0;">
+            <p class="mb-3">
+              Our relationship doesn't stop at deployment. We stand firmly behind every system we craft:
+            </p>
+            <div class="p-4 rounded-lg bg-amber-50/60 border border-amber-200/60 mb-3">
+              <div class="flex items-center gap-2 font-bold text-brandNavyDark text-sm mb-1">
+                <i class="fa-solid fa-shield-halved text-brandGold"></i> 30-Day Complimentary Code Warranty
+              </div>
+              <p class="text-xs text-gray-700">
+                Any unexpected bug, layout discrepancy, or technical glitch identified within 30 days of launch is patched and deployed immediately at zero charge to you.
+              </p>
+            </div>
+            <p class="text-xs text-gray-600 mb-2">
+              For teams requiring ongoing SLA uptime guarantees, we offer 24/7 server monitoring, regular dependency security patches, and priority development hours starting at $499/mo.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 7: Tech Stack & Quality -->
+        <div class="faq-item bg-white rounded-xl border border-gray-200/90 shadow-2xs transition-all duration-200 hover:border-brandGold/60 overflow-hidden" data-category="process">
+          <button type="button" class="faq-toggle w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 font-bold text-brandNavyDark text-base sm:text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brandGold" aria-expanded="false" aria-controls="faq-answer-7">
+            <div class="flex flex-col text-left">
+              <div class="flex items-center gap-2 text-[11px] font-semibold text-brandGold uppercase tracking-wider mb-1">
+                <span>Technology & Performance</span>
+                <span aria-hidden="true">·</span>
+                <span>Engineering Standards</span>
+              </div>
+              <span class="faq-question-text text-gray-900 group-hover:text-brandGold transition-colors">
+                What technology stack do you use, and will our application be fast & secure?
+              </span>
+            </div>
+            <span class="w-9 h-9 rounded-full bg-gray-50 flex items-center justify-center shrink-0 transition-all duration-300 text-gray-500 border border-gray-200 faq-icon">
+              <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </span>
+          </button>
+          <div id="faq-answer-7" class="faq-content transition-all duration-300 ease-in-out px-6 sm:px-7 pb-6 sm:pb-7 text-gray-600 text-sm sm:text-[15px] leading-relaxed border-t border-gray-100/80 pt-4 hidden" style="max-height: 0; opacity: 0;">
+            <p class="mb-3">
+              We never use bloated pre-made templates or slow page-builder plugins. We engineer tailored modern web architectures:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mb-3 text-xs">
+              <div class="p-3 bg-gray-50 rounded-lg border border-gray-100 text-center">
+                <i class="fa-brands fa-react text-sky-500 text-xl mb-1.5 block"></i>
+                <strong class="text-brandNavyDark block">React & Next.js</strong>
+                <span class="text-gray-500">Server-side rendering & instant routing</span>
+              </div>
+              <div class="p-3 bg-gray-50 rounded-lg border border-gray-100 text-center">
+                <i class="fa-solid fa-gauge-high text-emerald-500 text-xl mb-1.5 block"></i>
+                <strong class="text-brandNavyDark block">Sub-Second Speed</strong>
+                <span class="text-gray-500">95+ Lighthouse Score & Web Vitals</span>
+              </div>
+              <div class="p-3 bg-gray-50 rounded-lg border border-gray-100 text-center">
+                <i class="fa-solid fa-shield-virus text-brandGold text-xl mb-1.5 block"></i>
+                <strong class="text-brandNavyDark block">Enterprise Security</strong>
+                <span class="text-gray-500">SSL/TLS, CSRF protection, sanitized inputs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 8: How to start -->
+        <div class="faq-item bg-white rounded-xl border border-gray-200/90 shadow-2xs transition-all duration-200 hover:border-brandGold/60 overflow-hidden" data-category="pricing">
+          <button type="button" class="faq-toggle w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 font-bold text-brandNavyDark text-base sm:text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brandGold" aria-expanded="false" aria-controls="faq-answer-8">
+            <div class="flex flex-col text-left">
+              <div class="flex items-center gap-2 text-[11px] font-semibold text-brandGold uppercase tracking-wider mb-1">
+                <span>Getting Started</span>
+                <span aria-hidden="true">·</span>
+                <span>Onboarding</span>
+              </div>
+              <span class="faq-question-text text-gray-900 group-hover:text-brandGold transition-colors">
+                How quickly can we start, and what is required to kick off?
+              </span>
+            </div>
+            <span class="w-9 h-9 rounded-full bg-gray-50 flex items-center justify-center shrink-0 transition-all duration-300 text-gray-500 border border-gray-200 faq-icon">
+              <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </span>
+          </button>
+          <div id="faq-answer-8" class="faq-content transition-all duration-300 ease-in-out px-6 sm:px-7 pb-6 sm:pb-7 text-gray-600 text-sm sm:text-[15px] leading-relaxed border-t border-gray-100/80 pt-4 hidden" style="max-height: 0; opacity: 0;">
+            <p class="mb-3">
+              Getting started is straightforward and friction-free:
+            </p>
+            <ol class="list-decimal list-inside space-y-1.5 text-xs sm:text-sm text-gray-700 mb-3">
+              <li><strong>Initial Consultation:</strong> Submit a request via our <a href="/contact.html" class="text-brandGold font-bold underline">Contact Page</a> or quote builder with your project goals.</li>
+              <li><strong>Proposal & Scoping (Within 24 Hours):</strong> We prepare an itemized deliverable breakdown, architecture diagram, and fixed quote.</li>
+              <li><strong>Kickoff Call & Workspace Setup:</strong> Upon contract signing, we invite your team to a private Slack or WhatsApp channel, configure your Figma space, and begin Day 1 Discovery within <strong>48 hours</strong>.</li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Still Have Questions Callout Card -->
+      <div class="mt-12 bg-white rounded-2xl border border-brandGold/30 p-8 sm:p-10 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-brandGold/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="flex items-center gap-5">
+          <div class="w-14 h-14 rounded-xl bg-brandNavyDark flex items-center justify-center text-brandGold text-2xl shrink-0 shadow-sm">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <div>
+            <h4 class="text-xl font-bold text-brandNavyDark mb-1">Still have questions about your specific project?</h4>
+            <p class="text-sm text-gray-600">Our engineering leads and 24/7 RanSovie AI assistant are here to review your roadmap.</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 shrink-0 w-full md:w-auto">
+          <a href="/contact.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brandNavyDark text-white hover:bg-brandGold hover:text-brandNavyDark font-bold px-6 py-3 rounded-lg text-sm transition-all duration-300 shadow-sm">
+            <span>Book a Discovery Call</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+          <button type="button" onclick="const r = document.getElementById('robotWrapper'); if(r) r.click(); else alert('Opening assistant...');" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brandGold/15 hover:bg-brandGold text-brandNavyDark font-bold px-6 py-3 rounded-lg text-sm border border-brandGold/40 transition-all duration-300">
+            <i class="fa-solid fa-robot text-brandGold"></i>
+            <span>Ask RanSovie AI</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Interactive Script -->
+  <script>
+    (function initFaqAccordion() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      const expandAllBtn = document.getElementById('faq-expand-all');
+      const expandText = document.getElementById('faq-expand-text');
+      const filterBtns = document.querySelectorAll('.faq-filter-btn');
+      let allExpanded = false;
+
+      function toggleFaq(btn, forceState) {
+        const item = btn.closest('.faq-item');
+        const content = item.querySelector('.faq-content');
+        const icon = btn.querySelector('.faq-icon');
+        const isCurrentlyExpanded = btn.getAttribute('aria-expanded') === 'true';
+        const willExpand = forceState !== undefined ? forceState : !isCurrentlyExpanded;
+
+        btn.setAttribute('aria-expanded', willExpand);
+
+        if (willExpand) {
+          content.classList.remove('hidden');
+          content.style.maxHeight = content.scrollHeight + 40 + 'px';
+          content.style.opacity = '1';
+          if (icon) {
+            icon.classList.add('rotate-180', 'bg-brandGold/15', 'text-brandNavyDark', 'border-brandGold/40');
+            icon.classList.remove('bg-gray-50', 'text-gray-500', 'border-gray-200');
+          }
+          item.classList.add('border-brandGold/60', 'ring-1', 'ring-brandGold/20');
+        } else {
+          content.style.maxHeight = '0px';
+          content.style.opacity = '0';
+          setTimeout(() => {
+            if (btn.getAttribute('aria-expanded') === 'false') {
+              content.classList.add('hidden');
+            }
+          }, 300);
+          if (icon) {
+            icon.classList.remove('rotate-180', 'bg-brandGold/15', 'text-brandNavyDark', 'border-brandGold/40');
+            icon.classList.add('bg-gray-50', 'text-gray-500', 'border-gray-200');
+          }
+          item.classList.remove('border-brandGold/60', 'ring-1', 'ring-brandGold/20');
+        }
+      }
+
+      // Attach click handlers to accordion buttons
+      faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-toggle');
+        if (btn) {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleFaq(btn);
+          });
+        }
+      });
+
+      // Expand / Collapse All
+      if (expandAllBtn) {
+        expandAllBtn.addEventListener('click', () => {
+          allExpanded = !allExpanded;
+          faqItems.forEach(item => {
+            if (!item.classList.contains('hidden')) {
+              const btn = item.querySelector('.faq-toggle');
+              if (btn) toggleFaq(btn, allExpanded);
+            }
+          });
+          expandText.textContent = allExpanded ? 'Collapse All' : 'Expand All';
+        });
+      }
+
+      // Category filtering
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const category = btn.getAttribute('data-category');
+
+          // Update active tab styles
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-brandNavyDark', 'text-white', 'shadow-sm');
+            b.classList.add('text-gray-700', 'hover:text-brandNavyDark', 'hover:bg-white/70');
+          });
+          btn.classList.add('bg-brandNavyDark', 'text-white', 'shadow-sm');
+          btn.classList.remove('text-gray-700', 'hover:text-brandNavyDark', 'hover:bg-white/70');
+
+          // Filter accordion items
+          faqItems.forEach(item => {
+            const itemCat = item.getAttribute('data-category');
+            if (category === 'all' || itemCat === category) {
+              item.classList.remove('hidden');
+            } else {
+              item.classList.add('hidden');
+            }
+          });
+        });
+      });
+    })();
+  </script>
+
+  <!-- Footer CTA Section -->
+  <section class="relative bg-brandNavyDark pt-24 pb-16 overflow-hidden">
+    <!-- Abstract background shape -->
+    <div class="absolute right-0 bottom-0 w-1/2 h-full bg-gradient-to-tl from-[#D4AF37]/20 to-transparent -skew-x-12 translate-x-1/4"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-10 tracking-tight leading-tight">
+        READY TO TRANSFORM YOUR <br class="hidden md:block" /> BUSINESS DIGITALLY?
+      </h2>
+      <a href="/contact.html" class="inline-flex items-center gap-2 bg-transparent border-2 border-brandGold text-brandGold font-bold px-10 py-3.5 rounded hover:bg-brandGold hover:text-brandNavyDark transition duration-300 shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-[0_0_25px_rgba(212,175,55,0.4)]">
+        Contact Us
+      </a>
+      <p class="text-brandGold mt-6 font-bold tracking-wide">+8809638661612</p>
+    </div>
+  </section>
+
+  <!-- Comprehensive Footer -->
+  <footer class="bg-brandBlack text-white pt-24 border-t border-gray-900 overflow-hidden relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Newsletter Subscription -->
+      <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-8 md:p-14 mb-20 flex flex-col lg:flex-row items-center justify-between gap-10 relative overflow-hidden shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-r from-brandGold/5 to-transparent pointer-events-none"></div>
+        <div class="relative z-10 lg:w-1/2 text-center lg:text-left">
+          <h3 class="text-3xl md:text-4xl font-bold mb-4 text-white">Stay ahead of the curve.</h3>
+          <p class="text-gray-400 font-medium text-lg">Subscribe to our newsletter for the latest insights in strategy, tech, and design.</p>
+        </div>
+        <div class="relative z-10 lg:w-1/2 w-full">
+          <form action="https://formspree.io/f/placeholder" method="POST" class="flex flex-col sm:flex-row gap-3">
+            <input type="email" name="email" placeholder="Enter your email address" required class="flex-1 bg-brandBlack border border-gray-700 focus:border-brandGold focus:ring-1 focus:ring-brandGold rounded-lg px-5 py-4 text-white outline-none transition-colors font-medium placeholder-gray-600">
+            <button type="submit" class="bg-brandRed hover:bg-red-600 text-white px-8 py-4 rounded-lg font-bold transition-colors shadow-lg shadow-brandRed/20 whitespace-nowrap">Subscribe Now</button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Footer Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+        
+        <!-- Column 1: Brand -->
+        <div class="lg:col-span-4">
+          <a href="/index.html" class="flex items-center gap-3 mb-6 group">
+            <div class="relative w-12 h-12 flex items-center justify-center">
+              <img src="/images/ransovie-logo.svg" alt="RanSovie Logo" class="w-full h-full object-contain filter drop-shadow-[0_2px_12px_rgba(212,175,55,0.4)]" />
+            </div>
+            <div class="flex flex-col">
+              <span class="font-bold text-2xl tracking-tight text-white leading-tight">RanSovie</span>
+              <span class="text-xs text-brandGold font-semibold uppercase tracking-widest">IT Agency & Technology</span>
+            </div>
+          </a>
+          <p class="text-gray-400 mb-8 leading-relaxed font-medium pr-4">
+            Strategic Design, Advanced Tech & Targeted Growth. We partner with ambitious leaders to build exceptional digital experiences.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" aria-label="LinkedIn" class="w-11 h-11 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-brandGold hover:bg-gray-800 transition-all border border-gray-800 hover:border-brandGold"><i class="fa-brands fa-linkedin-in text-lg"></i></a>
+            <a href="#" aria-label="Twitter" class="w-11 h-11 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-brandGold hover:bg-gray-800 transition-all border border-gray-800 hover:border-brandGold"><i class="fa-brands fa-twitter text-lg"></i></a>
+            <a href="#" aria-label="Instagram" class="w-11 h-11 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-brandGold hover:bg-gray-800 transition-all border border-gray-800 hover:border-brandGold"><i class="fa-brands fa-instagram text-lg"></i></a>
+            <a href="#" aria-label="Facebook" class="w-11 h-11 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-brandGold hover:bg-gray-800 transition-all border border-gray-800 hover:border-brandGold"><i class="fa-brands fa-facebook-f text-lg"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2: Quick Links -->
+        <div class="lg:col-span-2 lg:col-start-6">
+          <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Explore</h4>
+          <ul class="space-y-4 text-gray-400 font-medium">
+            <li><a href="/index.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Home</a></li>
+            <li><a href="/services.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Services</a></li>
+            <li><a href="/about.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">About</a></li>
+            <li><a href="/portfolio.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Portfolio</a></li>
+            <li><a href="/blog.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Blog</a></li>
+            <li><a href="/contact.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3: Legal -->
+        <div class="lg:col-span-2">
+          <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Legal</h4>
+          <ul class="space-y-4 text-gray-400 font-medium">
+            <li><a href="#" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Refund Policy</a></li>
+            <li><a href="#" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Cookie Policy</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 4: Contact -->
+        <div class="lg:col-span-3" id="contact">
+          <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Get in Touch</h4>
+          <ul class="space-y-5 text-gray-400 mb-8 font-medium">
+            <li class="flex items-start gap-4">
+              <i class="fa-solid fa-location-dot mt-1 text-brandGold text-lg"></i>
+              <span class="leading-relaxed">IMUM Madani Chattar, BGB Battalion-35, Pathalia, Jamalpur-2000.</span>
+            </li>
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-envelope text-brandGold text-lg"></i>
+              <a href="mailto:ransovieiatechnologybd@gmail.com" class="hover:text-brandGold transition-colors">ransovieiatechnologybd@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-phone text-brandGold text-lg"></i>
+              <a href="tel:+8809638661612" class="hover:text-brandGold transition-colors">+8809638661612</a>
+            </li>
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-clock text-brandGold text-lg"></i>
+              <span>9am - 10pm</span>
+            </li>
+          </ul>
+          <a href="https://calendly.com/placeholder" target="_blank" rel="noopener noreferrer" class="inline-block border-2 border-brandGold text-brandGold hover:bg-brandGold hover:text-brandBlack px-8 py-3 rounded-lg font-bold transition-all shadow-[0_0_15px_rgba(212,175,55,0.15)] hover:shadow-[0_0_25px_rgba(212,175,55,0.3)]">
+            Book a 15-Min Call
+          </a>
+        </div>
+      </div>
+      
+      <!-- Bottom Bar -->
+      <div class="border-t border-gray-900 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-500 text-sm font-medium">
+        <p>&copy; 2026 RanSovie It Agency & Technology. All rights reserved.</p>
+        <p class="tracking-wide flex items-center gap-2 text-brandGold/90">
+          <i class="fa-solid fa-gem text-brandGold"></i>
+          A Ar Raiyan International Group of Company
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success Toast & Check Animation Notification -->
+  <script src="/toast.js" defer></script>
+  <!-- Unified Theme (Dark/Light) & Language (EN/BN) Controller -->
+  <script src="/theme-lang.js" defer></script>
+  <!-- RanSovie IT Agency & Technology AI Assistant (RanSovie AI) -->
+  <script src="/chatbot.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | RanSovie IT Agency & Technology</title>
+  <meta name="description" content="RanSovie It Agency & Technology - Strategic Design, Advanced Tech & Targeted Growth. We engineer bespoke digital solutions that transform bold visions into market-leading realities." />
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ransovie.com" />
+  <meta property="og:title" content="RanSovie IT Agency & Technology" />
+  <meta property="og:description" content="Strategic Design, Advanced Tech & Targeted Growth." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandNavyDark: '#090D16',
+            brandNavyCard: '#111827',
+            brandGold: '#D4AF37',
+            brandRed: '#EF4444',
+            brandBlack: '#000000',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom CSS Styles -->
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    
+    .glassmorphism {
+      background: rgba(9, 13, 22, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .glassmorphism-light {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .bg-tech-gradient {
+      background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.12), transparent 50%),
+                  radial-gradient(circle at bottom left, rgba(239, 68, 68, 0.08), transparent 50%);
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      border-color: #D4AF37;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-brandNavyDark dark:text-white transition-colors duration-300 antialiased overflow-x-hidden selection:bg-brandGold selection:text-brandBlack">
+
+      <!-- Navigation Bar -->
+  <nav id="navbar" class="bg-white/95 dark:bg-brandNavyDark/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 dark:border-gray-800 transition-colors duration-300 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="/index.html" class="flex items-center gap-3 group">
+          <div class="relative w-11 h-11 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+            <img src="/images/ransovie-logo.svg" alt="RanSovie Logo" class="w-full h-full object-contain filter drop-shadow-[0_2px_8px_rgba(212,175,55,0.35)]" />
+          </div>
+          <div class="flex flex-col">
+            <span class="font-extrabold text-brandNavyDark dark:text-white text-lg tracking-tight leading-tight group-hover:text-brandGold transition-colors">RanSovie</span>
+            <span class="text-[9px] font-semibold text-gray-500 dark:text-brandGold tracking-widest uppercase">IT Agency & Technology</span>
+          </div>
+        </a>
+        
+        <!-- Desktop Links -->
+        <div class="hidden lg:flex items-center space-x-7">
+          <a href="/index.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Home</a>
+          
+          <!-- Services Dropdown (Clean, name-only without bulky paragraphs) -->
+          <div class="relative group" id="services-nav-group">
+            <a href="/services.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition flex items-center gap-1.5 py-4">
+              <span>Services</span>
+              <i class="fa-solid fa-chevron-down text-[11px] transition-transform duration-200 group-hover:rotate-180 text-gray-400 group-hover:text-brandGold"></i>
+            </a>
+            
+            <!-- Clean Dropdown Menu -->
+            <div class="invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 absolute left-0 top-full w-72 bg-white dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800 rounded-2xl shadow-2xl p-3 z-50">
+              <div class="space-y-1.5">
+                
+                <!-- 1. Web Development -->
+                <a href="/web-development.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-red-500/10 dark:hover:bg-red-500/15 group/item transition-colors">
+                  <div class="w-9 h-9 rounded-lg bg-red-500/10 text-brandRed flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brandRed group-hover/item:text-white transition-colors">
+                    <i class="fa-solid fa-code"></i>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-brandRed transition-colors">Web Development</div>
+                    <div class="text-[11px] text-gray-500 dark:text-gray-400">Custom Apps & Systems</div>
+                  </div>
+                </a>
+
+                <!-- 2. Graphic Design -->
+                <a href="/graphic-design.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-yellow-500/10 dark:hover:bg-yellow-500/15 group/item transition-colors">
+                  <div class="w-9 h-9 rounded-lg bg-yellow-500/10 text-brandGold flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brandGold group-hover/item:text-brandBlack transition-colors">
+                    <i class="fa-solid fa-pen-nib"></i>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-brandGold transition-colors">Graphic Design</div>
+                    <div class="text-[11px] text-gray-500 dark:text-gray-400">Brand Identity & UI/UX</div>
+                  </div>
+                </a>
+
+                <!-- 3. Digital Marketing -->
+                <a href="/digital-marketing.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-green-500/10 dark:hover:bg-green-500/15 group/item transition-colors">
+                  <div class="w-9 h-9 rounded-lg bg-green-500/10 text-green-500 flex items-center justify-center text-sm shrink-0 group-hover/item:bg-green-500 group-hover/item:text-white transition-colors">
+                    <i class="fa-solid fa-chart-line"></i>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-green-500 transition-colors">Digital Marketing</div>
+                    <div class="text-[11px] text-gray-500 dark:text-gray-400">SEO, Ads & Growth</div>
+                  </div>
+                </a>
+
+              </div>
+
+              <!-- Dropdown Footer -->
+              <div class="mt-2 pt-2 border-t border-gray-100 dark:border-gray-800">
+                <a href="/services.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-bold text-brandGold hover:bg-brandGold/10 transition-colors">
+                  <span>View Services Hub</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="/portfolio.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Portfolio</a>
+          <a href="/pricing.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Pricing</a>
+          <a href="/about.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">About Us</a>
+          <a href="/contact.html" class="text-brandGold font-bold text-sm border-b-2 border-brandGold pb-1">Contact Us</a>
+          <a href="/blog.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Blog</a>
+        </div>
+        
+        <!-- Actions (Language + Theme + CTA) -->
+        <div class="hidden lg:flex items-center space-x-4">
+          <!-- Language Toggle (EN / BN) -->
+          <button id="lang-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-brandNavyCard text-xs font-bold transition-all shadow-sm hover:border-brandGold focus:outline-none" title="Switch Language / ভাষা পরিবর্তন (EN / BN)">
+            <i class="fa-solid fa-globe text-[11px] text-brandGold"></i>
+            <span id="lang-badge-en" class="text-brandGold font-black">EN</span>
+            <span class="text-gray-400 text-[10px]">/</span>
+            <span id="lang-badge-bn" class="text-gray-500 dark:text-gray-400 font-medium">BN</span>
+          </button>
+          
+          <button id="theme-toggle" class="hover:text-brandGold transition-colors p-2.5 rounded-full bg-gray-100 dark:bg-brandNavyCard text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 shadow-inner focus:outline-none" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+            <i id="theme-icon" class="fa-solid fa-sun w-4 h-4 flex items-center justify-center"></i>
+          </button>
+          
+          <a href="/contact.html?type=quote" class="bg-brandGold hover:bg-yellow-500 text-brandNavyDark font-bold px-5 py-2.5 rounded text-sm transition shadow-lg flex items-center gap-2">
+            Request a Quote
+          </a>
+        </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <div class="lg:hidden flex items-center gap-2">
+          <button id="lang-toggle-mobile-header" class="flex items-center gap-1 px-2.5 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-brandNavyCard text-xs font-bold hover:text-brandGold transition-colors" title="Switch Language (EN / BN)">
+            <span id="lang-badge-en-mobile" class="text-brandGold font-black">EN</span>
+            <span class="text-gray-400 text-[10px]">/</span>
+            <span id="lang-badge-bn-mobile" class="text-gray-500 dark:text-gray-400 font-medium">BN</span>
+          </button>
+          <button id="theme-toggle-mobile" class="hover:text-brandGold transition-colors p-2 rounded-full bg-gray-100 dark:bg-brandNavyCard text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700" aria-label="Toggle Dark Mode">
+            <i id="theme-icon-mobile" class="fa-solid fa-sun w-4 h-4 flex items-center justify-center"></i>
+          </button>
+          <button id="mobile-menu-btn" class="p-1.5 text-2xl text-brandNavyDark dark:text-white focus:outline-none hover:text-brandGold transition-colors">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white dark:bg-brandNavyCard border-t border-gray-200 dark:border-gray-800 shadow-2xl transition-all max-h-[85vh] overflow-y-auto">
+      <div class="px-4 py-6 flex flex-col space-y-2">
+         <a href="/index.html" class="block px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-semibold transition-colors">Home</a>
+         
+         <!-- Mobile Services Accordion (Clean & Direct) -->
+         <div class="rounded-lg overflow-hidden">
+           <button id="mobile-services-toggle" type="button" class="w-full flex items-center justify-between px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-semibold transition-colors text-left">
+             <span class="flex items-center gap-2">
+               <span>Services</span>
+               <span class="text-[10px] px-2 py-0.5 rounded bg-brandGold/20 text-brandGold font-bold">3 Pages</span>
+             </span>
+             <i id="mobile-services-icon" class="fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
+           </button>
+           <div id="mobile-services-menu" class="hidden pl-3 pr-2 py-2 space-y-1.5 bg-gray-50/80 dark:bg-brandNavyDark/50 rounded-lg mt-1 border border-gray-100 dark:border-gray-800">
+             
+             <!-- 1. Web Dev -->
+             <a href="/web-development.html" class="flex items-center gap-2.5 px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 font-semibold text-sm text-brandRed transition-colors">
+               <i class="fa-solid fa-code text-xs"></i> 1. Web Development
+             </a>
+
+             <!-- 2. Graphic Design -->
+             <a href="/graphic-design.html" class="flex items-center gap-2.5 px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 font-semibold text-sm text-brandGold transition-colors">
+               <i class="fa-solid fa-pen-nib text-xs"></i> 2. Graphic Design
+             </a>
+
+             <!-- 3. Digital Marketing -->
+             <a href="/digital-marketing.html" class="flex items-center gap-2.5 px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 font-semibold text-sm text-green-500 transition-colors">
+               <i class="fa-solid fa-chart-line text-xs"></i> 3. Digital Marketing
+             </a>
+
+             <div class="pt-2 border-t border-gray-200 dark:border-gray-700">
+               <a href="/services.html" class="text-xs font-bold text-brandGold hover:underline block text-center py-1">
+                 View All Services Hub →
+               </a>
+             </div>
+
+           </div>
+         </div>
+
+         <a href="/portfolio.html" class="block px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-semibold transition-colors">Portfolio</a>
+         <a href="/pricing.html" class="block px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-semibold transition-colors">Pricing</a>
+         <a href="/about.html" class="block px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-semibold transition-colors">About Us</a>
+         <a href="/contact.html" class="block px-4 py-2.5 bg-brandGold/10 text-brandGold rounded-lg font-bold transition-colors">Contact Us</a>
+         <a href="/blog.html" class="block px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-semibold transition-colors">Blog</a>
+         
+         <div class="h-px bg-gray-200 dark:bg-gray-800 my-2"></div>
+         
+         <div class="flex items-center justify-between px-4 py-2">
+           <button id="lang-toggle-mobile" class="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-brandGold">
+             <i class="fa-solid fa-globe text-brandGold"></i>
+             <span>Language:</span>
+             <span id="lang-badge-drawer" class="font-bold text-brandGold">EN / BN</span>
+           </button>
+         </div>
+         
+         <a href="/contact.html?type=quote" class="block mt-2 text-center bg-brandGold hover:bg-yellow-500 text-brandNavyDark px-5 py-3 rounded-lg font-bold shadow-lg">Request a Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <section class="py-32 px-4 sm:px-6 lg:px-8 relative z-10 bg-white dark:bg-brandNavyDark min-h-screen pt-36">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-brandGold font-bold tracking-widest uppercase text-xs sm:text-sm mb-3">Get In Touch</h2>
+      <h3 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 tracking-tight" id="contact-page-title">Direct Agency Inquiry & Quote</h3>
+      <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base max-w-xl mx-auto mb-10">
+        Whether you are seeking custom software engineering, a full brand overhaul, or targeted growth campaigns, our directors respond within 24 hours.
+      </p>
+
+      <!-- Inquiry Type Tabs -->
+      <div class="flex items-center justify-center gap-2 p-1.5 bg-gray-200/80 dark:bg-gray-800/80 rounded-xl max-w-md mx-auto mb-8 shadow-inner" role="tablist">
+        <button type="button" id="tab-btn-contact" class="flex-1 py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all bg-brandRed text-white shadow-sm flex items-center justify-center gap-2" role="tab" aria-selected="true">
+          <i class="fa-regular fa-envelope"></i> General Contact
+        </button>
+        <button type="button" id="tab-btn-quote" class="flex-1 py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 dark:text-gray-300 hover:text-white flex items-center justify-center gap-2" role="tab" aria-selected="false">
+          <i class="fa-solid fa-file-invoice-dollar text-brandGold"></i> Request a Quote
+        </button>
+      </div>
+
+      <div class="bg-gray-50 dark:bg-brandNavyCard p-6 sm:p-10 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-xl text-left relative overflow-hidden">
+        
+        <!-- Inline Animated Check Success Banner -->
+        <div id="inline-success-banner" class="hidden mb-8 p-5 sm:p-6 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-white transition-all duration-300">
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 text-emerald-400 shadow-sm">
+              <svg width="28" height="28" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="20" stroke="#10B981" stroke-width="3" stroke-linecap="round" class="albaraqah-check-circle" />
+                <path d="M14.5 24.5L21.5 31.5L33.5 17.5" stroke="#FDE047" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" class="albaraqah-check-stem" />
+              </svg>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <h4 class="font-extrabold text-base text-gray-900 dark:text-white" id="inline-success-title">Message Sent Successfully!</h4>
+                <span class="text-[10px] font-mono font-bold text-brandGold bg-brandGold/15 px-2 py-0.5 rounded border border-brandGold/30" id="inline-success-badge">#AB-VERIFIED</span>
+              </div>
+              <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed" id="inline-success-desc">
+                Thank you! Your submission has been securely registered in our system. A project director will reach out within 24 hours.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <form id="main-contact-form" class="flex flex-col gap-6">
+          <input type="hidden" id="form-inquiry-type" name="inquiry_type" value="General Contact">
+          
+          <!-- Inquiry Tabs -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-4">
+            <button type="button" id="tab-btn-contact" class="py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all bg-brandRed text-white shadow-sm flex items-center justify-center gap-2" role="tab">General Contact</button>
+            <button type="button" id="tab-btn-quote" class="py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 dark:text-gray-300 hover:text-white bg-gray-200 dark:bg-gray-800 flex items-center justify-center gap-2" role="tab">Request a Quote</button>
+            <button type="button" id="tab-btn-feedback" class="py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 dark:text-gray-300 hover:text-white bg-gray-200 dark:bg-gray-800 flex items-center justify-center gap-2" role="tab">Feedback/Suggestion</button>
+          </div>
+
+          <!-- Quote Specific Fields (Visible in Quote mode) -->
+          <div id="quote-fields-container" class="hidden space-y-6 pt-2 pb-2 border-b border-gray-200 dark:border-gray-800">
+            <!-- Service Selection -->
+            <div>
+              <label class="block text-xs font-bold text-brandGold uppercase tracking-wider mb-2.5">
+                Target Service <span class="text-brandRed">*</span>
+              </label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5" id="service-options-grid">
+                <label class="quote-option-label flex items-center gap-3 p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-brandNavyDark cursor-pointer hover:border-brandGold transition">
+                  <input type="radio" name="target_service" value="Web Development & Software" checked class="accent-brandGold">
+                  <span class="text-xs sm:text-sm font-semibold"><i class="fa-solid fa-code text-brandRed mr-1.5"></i> Web Development</span>
+                </label>
+                <label class="quote-option-label flex items-center gap-3 p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-brandNavyDark cursor-pointer hover:border-brandGold transition">
+                  <input type="radio" name="target_service" value="UI/UX & Brand Design" class="accent-brandGold">
+                  <span class="text-xs sm:text-sm font-semibold"><i class="fa-solid fa-pen-nib text-brandGold mr-1.5"></i> UI/UX & Branding</span>
+                </label>
+                <label class="quote-option-label flex items-center gap-3 p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-brandNavyDark cursor-pointer hover:border-brandGold transition">
+                  <input type="radio" name="target_service" value="Digital Marketing & SEO" class="accent-brandGold">
+                  <span class="text-xs sm:text-sm font-semibold"><i class="fa-solid fa-chart-line text-green-500 mr-1.5"></i> Digital Marketing</span>
+                </label>
+                <label class="quote-option-label flex items-center gap-3 p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-brandNavyDark cursor-pointer hover:border-brandGold transition">
+                  <input type="radio" name="target_service" value="Full Enterprise Transformation" class="accent-brandGold">
+                  <span class="text-xs sm:text-sm font-semibold"><i class="fa-solid fa-network-wired text-purple-400 mr-1.5"></i> Enterprise Suite</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Budget Range -->
+            <div>
+              <label class="block text-xs font-bold text-brandGold uppercase tracking-wider mb-2.5">
+                Estimated Project Budget
+              </label>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                <label class="budget-option-label text-center p-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-brandNavyDark cursor-pointer hover:border-brandGold transition">
+                  <input type="radio" name="budget_tier" value="$499 - $1,500 (Basic)" class="hidden">
+                  <span class="block text-xs font-bold">$499 - $1.5k</span>
+                  <span class="text-[10px] text-gray-500">Starter</span>
+                </label>
+                <label class="budget-option-label text-center p-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-brandNavyDark cursor-pointer hover:border-brandGold transition">
+                  <input type="radio" name="budget_tier" value="$1,500 - $5,000 (Pro)" checked class="hidden">
+                  <span class="block text-xs font-bold text-brandGold">$1.5k - $5k</span>
+                  <span class="text-[10px] text-gray-500">Growth Pro</span>
+                </label>
+                <label class="budget-option-label text-center p-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-brandNavyDark cursor-pointer hover:border-brandGold transition">
+                  <input type="radio" name="budget_tier" value="$5,000 - $15,000 (Scale)" class="hidden">
+                  <span class="block text-xs font-bold">$5k - $15k</span>
+                  <span class="text-[10px] text-gray-500">Scale</span>
+                </label>
+                <label class="budget-option-label text-center p-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-brandNavyDark cursor-pointer hover:border-brandGold transition">
+                  <input type="radio" name="budget_tier" value="$15,000+ (Custom Enterprise)" class="hidden">
+                  <span class="block text-xs font-bold">$15k+</span>
+                  <span class="text-[10px] text-gray-500">Enterprise</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Name & Email (2 Cols on desktop) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider mb-2">
+                Full Name <span class="text-brandRed">*</span>
+              </label>
+              <input type="text" id="contact-name" name="name" required class="w-full bg-white dark:bg-brandNavyDark border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brandGold focus:ring-1 focus:ring-brandGold transition" placeholder="e.g. Tariq Usman">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider mb-2">
+                Work Email <span class="text-brandRed">*</span>
+              </label>
+              <input type="email" id="contact-email" name="email" required class="w-full bg-white dark:bg-brandNavyDark border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brandGold focus:ring-1 focus:ring-brandGold transition" placeholder="tariq@company.com">
+            </div>
+          </div>
+
+          <!-- Phone Number -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider mb-2">
+              Phone / WhatsApp <span class="text-gray-400 font-normal">(Optional for faster response)</span>
+            </label>
+            <input type="tel" id="contact-phone" name="phone" class="w-full bg-white dark:bg-brandNavyDark border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brandGold focus:ring-1 focus:ring-brandGold transition" placeholder="+1 (501) 325-7990">
+          </div>
+
+          <!-- Message / Scope -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider mb-2" id="message-label">
+              Project Description & Requirements <span class="text-brandRed">*</span>
+            </label>
+            <textarea id="contact-message" name="message" required rows="4" class="w-full bg-white dark:bg-brandNavyDark border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brandGold focus:ring-1 focus:ring-brandGold transition leading-relaxed" placeholder="Briefly describe your objectives, existing platform, tech preferences, or desired launch timeframe..."></textarea>
+          </div>
+
+          <!-- Submit Button with Dynamic State & Subtle Check Transition -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+            <button type="submit" id="contact-submit-btn" class="w-full sm:w-auto min-w-[220px] bg-brandRed hover:bg-red-600 text-white font-bold py-3.5 px-8 rounded-lg transition-all duration-300 shadow-lg shadow-brandRed/25 flex items-center justify-center gap-2 group">
+              <i class="fa-solid fa-paper-plane text-xs transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" id="btn-icon"></i>
+              <span id="btn-label">Send Message</span>
+            </button>
+            <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+              <i class="fa-solid fa-lock text-brandGold"></i>
+              <span>100% Confidential & Non-Disclosure Protected</span>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Floating Elements -->
+  <!-- Back to Top Button -->
+  <button id="btt-btn" class="fixed bottom-24 right-6 z-40 w-12 h-12 bg-white dark:bg-brandNavyCard border border-gray-200 dark:border-gray-700 hover:border-brandGold dark:hover:border-brandGold text-gray-800 dark:text-white hover:text-brandGold dark:hover:text-brandGold rounded-full flex items-center justify-center text-xl shadow-lg opacity-0 pointer-events-none transition-all duration-300 focus:outline-none" aria-label="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Comprehensive Footer -->
+  <footer class="bg-brandBlack text-white pt-24 border-t border-gray-900 overflow-hidden relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Newsletter Subscription -->
+      <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-8 md:p-14 mb-20 flex flex-col lg:flex-row items-center justify-between gap-10 relative overflow-hidden shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-r from-brandGold/5 to-transparent pointer-events-none"></div>
+        <div class="relative z-10 lg:w-1/2 text-center lg:text-left">
+          <h3 class="text-3xl md:text-4xl font-bold mb-4 text-white">Stay ahead of the curve.</h3>
+          <p class="text-gray-400 font-medium text-lg">Subscribe to our newsletter for the latest insights in strategy, tech, and design.</p>
+        </div>
+        <div class="relative z-10 lg:w-1/2 w-full">
+          <form action="https://formspree.io/f/placeholder" method="POST" class="flex flex-col sm:flex-row gap-3">
+            <input type="email" name="email" placeholder="Enter your email address" required class="flex-1 bg-brandBlack border border-gray-700 focus:border-brandGold focus:ring-1 focus:ring-brandGold rounded-lg px-5 py-4 text-white outline-none transition-colors font-medium placeholder-gray-600">
+            <button type="submit" class="bg-brandRed hover:bg-red-600 text-white px-8 py-4 rounded-lg font-bold transition-colors shadow-lg shadow-brandRed/20 whitespace-nowrap">Subscribe Now</button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Footer Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+        
+        <!-- Column 1: Brand -->
+        <div class="lg:col-span-4">
+          <a href="/index.html" class="flex items-center gap-3 mb-6 group">
+            <div class="relative w-12 h-12 flex items-center justify-center">
+              <img src="/images/ransovie-logo.svg" alt="RanSovie Logo" class="w-full h-full object-contain filter drop-shadow-[0_2px_12px_rgba(212,175,55,0.4)]" />
+            </div>
+            <div class="flex flex-col">
+              <span class="font-bold text-2xl tracking-tight text-white leading-tight">RanSovie</span>
+              <span class="text-xs text-brandGold font-semibold uppercase tracking-widest">IT Agency & Technology</span>
+            </div>
+          </a>
+          <p class="text-gray-400 mb-8 leading-relaxed font-medium pr-4">
+            Strategic Design, Advanced Tech & Targeted Growth. We partner with ambitious leaders to build exceptional digital experiences.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" aria-label="LinkedIn" class="w-11 h-11 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-brandGold hover:bg-gray-800 transition-all border border-gray-800 hover:border-brandGold"><i class="fa-brands fa-linkedin-in text-lg"></i></a>
+            <a href="#" aria-label="Twitter" class="w-11 h-11 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-brandGold hover:bg-gray-800 transition-all border border-gray-800 hover:border-brandGold"><i class="fa-brands fa-twitter text-lg"></i></a>
+            <a href="#" aria-label="Instagram" class="w-11 h-11 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-brandGold hover:bg-gray-800 transition-all border border-gray-800 hover:border-brandGold"><i class="fa-brands fa-instagram text-lg"></i></a>
+            <a href="#" aria-label="Facebook" class="w-11 h-11 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-brandGold hover:bg-gray-800 transition-all border border-gray-800 hover:border-brandGold"><i class="fa-brands fa-facebook-f text-lg"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2: Quick Links -->
+        <div class="lg:col-span-2 lg:col-start-6">
+          <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Explore</h4>
+          <ul class="space-y-4 text-gray-400 font-medium">
+            <li><a href="/index.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Home</a></li>
+            <li><a href="/services.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Services</a></li>
+            <li><a href="/about.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">About</a></li>
+            <li><a href="/portfolio.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Portfolio</a></li>
+            <li><a href="/blog.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Blog</a></li>
+            <li><a href="/contact.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3: Legal -->
+        <div class="lg:col-span-2">
+          <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Legal</h4>
+          <ul class="space-y-4 text-gray-400 font-medium">
+            <li><a href="#" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Refund Policy</a></li>
+            <li><a href="#" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Cookie Policy</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 4: Contact -->
+        <div class="lg:col-span-3" id="contact">
+          <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Get in Touch</h4>
+          <ul class="space-y-5 text-gray-400 mb-8 font-medium">
+            <li class="flex items-start gap-4">
+              <i class="fa-solid fa-location-dot mt-1 text-brandGold text-lg"></i>
+              <span class="leading-relaxed">IMUM Madani Chattar, BGB Battalion-35, Pathalia, Jamalpur-2000.</span>
+            </li>
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-envelope text-brandGold text-lg"></i>
+              <a href="mailto:ransovieiatechnologybd@gmail.com" class="hover:text-brandGold transition-colors">ransovieiatechnologybd@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-phone text-brandGold text-lg"></i>
+              <a href="tel:+8809638661612" class="hover:text-brandGold transition-colors">+8809638661612</a>
+            </li>
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-clock text-brandGold text-lg"></i>
+              <span>9am - 10pm</span>
+            </li>
+          </ul>
+          <a href="https://calendly.com/placeholder" target="_blank" rel="noopener noreferrer" class="inline-block border-2 border-brandGold text-brandGold hover:bg-brandGold hover:text-brandBlack px-8 py-3 rounded-lg font-bold transition-all shadow-[0_0_15px_rgba(212,175,55,0.15)] hover:shadow-[0_0_25px_rgba(212,175,55,0.3)]">
+            Book a 15-Min Call
+          </a>
+        </div>
+      </div>
+      
+      <!-- Bottom Bar -->
+      <div class="border-t border-gray-900 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-500 text-sm font-medium">
+        <p>&copy; 2026 RanSovie It Agency & Technology. All rights reserved.</p>
+        <p class="tracking-wide flex items-center gap-2 text-brandGold/90">
+          <i class="fa-solid fa-gem text-brandGold"></i>
+          A Ar Raiyan International Group of Company
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla JavaScript Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      // Theme and Language handling is managed centrally by /theme-lang.js
+
+      // 3. Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          const isHidden = mobileMenu.classList.contains('hidden');
+          if (isHidden) {
+            mobileMenu.classList.remove('hidden');
+            mobileMenuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+          } else {
+            mobileMenu.classList.add('hidden');
+            mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          }
+        });
+        
+        // Close menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
+
+            // 3.1 Mobile Services Accordion Toggle
+      const mobileServicesToggle = document.getElementById('mobile-services-toggle');
+      const mobileServicesMenu = document.getElementById('mobile-services-menu');
+      const mobileServicesIcon = document.getElementById('mobile-services-icon');
+      if (mobileServicesToggle && mobileServicesMenu) {
+        mobileServicesToggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isMenuHidden = mobileServicesMenu.classList.contains('hidden');
+          if (isMenuHidden) {
+            mobileServicesMenu.classList.remove('hidden');
+            if (mobileServicesIcon) mobileServicesIcon.classList.add('rotate-180');
+          } else {
+            mobileServicesMenu.classList.add('hidden');
+            if (mobileServicesIcon) mobileServicesIcon.classList.remove('rotate-180');
+          }
+        });
+      }
+
+      // 4. Language Switcher & Full Translation is handled by /theme-lang.js
+
+      // 5. Live Statistics Counter (Intersection Observer)
+      const counters = document.querySelectorAll('.counter-value');
+      const duration = 2000; // 2 seconds
+      const interval = 20; // ms
+      const steps = duration / interval;
+      
+      const startCounters = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = +counter.getAttribute('data-target');
+            const inc = target / steps;
+            let count = 0;
+            
+            const updateCount = setInterval(() => {
+              count += inc;
+              if (count >= target) {
+                counter.innerText = target;
+                clearInterval(updateCount);
+              } else {
+                counter.innerText = Math.ceil(count);
+              }
+            }, interval);
+            
+            observer.unobserve(counter); // only run once
+          }
+        });
+      };
+      
+      const counterObserver = new IntersectionObserver(startCounters, { threshold: 0.5 });
+      counters.forEach(counter => counterObserver.observe(counter));
+
+      // 7. Contact & Quote Form Handling with Subtle Check & Toast
+      const contactForm = document.getElementById('main-contact-form');
+      const tabContact = document.getElementById('tab-btn-contact');
+      const tabQuote = document.getElementById('tab-btn-quote');
+      const quoteFields = document.getElementById('quote-fields-container');
+      const inquiryTypeInput = document.getElementById('form-inquiry-type');
+      const submitBtn = document.getElementById('contact-submit-btn');
+      const btnIcon = document.getElementById('btn-icon');
+      const btnLabel = document.getElementById('btn-label');
+      const inlineBanner = document.getElementById('inline-success-banner');
+      const inlineTitle = document.getElementById('inline-success-title');
+      const inlineDesc = document.getElementById('inline-success-desc');
+      const inlineBadge = document.getElementById('inline-success-badge');
+
+      function switchTab(mode) {
+        if (mode === 'quote') {
+          if (quoteFields) quoteFields.classList.remove('hidden');
+          if (inquiryTypeInput) inquiryTypeInput.value = 'Request a Project Quote';
+          if (btnLabel) btnLabel.textContent = 'Submit Quote Request';
+          
+          if (tabQuote) {
+            tabQuote.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all bg-brandRed text-white shadow-sm flex items-center justify-center gap-2';
+            tabQuote.setAttribute('aria-selected', 'true');
+          }
+          if (tabContact) {
+            tabContact.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 dark:text-gray-300 hover:text-white bg-gray-200 dark:bg-gray-800 flex items-center justify-center gap-2';
+            tabContact.setAttribute('aria-selected', 'false');
+          }
+          if (tabFeedback) {
+            tabFeedback.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 dark:text-gray-300 hover:text-white bg-gray-200 dark:bg-gray-800 flex items-center justify-center gap-2';
+            tabFeedback.setAttribute('aria-selected', 'false');
+          }
+        } else if (mode === 'feedback') {
+          if (quoteFields) quoteFields.classList.add('hidden');
+          if (inquiryTypeInput) inquiryTypeInput.value = 'Feedback or Suggestion';
+          if (btnLabel) btnLabel.textContent = 'Send Feedback';
+          
+          if (tabFeedback) {
+            tabFeedback.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all bg-brandRed text-white shadow-sm flex items-center justify-center gap-2';
+            tabFeedback.setAttribute('aria-selected', 'true');
+          }
+          if (tabContact) {
+            tabContact.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 dark:text-gray-300 hover:text-white bg-gray-200 dark:bg-gray-800 flex items-center justify-center gap-2';
+            tabContact.setAttribute('aria-selected', 'false');
+          }
+          if (tabQuote) {
+            tabQuote.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 dark:text-gray-300 hover:text-white bg-gray-200 dark:bg-gray-800 flex items-center justify-center gap-2';
+            tabQuote.setAttribute('aria-selected', 'false');
+          }
+        } else {
+          if (quoteFields) quoteFields.classList.add('hidden');
+          if (inquiryTypeInput) inquiryTypeInput.value = 'General Contact';
+          if (btnLabel) btnLabel.textContent = 'Send Message';
+
+          if (tabContact) {
+            tabContact.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all bg-brandRed text-white shadow-sm flex items-center justify-center gap-2';
+            tabContact.setAttribute('aria-selected', 'true');
+          }
+          if (tabQuote) {
+            tabQuote.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 dark:text-gray-300 hover:text-white bg-gray-200 dark:bg-gray-800 flex items-center justify-center gap-2';
+            tabQuote.setAttribute('aria-selected', 'false');
+          }
+          if (tabFeedback) {
+            tabFeedback.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 dark:text-gray-300 hover:text-white bg-gray-200 dark:bg-gray-800 flex items-center justify-center gap-2';
+            tabFeedback.setAttribute('aria-selected', 'false');
+          }
+        }
+      }
+
+      if (tabContact) tabContact.addEventListener('click', () => switchTab('contact'));
+      if (tabQuote) tabQuote.addEventListener('click', () => switchTab('quote'));
+      if (tabFeedback) tabFeedback.addEventListener('click', () => switchTab('feedback'));
+
+      // Check URL parameters for quote trigger or plan selection
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('type') === 'quote' || urlParams.get('quote') === '1' || urlParams.has('plan')) {
+        switchTab('quote');
+        const plan = urlParams.get('plan');
+        if (plan) {
+          const budgetRadios = document.querySelectorAll('input[name="budget_tier"]');
+          budgetRadios.forEach(radio => {
+            if (radio.value.toLowerCase().includes(plan.toLowerCase())) {
+              radio.checked = true;
+            }
+          });
+        }
+      }
+
+      // Handle Form Submit
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const name = document.getElementById('contact-name')?.value?.trim() || 'Client';
+          const email = document.getElementById('contact-email')?.value?.trim() || '';
+          const phone = document.getElementById('contact-phone')?.value?.trim() || '';
+          const message = document.getElementById('contact-message')?.value?.trim() || '';
+          const isQuote = inquiryTypeInput && inquiryTypeInput.value.includes('Quote');
+
+          // Selected quote attributes if in quote mode
+          const selectedService = document.querySelector('input[name="target_service"]:checked')?.value || 'Digital Solutions';
+          const selectedBudget = document.querySelector('input[name="budget_tier"]:checked')?.value || 'Standard';
+
+          // Set Loading State
+          submitBtn.disabled = true;
+          btnIcon.className = 'fa-solid fa-circle-notch fa-spin text-xs';
+          btnLabel.textContent = isQuote ? 'Preparing Quote Request...' : 'Sending Message...';
+
+          // Simulate brief realistic processing
+          setTimeout(() => {
+            const refCode = 'AB-' + Math.floor(100000 + Math.random() * 900000);
+
+            // Subtle Button Check Transition
+            btnIcon.className = 'fa-solid fa-check text-emerald-300 text-sm animate-bounce';
+            btnLabel.textContent = isQuote ? 'Quote Request Received!' : 'Message Sent!';
+            submitBtn.classList.add('bg-emerald-600', 'hover:bg-emerald-700');
+            submitBtn.classList.remove('bg-brandRed', 'hover:bg-red-600');
+
+            // Update & Show Inline Success Banner
+            if (inlineBanner) {
+              if (inlineTitle) {
+                inlineTitle.textContent = isQuote 
+                  ? 'Quote Request Successfully Logged!' 
+                  : 'Message Sent Successfully!';
+              }
+              if (inlineDesc) {
+                inlineDesc.textContent = isQuote
+                  ? `Thank you, ${name}! Your project estimate request for "${selectedService}" (${selectedBudget}) has been received. Our solutions team will review the scope and reply to ${email} within 24 hours.`
+                  : `Thank you, ${name}! Your message has been sent to our leadership team. We will review your note and contact you at ${email} shortly.`;
+              }
+              if (inlineBadge) {
+                inlineBadge.textContent = '#' + refCode;
+              }
+              inlineBanner.classList.remove('hidden');
+              inlineBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            // Trigger Floating Success Toast Notification with SVG Check Animation
+            if (window.showSuccessToast) {
+              window.showSuccessToast({
+                title: isQuote ? 'Quote Request Received!' : 'Message Sent Successfully!',
+                message: isQuote
+                  ? `Thank you, ${name}! Our solutions team has received your quote request for ${selectedService}.`
+                  : `Thank you, ${name}! Our team will review your inquiry and follow up at ${email}.`,
+                referenceId: refCode,
+                type: isQuote ? 'quote' : 'contact',
+                duration: 5500
+              });
+            }
+
+            // Reset form fields
+            contactForm.reset();
+
+            // Revert button state after 4 seconds
+            setTimeout(() => {
+              submitBtn.disabled = false;
+              submitBtn.classList.remove('bg-emerald-600', 'hover:bg-emerald-700');
+              submitBtn.classList.add('bg-brandRed', 'hover:bg-red-600');
+              btnIcon.className = 'fa-solid fa-paper-plane text-xs';
+              btnLabel.textContent = isQuote ? 'Submit Quote Request' : 'Send Message';
+            }, 4000);
+
+          }, 650);
+        });
+      }
+
+      // Newsletter form submit toast
+      const newsletterForm = document.querySelector('footer form');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const emailInput = newsletterForm.querySelector('input[type="email"]');
+          const email = emailInput?.value || '';
+          if (email && window.showSuccessToast) {
+            window.showSuccessToast({
+              title: 'Subscribed Successfully!',
+              message: `You are now subscribed to RanSovie It Agency & Technology updates (${email}).`,
+              type: 'newsletter'
+            });
+            newsletterForm.reset();
+          }
+        });
+      }
+
+    });
+  </script>
+  <!-- Success Toast & Check Animation Notification -->
+  <script src="/toast.js" defer></script>
+  <!-- Unified Theme (Dark/Light) & Language (EN/BN) Controller -->
+  <script src="/theme-lang.js" defer></script>
+  <!-- RanSovie IT Agency & Technology AI Assistant (RanSovie AI) -->
+  <script src="/chatbot.js" defer></script>
+</body>
+</html>

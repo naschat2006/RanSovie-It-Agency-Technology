@@ -2,17 +2,35 @@ import os
 import re
 
 seo_data = {
-    'index.html': {'title': 'RanSovie IT Agency & Technology | Strategic Design & Tech', 'desc': 'RanSovie IT Agency & Technology - Strategic Design, Advanced Tech & Targeted Growth. Bespoke digital solutions for visionary brands.'},
-    'about.html': {'title': 'About Us | RanSovie IT Agency & Technology', 'desc': 'Learn about RanSovie IT Agency & Technology. We are a premier digital agency specializing in strategic design, advanced tech, and targeted business growth.'},
-    'services.html': {'title': 'Our Services | RanSovie IT Agency & Technology', 'desc': 'Explore our professional services including Web Development, Graphic Design, and Digital Marketing to grow your business effectively.'},
-    'web-development.html': {'title': 'Web Development Services | RanSovie', 'desc': 'Custom web development services: robust apps, innovative systems, and responsive websites for modern businesses.'},
-    'graphic-design.html': {'title': 'Graphic Design & Branding | RanSovie', 'desc': 'Professional graphic design, brand identity, and UI/UX design services to elevate your brand presence.'},
-    'digital-marketing.html': {'title': 'Digital Marketing & SEO | RanSovie', 'desc': 'Drive growth with expert digital marketing, SEO, and targeted ad campaigns.'},
-    'portfolio.html': {'title': 'Our Portfolio | RanSovie IT Agency & Technology', 'desc': 'Explore our success stories: web and app development, branding, and growth marketing case studies.'},
-    'pricing.html': {'title': 'Pricing & Engagement | RanSovie', 'desc': 'Transparent pricing and engagement models for business web portals, SaaS, and custom projects.'},
-    'contact.html': {'title': 'Contact Us | RanSovie IT Agency & Technology', 'desc': 'Get in touch with RanSovie IT Agency to discuss your digital transformation project.'},
-    'blog.html': {'title': 'Tech Insights Blog | RanSovie', 'desc': 'Latest insights in strategy, technology, design, and business growth from RanSovie.'}
+    'index.html': {'title': 'RanSovie | Premier IT Agency & Software Development', 'desc': 'RanSovie is a leading IT agency providing bespoke software development, web solutions, and strategic digital growth for visionary brands.'},
+    'about.html': {'title': 'About RanSovie | Our Mission & IT Agency Values', 'desc': 'Learn about RanSovie IT Agency. We are committed to strategic design, advanced tech, and driving targeted business growth.'},
+    'services.html': {'title': 'Services | RanSovie IT Agency Solutions', 'desc': 'Explore our professional services including Web Development, Graphic Design, and Digital Marketing at RanSovie IT Agency.'},
+    'web-development.html': {'title': 'Custom Web Development Services | RanSovie IT Agency', 'desc': 'RanSovie provides custom web development services: robust apps, innovative systems, and responsive websites.'},
+    'graphic-design.html': {'title': 'Graphic Design & Brand Identity | RanSovie IT Agency', 'desc': 'Elevate your brand with professional graphic design, branding, and UI/UX services from RanSovie IT Agency.'},
+    'digital-marketing.html': {'title': 'Digital Marketing & Growth SEO | RanSovie IT Agency', 'desc': 'Drive growth with expert digital marketing, SEO, and targeted ad campaigns by RanSovie IT Agency.'},
+    'portfolio.html': {'title': 'Our Success Stories | RanSovie IT Agency Portfolio', 'desc': 'Explore successful projects: web and app development, branding, and growth marketing case studies by RanSovie.'},
+    'pricing.html': {'title': 'Transparent Pricing | RanSovie IT Agency', 'desc': 'Transparent pricing and engagement models for business web portals, SaaS, and custom projects at RanSovie.'},
+    'contact.html': {'title': 'Contact RanSovie IT Agency | Start Your Project', 'desc': 'Get in touch with RanSovie IT Agency to discuss your digital transformation and software project.'},
+    'blog.html': {'title': 'Tech Insights Blog | RanSovie IT Agency', 'desc': 'Latest insights in strategy, technology, design, and business growth from RanSovie IT Agency.'}
 }
+
+json_ld = """
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "RanSovie",
+    "description": "RanSovie is a professional IT agency specializing in software development, web solutions, and digital transformation.",
+    "url": "https://ransovie.com",
+    "image": "https://ransovie.com/images/ransovie-logo.svg",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "BD"
+    }
+  }
+  </script>
+"""
 
 def update_seo():
     files = [f for f in os.listdir('.') if f.endswith('.html')]
@@ -50,6 +68,14 @@ def update_seo():
         # If not replaced, inject them
         if '<!-- Open Graph / Social -->' not in content:
             content = content.replace('<head>', f'<head>{og_tags}')
+        
+        # Add Favicon if missing
+        if '<link rel="icon"' not in content:
+            content = content.replace('</head>', '  <link rel="icon" type="image/png" href="/01.png">\n</head>')
+        
+        # Add JSON-LD if missing
+        if 'application/ld+json' not in content:
+             content = content.replace('</head>', f'{json_ld}\n</head>')
             
         with open(filename, 'w', encoding='utf-8') as f:
             f.write(content)

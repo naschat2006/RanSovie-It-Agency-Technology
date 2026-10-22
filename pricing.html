@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ransovie.com/pricing.html" />
+  <meta property="og:title" content="Pricing & Engagement | RanSovie" />
+  <meta property="og:description" content="Transparent pricing and engagement models for business web portals, SaaS, and custom projects." />
+  <meta property="og:image" content="https://ransovie.com/images/ransovie-logo.svg" />
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pricing Packages | RanSovie It Agency & Technology</title>
-  <meta name="description" content="RanSovie It Agency & Technology - Strategic Design, Advanced Tech & Targeted Growth." />
+  <title>Pricing & Engagement | RanSovie</title>
+  <meta name="description" content="Transparent pricing and engagement models for business web portals, SaaS, and custom projects." />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   
   <!-- Fonts & Icons -->
@@ -82,22 +89,67 @@
         <div class="hidden lg:flex items-center space-x-7">
           <a href="/index.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Home</a>
           
-          <!-- Services Dropdown -->
-          <div class="relative group">
+          <!-- Services Dropdown (Clean, name-only without bulky paragraphs) -->
+          <div class="relative group" id="services-nav-group">
             <a href="/services.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition flex items-center gap-1.5 py-4">
-              Services <i class="fa-solid fa-chevron-down text-[10px]"></i>
+              <span>Services</span>
+              <i class="fa-solid fa-chevron-down text-[11px] transition-transform duration-200 group-hover:rotate-180 text-gray-400 group-hover:text-brandGold"></i>
             </a>
-            <div class="absolute left-0 mt-0 w-56 bg-white dark:bg-brandNavyCard border border-gray-100 dark:border-gray-800 shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden">
-              <a href="/web-development.html" class="block px-4 py-3 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-brandGold border-b border-gray-50 dark:border-gray-800">Web Development</a>
-              <a href="/graphic-design.html" class="block px-4 py-3 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-brandGold border-b border-gray-50 dark:border-gray-800">Graphic Design</a>
-              <a href="/digital-marketing.html" class="block px-4 py-3 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-brandGold">Digital Marketing</a>
+            
+            <!-- Clean Dropdown Menu -->
+            <div class="invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 absolute left-0 top-full w-72 bg-white dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800 rounded-2xl shadow-2xl p-3 z-50">
+              <div class="space-y-1.5">
+                
+                <!-- 1. Web Development -->
+                <a href="/web-development.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-red-500/10 dark:hover:bg-red-500/15 group/item transition-colors">
+                  <div class="w-9 h-9 rounded-lg bg-red-500/10 text-brandRed flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brandRed group-hover/item:text-white transition-colors">
+                    <i class="fa-solid fa-code"></i>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-brandRed transition-colors">Web Development</div>
+                    <div class="text-[11px] text-gray-500 dark:text-gray-400">Custom Apps & Systems</div>
+                  </div>
+                </a>
+
+                <!-- 2. Graphic Design -->
+                <a href="/graphic-design.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-yellow-500/10 dark:hover:bg-yellow-500/15 group/item transition-colors">
+                  <div class="w-9 h-9 rounded-lg bg-yellow-500/10 text-brandGold flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brandGold group-hover/item:text-brandBlack transition-colors">
+                    <i class="fa-solid fa-pen-nib"></i>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-brandGold transition-colors">Graphic Design</div>
+                    <div class="text-[11px] text-gray-500 dark:text-gray-400">Brand Identity & UI/UX</div>
+                  </div>
+                </a>
+
+                <!-- 3. Digital Marketing -->
+                <a href="/digital-marketing.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-green-500/10 dark:hover:bg-green-500/15 group/item transition-colors">
+                  <div class="w-9 h-9 rounded-lg bg-green-500/10 text-green-500 flex items-center justify-center text-sm shrink-0 group-hover/item:bg-green-500 group-hover/item:text-white transition-colors">
+                    <i class="fa-solid fa-chart-line"></i>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-green-500 transition-colors">Digital Marketing</div>
+                    <div class="text-[11px] text-gray-500 dark:text-gray-400">SEO, Ads & Growth</div>
+                  </div>
+                </a>
+
+              </div>
+
+              <!-- Dropdown Footer -->
+              <div class="mt-2 pt-2 border-t border-gray-100 dark:border-gray-800">
+                <a href="/services.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-bold text-brandGold hover:bg-brandGold/10 transition-colors">
+                  <span>View Services Hub</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+              </div>
             </div>
           </div>
 
           <a href="/portfolio.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Portfolio</a>
-          <a href="/pricing.html" class="text-brandGold font-bold text-sm border-b-2 border-brandGold pb-1">Pricing</a>
+          <a href="/pricing.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Pricing</a>
           <a href="/about.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">About Us</a>
           <a href="/contact.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Contact Us</a>
+          <a href="/blog.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Blog</a>
         </div>
         
         <!-- Actions (Language + Theme + CTA) -->
@@ -138,7 +190,7 @@
 
     <!-- Mobile Menu Dropdown -->
     <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-brandNavyCard border-b border-gray-200 dark:border-gray-800 shadow-xl px-4 py-6 space-y-3 transition-all">
-      <a href="/index.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">Home</a>
+      <a href="/index.html" class="block px-4 py-2 text-brandGold font-bold rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Home</a>
       <div class="px-4 py-2">
         <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Services</span>
         <div class="mt-2 space-y-1 pl-2 border-l-2 border-brandGold/40">
@@ -149,7 +201,7 @@
         </div>
       </div>
       <a href="/portfolio.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">Portfolio</a>
-      <a href="/pricing.html" class="block px-4 py-2 text-brandGold font-bold rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Pricing</a>
+      <a href="/pricing.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">Pricing</a>
       <a href="/about.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">About Us</a>
       <a href="/contact.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">Contact Us</a>
       <div class="pt-3 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between px-4">

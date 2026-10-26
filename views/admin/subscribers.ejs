@@ -1,0 +1,24 @@
+<div class="space-y-6">
+  <div class="flex items-center justify-between">
+    <h1 class="text-2xl font-black text-white">Newsletter Subscribers</h1>
+    <a href="/rsadminn/subscribers/export" class="bg-yellow-500 hover:bg-yellow-400 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs transition">Export CSV</a>
+  </div>
+  <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+    <table class="w-full text-left border-collapse">
+      <thead>
+        <tr class="border-b border-slate-800 text-xs text-gray-400 bg-slate-950">
+          <th class="p-4">Email Address</th>
+          <th class="p-4">Subscribed Date</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-800 text-sm">
+        <% subscribers.forEach(sub => { %>
+        <tr>
+          <td class="p-4 font-semibold text-white"><%= sub.email %></td>
+          <td class="p-4 text-gray-400 text-xs"><%= sub.created_at %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>

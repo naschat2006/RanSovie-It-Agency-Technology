@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="<%= lang || 'en' %>" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= typeof seoTitle !== 'undefined' && seoTitle ? seoTitle : (settings.site_name || 'RanSovie IT Agency & Technology') %></title>
+  <meta name="description" content="<%= typeof seoDesc !== 'undefined' && seoDesc ? seoDesc : (settings.footer_text || 'Empowering global businesses with next-generation software, AI solutions, and digital excellence.') %>">
+  <% if (typeof noindex !== 'undefined' && noindex) { %>
+  <meta name="robots" content="noindex, nofollow">
+  <% } else { %>
+  <meta name="robots" content="index, follow">
+  <% } %>
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="<%= typeof seoTitle !== 'undefined' && seoTitle ? seoTitle : (settings.site_name || 'RanSovie IT Agency & Technology') %>">
+  <meta property="og:description" content="<%= typeof seoDesc !== 'undefined' && seoDesc ? seoDesc : (settings.footer_text || '') %>">
+  <meta property="og:url" content="https://ransovieitagency.com<%= currentPath || '/' %>">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="<%= typeof ogImage !== 'undefined' && ogImage ? ogImage : 'https://ransovieitagency.com/01.png' %>">
+  
+  <link rel="icon" type="image/png" href="/01.png">
+  <link rel="canonical" href="https://ransovieitagency.com<%= currentPath || '/' %>">
+
+  <!-- Tailwind CSS CDN or Vite -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0B132B',
+              dark: '#1C2541',
+              gold: '#F4D35E',
+              red: '#EE6C4D',
+              light: '#F8F9FA'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "RanSovie IT Agency & Technology",
+    "url": "https://ransovieitagency.com",
+    "logo": "https://ransovieitagency.com/01.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "<%= settings.phone %>",
+      "contactType": "customer service",
+      "email": "<%= settings.email %>"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "<%= settings.address %>",
+      "addressLocality": "Dhaka",
+      "addressCountry": "BD"
+    },
+    "sameAs": [
+      "<%= settings.facebook %>",
+      "<%= settings.linkedin %>",
+      "<%= settings.github %>"
+    ]
+  }
+  </script>
+  <!-- Immediate Theme Initializer -->
+  <script>
+    document.documentElement.classList.remove('dark');
+    localStorage.theme = 'light';
+  </script>
+</head>
+<body class="bg-[#FAF9F6] text-gray-900 transition-colors duration-300 antialiased overflow-x-hidden">
+  <!-- Top Bar -->
+  <div class="bg-slate-950 border-b border-slate-800 text-xs py-2 px-4 text-gray-400">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <a href="tel:<%= settings.phone %>" class="hover:text-yellow-400 transition flex items-center gap-1.5"><i class="fa-solid fa-phone text-yellow-500"></i> <%= settings.phone %></a>
+        <a href="mailto:<%= settings.email %>" class="hover:text-yellow-400 transition flex items-center gap-1.5"><i class="fa-solid fa-envelope text-yellow-500"></i> <%= settings.email %></a>
+      </div>
+      <div class="flex items-center gap-4">
+        <span><i class="fa-solid fa-clock text-yellow-500"></i> <%= lang === 'bn' ? settings.working_hours_bn || settings.working_hours : settings.working_hours %></span>
+        <div class="flex items-center gap-2 bg-slate-800 px-2 py-0.5 rounded text-xs font-semibold">
+          <a href="?lang=en" class="<%= lang === 'en' ? 'text-yellow-400 font-bold' : 'text-gray-400 hover:text-white' %>">EN</a>
+          <span class="text-gray-600">|</span>
+          <a href="?lang=bn" class="<%= lang === 'bn' ? 'text-yellow-400 font-bold' : 'text-gray-400 hover:text-white' %>">বাং</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800 shadow-md">
+    <div class="w-full px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <img src="/01.png" alt="RanSovie Logo" class="h-10 w-10 object-contain rounded-lg bg-slate-800 p-1">
+        <div>
+          <span class="text-xl font-extrabold tracking-tight text-white block">RanSovie <span class="text-yellow-400">IT</span></span>
+          <span class="text-[10px] text-gray-400 tracking-wider uppercase block"><%= lang === 'bn' ? 'এজেন্সি এন্ড টেকনোলজি' : 'Agency & Technology' %></span>
+        </div>
+      </a>
+      
+      <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+        <a href="/" class="hover:text-yellow-400 transition <%= currentPath === '/' ? 'text-yellow-400 font-semibold' : 'text-gray-300' %>"><%= lang === 'bn' ? 'হোম' : 'Home' %></a>
+        <a href="/services" class="hover:text-yellow-400 transition <%= currentPath && currentPath.startsWith('/services') ? 'text-yellow-400 font-semibold' : 'text-gray-300' %>"><%= lang === 'bn' ? 'সেবাসমূহ' : 'Services' %></a>
+        <a href="/portfolio" class="hover:text-yellow-400 transition <%= currentPath === '/portfolio' ? 'text-yellow-400 font-semibold' : 'text-gray-300' %>"><%= lang === 'bn' ? 'পোর্টফোলিও' : 'Portfolio' %></a>
+        <a href="/pricing" class="hover:text-yellow-400 transition <%= currentPath === '/pricing' ? 'text-yellow-400 font-semibold' : 'text-gray-300' %>"><%= lang === 'bn' ? 'মূল্যতালিকা' : 'Pricing' %></a>
+        <a href="/blog" class="hover:text-yellow-400 transition <%= currentPath && currentPath.startsWith('/blog') ? 'text-yellow-400 font-semibold' : 'text-gray-300' %>"><%= lang === 'bn' ? 'ব্লগ' : 'Blog' %></a>
+        <a href="/about" class="hover:text-yellow-400 transition <%= currentPath === '/about' ? 'text-yellow-400 font-semibold' : 'text-gray-300' %>"><%= lang === 'bn' ? 'আমাদের সম্পর্কে' : 'About' %></a>
+        <a href="/contact" class="hover:text-yellow-400 transition <%= currentPath === '/contact' ? 'text-yellow-400 font-semibold' : 'text-gray-300' %>"><%= lang === 'bn' ? 'যোগাযোগ' : 'Contact' %></a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-4">
+        <a href="<%= settings.calendly || '/contact' %>" target="_blank" class="bg-yellow-500 hover:bg-yellow-400 text-slate-950 px-5 py-2.5 rounded-xl font-bold text-sm shadow-lg transition flex items-center gap-2">
+          <i class="fa-solid fa-calendar-check"></i> <%= lang === 'bn' ? 'বুক কনসালটেশন' : 'Book Call' %>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" class="md:hidden text-gray-300 hover:text-white text-2xl focus:outline-none">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden bg-slate-950 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+      <a href="/" class="block py-2 text-gray-200 hover:text-yellow-400 font-medium"><%= lang === 'bn' ? 'হোম' : 'Home' %></a>
+      <a href="/services" class="block py-2 text-gray-200 hover:text-yellow-400 font-medium"><%= lang === 'bn' ? 'সেবাসমূহ' : 'Services' %></a>
+      <a href="/portfolio" class="block py-2 text-gray-200 hover:text-yellow-400 font-medium"><%= lang === 'bn' ? 'পোর্টফোলিও' : 'Portfolio' %></a>
+      <a href="/pricing" class="block py-2 text-gray-200 hover:text-yellow-400 font-medium"><%= lang === 'bn' ? 'মূল্যতালিকা' : 'Pricing' %></a>
+      <a href="/blog" class="block py-2 text-gray-200 hover:text-yellow-400 font-medium"><%= lang === 'bn' ? 'ব্লগ' : 'Blog' %></a>
+      <a href="/about" class="block py-2 text-gray-200 hover:text-yellow-400 font-medium"><%= lang === 'bn' ? 'আমাদের সম্পর্কে' : 'About' %></a>
+      <a href="/contact" class="block py-2 text-gray-200 hover:text-yellow-400 font-medium"><%= lang === 'bn' ? 'যোগাযোগ' : 'Contact' %></a>
+      <div class="pt-2">
+        <a href="<%= settings.calendly || '/contact' %>" class="block text-center bg-yellow-500 text-slate-950 py-2.5 rounded-xl font-bold"><%= lang === 'bn' ? 'বুক কনসালটেশন' : 'Book Call' %></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <%- body %>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 border-t border-slate-800 pt-16 pb-12 text-gray-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <div class="space-y-4">
+        <div class="flex items-center gap-3">
+          <img src="/01.png" alt="RanSovie Logo" class="h-8 w-8 object-contain rounded bg-slate-800 p-1">
+          <span class="text-lg font-bold text-white">RanSovie <span class="text-yellow-400">IT</span></span>
+        </div>
+        <p class="text-gray-400 text-xs leading-relaxed"><%= lang === 'bn' ? settings.footer_text_bn || settings.footer_text : settings.footer_text %></p>
+        <p class="text-xs text-yellow-500 font-medium"><%= lang === 'bn' ? settings.concern_of_bn || settings.concern_of : settings.concern_of %></p>
+      </div>
+
+      <div>
+        <h3 class="text-white font-semibold mb-4 text-base"><%= lang === 'bn' ? 'দ্রুত লিংক' : 'Quick Links' %></h3>
+        <ul class="space-y-2 text-xs">
+          <li><a href="/services" class="hover:text-yellow-400 transition"><%= lang === 'bn' ? 'আমাদের সেবাসমূহ' : 'Our Services' %></a></li>
+          <li><a href="/portfolio" class="hover:text-yellow-400 transition"><%= lang === 'bn' ? 'প্রোজেক্ট পোর্টফোলিও' : 'Portfolio Projects' %></a></li>
+          <li><a href="/pricing" class="hover:text-yellow-400 transition"><%= lang === 'bn' ? 'মূল্য নির্ধারণ পরিকল্পনা' : 'Pricing Plans' %></a></li>
+          <li><a href="/blog" class="hover:text-yellow-400 transition"><%= lang === 'bn' ? 'টেক ব্লগ ও আর্টিকেল' : 'Tech Blog' %></a></li>
+          <li><a href="/about" class="hover:text-yellow-400 transition"><%= lang === 'bn' ? 'কোম্পানি সম্পর্কে' : 'About Company' %></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-white font-semibold mb-4 text-base"><%= lang === 'bn' ? 'আইনি নীতিমালা' : 'Legal & Policies' %></h3>
+        <ul class="space-y-2 text-xs">
+          <li><a href="/privacy" class="hover:text-yellow-400 transition">Privacy Policy</a></li>
+          <li><a href="/terms" class="hover:text-yellow-400 transition">Terms of Service</a></li>
+          <li><a href="/refund" class="hover:text-yellow-400 transition">Refund Policy</a></li>
+          <li><a href="/cookie" class="hover:text-yellow-400 transition">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-white font-semibold text-base"><%= lang === 'bn' ? 'যোগাযোগ ও অবস্থান' : 'Contact & Location' %></h3>
+        <p class="text-xs"><i class="fa-solid fa-location-dot text-yellow-500 mr-2"></i> <%= settings.address %></p>
+        <p class="text-xs"><i class="fa-solid fa-phone text-yellow-500 mr-2"></i> <%= settings.phone %></p>
+        <p class="text-xs"><i class="fa-solid fa-envelope text-yellow-500 mr-2"></i> <%= settings.email %></p>
+        
+        <div class="flex items-center gap-3 pt-2">
+          <% if (settings.facebook) { %>
+          <a href="<%= settings.facebook %>" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-yellow-500 hover:text-slate-950 transition"><i class="fa-brands fa-facebook-f"></i></a>
+          <% } %>
+          <% if (settings.linkedin) { %>
+          <a href="<%= settings.linkedin %>" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-yellow-500 hover:text-slate-950 transition"><i class="fa-brands fa-linkedin-in"></i></a>
+          <% } %>
+          <% if (settings.github) { %>
+          <a href="<%= settings.github %>" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-yellow-500 hover:text-slate-950 transition"><i class="fa-brands fa-github"></i></a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-900 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+      <p><%= lang === 'bn' ? settings.copyright_bn || settings.copyright : settings.copyright %></p>
+      <div class="flex items-center gap-6">
+        <a href="/contact" class="hover:text-white transition"><%= lang === 'bn' ? 'সাপোর্ট পান' : 'Get Support' %></a>
+        <a href="/sitemap.xml" class="hover:text-white transition">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('mobileMenuBtn');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>

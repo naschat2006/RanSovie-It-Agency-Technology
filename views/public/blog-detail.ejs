@@ -1,0 +1,21 @@
+<section class="py-20 bg-slate-950">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    <div class="space-y-4">
+      <div class="flex items-center gap-4 text-xs text-gray-400">
+        <span><i class="fa-solid fa-calendar text-yellow-500"></i> <%= post.date %></span>
+        <span><i class="fa-solid fa-user text-yellow-500"></i> <%= post.author %></span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-black text-white"><%= lang === 'bn' ? post.title_bn : post.title_en %></h1>
+    </div>
+
+    <% if (post.cover_image) { %>
+    <div class="rounded-2xl overflow-hidden h-[380px] border border-slate-800">
+      <img src="<%= post.cover_image %>" alt="<%= post.title_en %>" class="w-full h-full object-cover">
+    </div>
+    <% } %>
+
+    <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl text-gray-300 leading-relaxed space-y-6">
+      <%- lang === 'bn' ? post.content_bn : post.content_en %>
+    </div>
+  </div>
+</section>

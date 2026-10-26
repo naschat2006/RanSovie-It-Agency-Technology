@@ -24,6 +24,10 @@
     "Contact Us": "যোগাযোগ করুন",
     "Contact": "যোগাযোগ",
     "Blog": "ব্লগ",
+    "Search": "সার্চ",
+    "Search...": "সার্চ করুন...",
+    "Search Agency": "সার্চ",
+    "Search Agency & Leadership...": "এজেন্সি ও নেতৃত্ব সার্চ করুন...",
     "Request a Quote": "কোটেশন নিন",
     "Start a Project": "প্রজেক্ট শুরু করুন",
     "Request Quote": "কোটেশন নিন",
@@ -577,16 +581,8 @@
   // 4. THEME & INITIALIZATION CONTROLLER
   // ==========================================
   function applyInitialTheme() {
-    const isDark =
-      localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches);
-
-    if (isDark) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    document.documentElement.classList.remove('dark');
+    localStorage.theme = 'light';
   }
 
   // Run theme immediately to prevent light/dark flash
@@ -595,53 +591,15 @@
   // Full DOM Initialization
   function initApp() {
     const htmlEl = document.documentElement;
+    htmlEl.classList.remove('dark');
+    localStorage.theme = 'light';
 
-    // Theme elements
-    const themeBtns = [
-      document.getElementById('theme-toggle'),
-      document.getElementById('theme-toggle-mobile')
-    ].filter(Boolean);
-
-    const themeIcons = [
-      document.getElementById('theme-icon'),
-      document.getElementById('theme-icon-mobile')
-    ].filter(Boolean);
-
-    function syncThemeIcons() {
-      const isDark = htmlEl.classList.contains('dark');
-      themeIcons.forEach(icon => {
-        if (isDark) {
-          icon.classList.remove('fa-moon');
-          icon.classList.add('fa-sun');
-        } else {
-          icon.classList.remove('fa-sun');
-          icon.classList.add('fa-moon');
-        }
-      });
-      themeBtns.forEach(btn => {
-        btn.setAttribute('title', isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode');
-      });
-    }
-
-    function toggleTheme() {
-      htmlEl.classList.toggle('dark');
-      const isDark = htmlEl.classList.contains('dark');
-      localStorage.theme = isDark ? 'dark' : 'light';
-      syncThemeIcons();
-      window.dispatchEvent(new CustomEvent('ransovieThemeChanged', { detail: { theme: localStorage.theme } }));
-    }
-
-    themeBtns.forEach(btn => {
-      if (!btn._hasThemeClick) {
-        btn._hasThemeClick = true;
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          toggleTheme();
-        });
-      }
+    // Ensure theme toggle buttons are hidden
+    ['theme-toggle', 'theme-toggle-mobile'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = 'none';
     });
 
-    syncThemeIcons();
 
     // Language Toggle
     function toggleLanguage() {
@@ -736,6 +694,18 @@
     if (document.body) {
       observer.observe(document.body, { childList: true, subtree: true });
     }
+
+    // Auto-highlight active nav link based on current path
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === currentPath || (currentPath !== '/' && href !== '/' && currentPath.startsWith(href))) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
   }
 
   if (document.readyState === 'loading') {

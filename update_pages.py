@@ -25,6 +25,10 @@ def update_files():
         # Replace footer
         new_content = re.sub(r'<!-- Comprehensive Footer -->.*?</footer>', footer, new_content, flags=re.DOTALL)
         
+        # Ensure search.js is included
+        if '<script src="/search.js"' not in new_content:
+            new_content = new_content.replace('</body>', '  <!-- RanSovie Live Search & Leadership Knowledge Panel -->\n  <script src="/search.js" defer></script>\n</body>')
+        
         with open(filename, 'w', encoding='utf-8') as f:
             f.write(new_content)
         print(f"Updated {filename}")

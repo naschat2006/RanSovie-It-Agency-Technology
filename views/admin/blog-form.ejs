@@ -1,0 +1,50 @@
+<div class="space-y-6">
+  <div class="flex items-center justify-between">
+    <h1 class="text-2xl font-black text-white"><%= post ? 'Edit' : 'Add' %> Blog Post</h1>
+    <a href="/rsadminn/blog" class="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-xl text-sm font-semibold transition">Back to List</a>
+  </div>
+  
+  <form action="<%= post ? '/rsadminn/blog/edit/' + post.id : '/rsadminn/blog/add' %>" method="POST" class="bg-slate-900 border border-slate-800 p-8 rounded-2xl space-y-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <label class="block text-xs font-semibold text-gray-300 mb-2">Title (EN)</label>
+        <input type="text" name="title_en" value="<%= post ? post.title_en : '' %>" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:border-yellow-500 outline-none">
+      </div>
+      <div>
+        <label class="block text-xs font-semibold text-gray-300 mb-2">Title (BN)</label>
+        <input type="text" name="title_bn" value="<%= post ? post.title_bn : '' %>" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:border-yellow-500 outline-none">
+      </div>
+      <div>
+        <label class="block text-xs font-semibold text-gray-300 mb-2">Slug</label>
+        <input type="text" name="slug" value="<%= post ? post.slug : '' %>" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:border-yellow-500 outline-none">
+      </div>
+      <div>
+        <label class="block text-xs font-semibold text-gray-300 mb-2">Author</label>
+        <input type="text" name="author" value="<%= post ? post.author : '' %>" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:border-yellow-500 outline-none">
+      </div>
+      <div class="md:col-span-2">
+        <label class="block text-xs font-semibold text-gray-300 mb-2">Content (EN)</label>
+        <textarea name="content_en" rows="5" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:border-yellow-500 outline-none"><%= post ? post.content_en : '' %></textarea>
+      </div>
+      <div class="md:col-span-2">
+        <label class="block text-xs font-semibold text-gray-300 mb-2">Content (BN)</label>
+        <textarea name="content_bn" rows="5" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:border-yellow-500 outline-none"><%= post ? post.content_bn : '' %></textarea>
+      </div>
+      <div>
+        <label class="block text-xs font-semibold text-gray-300 mb-2">Cover Image URL</label>
+        <input type="text" name="cover_image" value="<%= post ? post.cover_image : '' %>" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:border-yellow-500 outline-none">
+      </div>
+      <div>
+        <label class="block text-xs font-semibold text-gray-300 mb-2">Status</label>
+        <select name="status" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:border-yellow-500 outline-none">
+          <option value="published" <%= post && post.status === 'published' ? 'selected' : '' %>>Published</option>
+          <option value="draft" <%= post && post.status === 'draft' ? 'selected' : '' %>>Draft</option>
+        </select>
+      </div>
+    </div>
+    
+    <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-slate-950 font-bold py-3 rounded-xl transition shadow-lg">
+      <%= post ? 'Update Post' : 'Add Post' %>
+    </button>
+  </form>
+</div>

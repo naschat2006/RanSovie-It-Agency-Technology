@@ -1,0 +1,63 @@
+<section class="py-20 bg-slate-950">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <div class="inline-flex items-center gap-2 bg-yellow-500/10 text-yellow-400 px-4 py-1.5 rounded-full text-xs font-semibold">
+        <i class="fa-solid fa-building"></i> <%= lang === 'bn' ? 'আমাদের গল্প' : 'About RanSovie' %>
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-black text-white"><%= lang === 'bn' ? 'ডিজিটাল উদ্ভাবনে অগ্রপথিক' : 'Pioneering Digital Innovation & Excellence' %></h1>
+      <p class="text-gray-300 text-base leading-relaxed">
+        <%= lang === 'bn' ? 'র‍্যানসোভি আইটি এজেন্সি এন্ড টেকনোলজি হলো ' + settings.concern_of_bn + ' এর একটি অঙ্গপ্রতিষ্ঠান। আমরা বিশ্বমানের সফটওয়্যার এবং এআই সলিউশন প্রদানে প্রতিশ্রুতিবদ্ধ।' : 'RanSovie IT Agency & Technology is ' + settings.concern_of + '. We build robust software solutions that empower enterprises worldwide.' %>
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl text-center space-y-3">
+        <div class="text-3xl font-black text-yellow-400">100+</div>
+        <h3 class="text-white font-bold"><%= lang === 'bn' ? 'সফল প্রজেক্ট' : 'Successful Projects' %></h3>
+        <p class="text-xs text-gray-400"><%= lang === 'bn' ? 'বিশ্বের বিভিন্ন দেশে সফলভাবে ডেলিভারি।' : 'Delivered across global markets.' %></p>
+      </div>
+      <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl text-center space-y-3">
+        <div class="text-3xl font-black text-yellow-400">10+</div>
+        <h3 class="text-white font-bold"><%= lang === 'bn' ? 'বিশেষজ্ঞ ইঞ্জিনিয়ার' : 'Expert Engineers' %></h3>
+        <p class="text-xs text-gray-400"><%= lang === 'bn' ? 'অভিজ্ঞ ও দক্ষ টিম।' : 'Dedicated development squad.' %></p>
+      </div>
+      <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl text-center space-y-3">
+        <div class="text-3xl font-black text-yellow-400">99%</div>
+        <h3 class="text-white font-bold"><%= lang === 'bn' ? 'ক্লায়েন্ট সন্তুষ্টি' : 'Client Satisfaction' %></h3>
+        <p class="text-xs text-gray-400"><%= lang === 'bn' ? 'দীর্ঘমেয়াদী ব্যবসায়িক অংশীদারিত্ব।' : 'Long-term client relationships.' %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-slate-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl font-black text-white mb-12"><%= lang === 'bn' ? 'আমাদের নেতৃত্ব' : 'Our Leadership' %></h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+      <!-- Chairman & Founder -->
+      <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 space-y-4">
+        <img src="/assets/aistudio/src_pages_chairman_1eb7fec7.png" alt="Md. Ashraful Alam" class="w-48 h-48 rounded-full mx-auto object-cover border-4 border-yellow-500">
+        <h3 class="text-xl font-bold text-white"><%= lang === 'bn' ? 'মুহাঃ আশরাফুল আলম' : 'Md. Ashraful Alam' %></h3>
+        <p class="text-yellow-400 font-semibold"><%= lang === 'bn' ? 'চেয়ারম্যান ও প্রতিষ্ঠাতা' : 'Chairman & Founder' %></p>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          <%= lang === 'bn' ? 'মুহাঃ আশরাফুল আলম RanSovie IT Agency & Technology-এর চেয়ারম্যান ও প্রতিষ্ঠাতা। তিনি প্রতিষ্ঠানের দীর্ঘমেয়াদি লক্ষ্য ও দিকনির্দেশনা ঠিক করেন, এবং ক্লায়েন্ট ও টিমের সাথে এমন সম্পর্ক গড়েন যা সবার বড় হতে সাহায্য করে।' : 'Md. Ashraful Alam is the Chairman and Founder of RanSovie IT Agency & Technology. He sets the company’s long-term vision and direction, and builds the partnerships that help our clients and our team grow.' %>
+        </p>
+        <p class="text-white italic text-sm">
+          <%= lang === 'bn' ? '"ভালো ব্যবসা দাঁড়ায় বিশ্বাসের ওপর, আর বিশ্বাস গড়ে ওঠে একটা একটা কাজের মধ্য দিয়ে。"' : '"A good business is built on trust, and trust is built one project at a time."' %>
+        </p>
+      </div>
+      <!-- CEO & Founder -->
+      <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 space-y-4">
+        <img src="/assets/aistudio/src_pages_ceo_c8341b89.png" alt="Nafis Iqbal" class="w-48 h-48 rounded-full mx-auto object-cover border-4 border-yellow-500">
+        <h3 class="text-xl font-bold text-white"><%= lang === 'bn' ? 'নাফিস ইকবাল' : 'Nafis Iqbal' %></h3>
+        <p class="text-yellow-400 font-semibold"><%= lang === 'bn' ? 'সিইও ও প্রতিষ্ঠাতা' : 'CEO & Founder' %></p>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          <%= lang === 'bn' ? 'নাফিস ইকবাল RanSovie IT Agency & Technology-এর সিইও ও প্রতিষ্ঠাতা। তিনি প্রতিষ্ঠানের প্রতিদিনের কাজ পরিচালনা করেন, এবং নিশ্চিত করেন প্রতিটা প্রজেক্ট ভালোভাবে পরিকল্পনা হোক, সময়মতো শেষ হোক এবং যত্নের সাথে হস্তান্তর হোক।' : 'Nafis Iqbal is the CEO and Founder of RanSovie IT Agency & Technology. He leads the day-to-day work of the company, making sure every project is planned well, delivered on time and handed over with care.' %>
+        </p>
+        <p class="text-white italic text-sm">
+          <%= lang === 'bn' ? '"আমরা শুধু ওয়েবসাইট তৈরি করি না, আমরা ডিজিটাল ব্যবসা তৈরি করি।"' : '"We don’t just build websites, we build digital businesses."' %>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

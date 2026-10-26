@@ -1,0 +1,39 @@
+<section class="py-20 bg-slate-950">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <h1 class="text-4xl font-black text-white"><%= lang === 'bn' ? 'আমাদের পোর্টফোলিও' : 'Our Portfolio' %></h1>
+      <p class="text-gray-400 text-base"><%= lang === 'bn' ? 'আমাদের সফলভাবে সম্পন্ন করা প্রজেক্টগুলোর তালিকা।' : 'Discover our milestone projects delivered with excellence.' %></p>
+    </div>
+
+    <% if (portfolio && portfolio.length > 0) { %>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <% portfolio.forEach(item => { %>
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden group hover:border-yellow-500/50 transition">
+        <div class="relative overflow-hidden h-60">
+          <img src="<%= item.image %>" alt="<%= item.title_en %>" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <span class="absolute top-4 left-4 bg-yellow-500 text-slate-950 px-3 py-1 rounded-lg text-xs font-bold">
+            <%= item.category %>
+          </span>
+        </div>
+        <div class="p-6 space-y-3">
+          <p class="text-xs text-gray-400"><%= item.client %></p>
+          <h2 class="text-xl font-bold text-white"><%= lang === 'bn' ? item.title_bn : item.title_en %></h2>
+          <p class="text-gray-400 text-sm"><%= lang === 'bn' ? item.description_bn : item.description_en %></p>
+          <% if (item.link) { %>
+          <a href="<%= item.link %>" target="_blank" class="inline-flex items-center gap-2 text-yellow-400 font-semibold text-xs pt-2">
+            <%= lang === 'bn' ? 'লাইভ প্রিভিউ' : 'Live Preview' %> <i class="fa-solid fa-external-link"></i>
+          </a>
+          <% } %>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+    <% } else { %>
+    <div class="text-center py-16 bg-slate-900 border border-slate-800 rounded-2xl max-w-xl mx-auto space-y-4">
+      <div class="text-4xl text-yellow-500"><i class="fa-solid fa-briefcase"></i></div>
+      <h2 class="text-xl font-bold text-white"><%= lang === 'bn' ? 'শীঘ্রই নতুন প্রজেক্ট আসছে' : 'Portfolio Coming Soon' %></h2>
+      <p class="text-gray-400 text-sm"><%= lang === 'bn' ? 'আমাদের প্রজেক্ট কেস স্টাডি খুব শীঘ্রই এখানে আপডেট করা হবে।' : 'Our latest portfolio projects and case studies will be updated here shortly.' %></p>
+    </div>
+    <% } %>
+  </div>
+</section>

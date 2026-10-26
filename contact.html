@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +10,7 @@
   
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ransovie.com/contact.html" />
+  <meta property="og:url" content="https://ransovie.com/contact" />
   <meta property="og:title" content="Contact RanSovie IT Agency | Start Your Project" />
   <meta property="og:description" content="Get in touch with RanSovie IT Agency to discuss your digital transformation and software project." />
   <meta property="og:image" content="https://ransovie.com/images/ransovie-logo.svg" />
@@ -94,77 +94,82 @@
   }
   </script>
 
+  <!-- Immediate Theme Initializer -->
+  <script>
+    document.documentElement.classList.remove('dark');
+    localStorage.theme = 'light';
+  </script>
 </head>
-<body class="bg-gray-50 text-gray-900 dark:bg-brandNavyDark dark:text-white transition-colors duration-300 antialiased overflow-x-hidden selection:bg-brandGold selection:text-brandBlack">
+<body class="bg-[#FAF9F6] text-gray-900 transition-colors duration-300 antialiased overflow-x-hidden">
 
       <!-- Navigation Bar -->
-  <nav id="navbar" class="bg-white dark:bg-brandNavyDark sticky top-0 z-50 shadow-sm border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <nav id="navbar" class="bg-[#FAF9F6]/95 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-gray-200/80 transition-colors duration-300">
+    <div class="w-full px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         <!-- Logo -->
-        <a href="/index.html" class="flex items-center gap-3 group">
+        <a href="/" class="flex items-center gap-3 group">
           <div class="relative w-11 h-11 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
             <img src="/images/ransovie-logo.svg" alt="RanSovie Logo" class="w-full h-full object-contain filter drop-shadow-[0_2px_8px_rgba(212,175,55,0.35)]" />
           </div>
           <div class="flex flex-col">
-            <span class="font-extrabold text-brandNavyDark dark:text-white text-lg tracking-tight leading-tight group-hover:text-brandGold transition-colors">RanSovie</span>
-            <span class="text-[9px] font-semibold text-gray-500 dark:text-brandGold tracking-widest uppercase">IT Agency & Technology</span>
+            <span class="font-extrabold text-brandNavyDark text-lg tracking-tight leading-tight group-hover:text-brandGold transition-colors">RanSovie</span>
+            <span class="text-[9px] font-semibold text-gray-600 tracking-widest uppercase">IT Agency & Technology</span>
           </div>
         </a>
         
         <!-- Desktop Links -->
         <div class="hidden lg:flex items-center space-x-7">
-          <a href="/index.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Home</a>
+          <a href="/" class="nav-link active text-brandNavyDark font-semibold text-sm hover:text-brandGold transition">Home</a>
           
           <!-- Services Dropdown (Clean, name-only without bulky paragraphs) -->
           <div class="relative group" id="services-nav-group">
-            <a href="/services.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition flex items-center gap-1.5 py-4">
+            <a href="/services" class="nav-link text-brandNavyDark font-semibold text-sm hover:text-brandGold transition flex items-center gap-1.5 py-4">
               <span>Services</span>
-              <i class="fa-solid fa-chevron-down text-[11px] transition-transform duration-200 group-hover:rotate-180 text-gray-400 group-hover:text-brandGold"></i>
+              <i class="fa-solid fa-chevron-down text-[11px] transition-transform duration-200 group-hover:rotate-180 text-gray-500 group-hover:text-brandGold"></i>
             </a>
             
             <!-- Clean Dropdown Menu -->
-            <div class="invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 absolute left-0 top-full w-72 bg-white dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800 rounded-2xl shadow-2xl p-3 z-50">
+            <div class="invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 absolute left-0 top-full w-72 bg-white border border-gray-200 rounded-2xl shadow-2xl p-3 z-50">
               <div class="space-y-1.5">
                 
                 <!-- 1. Web Development -->
-                <a href="/web-development.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-red-500/10 dark:hover:bg-red-500/15 group/item transition-colors">
+                <a href="/web-development" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-red-500/10 group/item transition-colors">
                   <div class="w-9 h-9 rounded-lg bg-red-500/10 text-brandRed flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brandRed group-hover/item:text-white transition-colors">
                     <i class="fa-solid fa-code"></i>
                   </div>
                   <div>
-                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-brandRed transition-colors">Web Development</div>
-                    <div class="text-[11px] text-gray-500 dark:text-gray-400">Custom Apps & Systems</div>
+                    <div class="text-sm font-bold text-gray-900 group-hover/item:text-brandRed transition-colors">Web Development</div>
+                    <div class="text-[11px] text-gray-500">Custom Apps & Systems</div>
                   </div>
                 </a>
 
                 <!-- 2. Graphic Design -->
-                <a href="/graphic-design.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-yellow-500/10 dark:hover:bg-yellow-500/15 group/item transition-colors">
+                <a href="/graphic-design" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-yellow-500/10 group/item transition-colors">
                   <div class="w-9 h-9 rounded-lg bg-yellow-500/10 text-brandGold flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brandGold group-hover/item:text-brandBlack transition-colors">
                     <i class="fa-solid fa-pen-nib"></i>
                   </div>
                   <div>
-                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-brandGold transition-colors">Graphic Design</div>
-                    <div class="text-[11px] text-gray-500 dark:text-gray-400">Brand Identity & UI/UX</div>
+                    <div class="text-sm font-bold text-gray-900 group-hover/item:text-brandGold transition-colors">Graphic Design</div>
+                    <div class="text-[11px] text-gray-500">Brand Identity & UI/UX</div>
                   </div>
                 </a>
 
                 <!-- 3. Digital Marketing -->
-                <a href="/digital-marketing.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-green-500/10 dark:hover:bg-green-500/15 group/item transition-colors">
-                  <div class="w-9 h-9 rounded-lg bg-green-500/10 text-green-500 flex items-center justify-center text-sm shrink-0 group-hover/item:bg-green-500 group-hover/item:text-white transition-colors">
+                <a href="/digital-marketing" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-green-500/10 group/item transition-colors">
+                  <div class="w-9 h-9 rounded-lg bg-green-500/10 text-green-600 flex items-center justify-center text-sm shrink-0 group-hover/item:bg-green-600 group-hover/item:text-white transition-colors">
                     <i class="fa-solid fa-chart-line"></i>
                   </div>
                   <div>
-                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-green-500 transition-colors">Digital Marketing</div>
-                    <div class="text-[11px] text-gray-500 dark:text-gray-400">SEO, Ads & Growth</div>
+                    <div class="text-sm font-bold text-gray-900 group-hover/item:text-green-600 transition-colors">Digital Marketing</div>
+                    <div class="text-[11px] text-gray-500">SEO, Ads & Growth</div>
                   </div>
                 </a>
 
               </div>
 
               <!-- Dropdown Footer -->
-              <div class="mt-2 pt-2 border-t border-gray-100 dark:border-gray-800">
-                <a href="/services.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-bold text-brandGold hover:bg-brandGold/10 transition-colors">
+              <div class="mt-2 pt-2 border-t border-gray-100">
+                <a href="/services" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-bold text-brandGold hover:bg-brandGold/10 transition-colors">
                   <span>View Services Hub</span>
                   <i class="fa-solid fa-arrow-right text-[10px]"></i>
                 </a>
@@ -172,25 +177,28 @@
             </div>
           </div>
 
-          <a href="/portfolio.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Portfolio</a>
-          <a href="/pricing.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Pricing</a>
-          <a href="/about.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">About Us</a>
-          <a href="/contact.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Contact Us</a>
-          <a href="/blog.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Blog</a>
+          <a href="/portfolio" class="nav-link text-brandNavyDark font-semibold text-sm hover:text-brandGold transition">Portfolio</a>
+          <a href="/pricing" class="nav-link text-brandNavyDark font-semibold text-sm hover:text-brandGold transition">Pricing</a>
+          <a href="/about" class="nav-link text-brandNavyDark font-semibold text-sm hover:text-brandGold transition">About Us</a>
+          <a href="/contact" class="nav-link text-brandNavyDark font-semibold text-sm hover:text-brandGold transition">Contact Us</a>
+          <a href="/blog" class="nav-link text-brandNavyDark font-semibold text-sm hover:text-brandGold transition">Blog</a>
         </div>
         
-        <!-- Actions (Language + Theme + CTA) -->
-        <div class="hidden lg:flex items-center space-x-4">
+        <!-- Actions (Search + Language + CTA) -->
+        <div class="hidden lg:flex items-center space-x-3">
+          <!-- Search Modal Trigger Button -->
+          <button id="search-modal-trigger" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-300 bg-white hover:border-brandGold hover:text-brandGold text-xs font-semibold text-gray-700 transition shadow-2xs group cursor-pointer" title="Search RanSovie & Leadership (Ctrl+K)">
+            <i class="fa-solid fa-magnifying-glass text-brandGold group-hover:scale-110 transition-transform"></i>
+            <span class="search-btn-label">Search...</span>
+            <kbd class="text-[10px] bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded border border-gray-200 font-mono">⌘K</kbd>
+          </button>
+
           <!-- Language Toggle (EN / BN) -->
-          <button id="lang-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-brandNavyCard text-xs font-bold transition-all shadow-sm hover:border-brandGold focus:outline-none" title="Switch Language / ভাষা পরিবর্তন (EN / BN)">
+          <button id="lang-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-300 bg-white text-xs font-bold transition-all shadow-sm hover:border-brandGold focus:outline-none" title="Switch Language / ভাষা পরিবর্তন (EN / BN)">
             <i class="fa-solid fa-globe text-[11px] text-brandGold"></i>
             <span id="lang-badge-en" class="text-brandGold font-black">EN</span>
             <span class="text-gray-400 text-[10px]">/</span>
-            <span id="lang-badge-bn" class="text-gray-500 dark:text-gray-400 font-medium">BN</span>
-          </button>
-          
-          <button id="theme-toggle" class="hover:text-brandGold transition-colors p-2.5 rounded-full bg-gray-100 dark:bg-brandNavyCard text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 shadow-inner focus:outline-none" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
-            <i id="theme-icon" class="fa-solid fa-sun w-4 h-4 flex items-center justify-center"></i>
+            <span id="lang-badge-bn" class="text-gray-500 font-medium">BN</span>
           </button>
 
           <a href="/contact.html?type=quote" class="bg-brandGold hover:bg-yellow-500 text-brandNavyDark font-bold px-5 py-2.5 rounded text-sm transition shadow-lg flex items-center gap-2">
@@ -198,17 +206,17 @@
           </a>
         </div>
         
-        <!-- Mobile Menu Toggle -->
+        <!-- Mobile Menu Toggle & Search -->
         <div class="lg:hidden flex items-center gap-2">
-          <button id="lang-toggle-mobile-header" class="flex items-center gap-1 px-2.5 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-brandNavyCard text-xs font-bold hover:text-brandGold transition-colors" title="Switch Language (EN / BN)">
+          <button id="search-modal-trigger-mobile" class="w-8 h-8 rounded-full border border-gray-300 bg-white flex items-center justify-center text-xs text-gray-700 hover:border-brandGold hover:text-brandGold transition cursor-pointer" title="Search Agency">
+            <i class="fa-solid fa-magnifying-glass text-brandGold"></i>
+          </button>
+          <button id="lang-toggle-mobile-header" class="flex items-center gap-1 px-2.5 py-1.5 rounded-full border border-gray-300 bg-white text-xs font-bold hover:text-brandGold transition-colors" title="Switch Language (EN / BN)">
             <span id="lang-badge-en-mobile" class="text-brandGold font-black">EN</span>
             <span class="text-gray-400 text-[10px]">/</span>
-            <span id="lang-badge-bn-mobile" class="text-gray-500 dark:text-gray-400 font-medium">BN</span>
+            <span id="lang-badge-bn-mobile" class="text-gray-500 font-medium">BN</span>
           </button>
-          <button id="theme-toggle-mobile" class="hover:text-brandGold transition-colors p-2 rounded-full bg-gray-100 dark:bg-brandNavyCard text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700" aria-label="Toggle Dark Mode">
-            <i id="theme-icon-mobile" class="fa-solid fa-sun w-4 h-4 flex items-center justify-center"></i>
-          </button>
-          <button id="mobile-menu-btn" class="p-1.5 text-2xl text-brandNavyDark dark:text-white focus:outline-none hover:text-brandGold transition-colors">
+          <button id="mobile-menu-btn" class="p-1.5 text-2xl text-brandNavyDark focus:outline-none hover:text-brandGold transition-colors">
             <i class="fa-solid fa-bars"></i>
           </button>
         </div>
@@ -216,23 +224,33 @@
     </div>
 
     <!-- Mobile Menu Dropdown -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-brandNavyCard border-b border-gray-200 dark:border-gray-800 shadow-xl px-4 py-6 space-y-3 transition-all">
-      <a href="/index.html" class="block px-4 py-2 text-brandGold font-bold rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Home</a>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 shadow-xl px-4 py-6 space-y-3 transition-all">
+      <!-- Mobile Search Button -->
+      <div class="px-2 pb-2">
+        <button id="search-modal-trigger-drawer" class="w-full flex items-center justify-between px-3.5 py-2.5 bg-gray-100 hover:bg-gray-200 border border-gray-200 rounded-xl text-xs font-semibold text-gray-700 transition">
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-magnifying-glass text-brandGold"></i>
+            <span>Search Agency & Leadership...</span>
+          </span>
+          <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-gray-300 font-mono">⌘K</span>
+        </button>
+      </div>
+      <a href="/" class="block px-4 py-2 text-brandGold font-bold rounded-lg hover:bg-gray-50:bg-gray-800">Home</a>
       <div class="px-4 py-2">
         <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Services</span>
         <div class="mt-2 space-y-1 pl-2 border-l-2 border-brandGold/40">
-          <a href="/web-development.html" class="block py-1 text-sm text-gray-700 dark:text-gray-300 hover:text-brandGold">Web Development</a>
-          <a href="/graphic-design.html" class="block py-1 text-sm text-gray-700 dark:text-gray-300 hover:text-brandGold">Graphic Design</a>
-          <a href="/digital-marketing.html" class="block py-1 text-sm text-gray-700 dark:text-gray-300 hover:text-brandGold">Digital Marketing</a>
-          <a href="/services.html" class="block py-1 text-xs text-brandGold font-semibold">View All Services →</a>
+          <a href="/web-development" class="block py-1 text-sm text-gray-700 hover:text-brandGold">Web Development</a>
+          <a href="/graphic-design" class="block py-1 text-sm text-gray-700 hover:text-brandGold">Graphic Design</a>
+          <a href="/digital-marketing" class="block py-1 text-sm text-gray-700 hover:text-brandGold">Digital Marketing</a>
+          <a href="/services" class="block py-1 text-xs text-brandGold font-semibold">View All Services →</a>
         </div>
       </div>
-      <a href="/portfolio.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">Portfolio</a>
-      <a href="/pricing.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">Pricing</a>
-      <a href="/about.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">About Us</a>
-      <a href="/contact.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">Contact Us</a>
-      <div class="pt-3 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between px-4">
-        <button id="lang-toggle-mobile" class="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-brandGold">
+      <a href="/portfolio" class="block px-4 py-2 font-semibold text-gray-800 hover:text-brandGold hover:bg-gray-50:bg-gray-800 rounded-lg">Portfolio</a>
+      <a href="/pricing" class="block px-4 py-2 font-semibold text-gray-800 hover:text-brandGold hover:bg-gray-50:bg-gray-800 rounded-lg">Pricing</a>
+      <a href="/about" class="block px-4 py-2 font-semibold text-gray-800 hover:text-brandGold hover:bg-gray-50:bg-gray-800 rounded-lg">About Us</a>
+      <a href="/contact" class="block px-4 py-2 font-semibold text-gray-800 hover:text-brandGold hover:bg-gray-50:bg-gray-800 rounded-lg">Contact Us</a>
+      <div class="pt-3 border-t border-gray-100 flex items-center justify-between px-4">
+        <button id="lang-toggle-mobile" class="flex items-center gap-2 text-sm font-semibold text-gray-700 hover:text-brandGold">
           <i class="fa-solid fa-globe text-brandGold"></i>
           <span>Language:</span>
           <span id="lang-badge-drawer" class="font-bold text-brandGold">EN / BN</span>
@@ -243,25 +261,25 @@
   </nav>
 
   <!-- Main Content -->
-  <section class="py-32 px-4 sm:px-6 lg:px-8 relative z-10 bg-white dark:bg-brandNavyDark min-h-screen pt-36">
+  <section class="py-32 px-4 sm:px-6 lg:px-8 relative z-10 bg-white min-h-screen pt-36">
     <div class="max-w-3xl mx-auto text-center">
       <h2 class="text-brandGold font-bold tracking-widest uppercase text-xs sm:text-sm mb-3">Get In Touch</h2>
       <h3 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 tracking-tight" id="contact-page-title">Direct Agency Inquiry & Quote</h3>
-      <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base max-w-xl mx-auto mb-10">
+      <p class="text-gray-600 text-sm sm:text-base max-w-xl mx-auto mb-10">
         Whether you are seeking custom software engineering, a full brand overhaul, or targeted growth campaigns, our directors respond within 24 hours.
       </p>
 
       <!-- Inquiry Type Tabs -->
-      <div class="flex items-center justify-center gap-2 p-1.5 bg-gray-200/80 dark:bg-gray-800/80 rounded-xl max-w-md mx-auto mb-8 shadow-inner" role="tablist">
+      <div class="flex items-center justify-center gap-2 p-1.5 bg-gray-200/80 rounded-xl max-w-md mx-auto mb-8 shadow-inner" role="tablist">
         <button type="button" id="tab-btn-contact" class="flex-1 py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all bg-brandRed text-white shadow-sm flex items-center justify-center gap-2" role="tab" aria-selected="true">
           <i class="fa-regular fa-envelope"></i> General Contact
         </button>
-        <button type="button" id="tab-btn-quote" class="flex-1 py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 dark:text-gray-300 hover:text-white flex items-center justify-center gap-2" role="tab" aria-selected="false">
+        <button type="button" id="tab-btn-quote" class="flex-1 py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 hover:text-white flex items-center justify-center gap-2" role="tab" aria-selected="false">
           <i class="fa-solid fa-file-invoice-dollar text-brandGold"></i> Request a Quote
         </button>
       </div>
 
-      <div class="bg-gray-50 dark:bg-brandNavyCard p-6 sm:p-10 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-xl text-left relative overflow-hidden">
+      <div class="bg-gray-50 p-6 sm:p-10 rounded-2xl border border-gray-100 shadow-xl text-left relative overflow-hidden">
         
         <!-- Inline Animated Check Success Banner -->
         <div id="inline-success-banner" class="hidden mb-8 p-5 sm:p-6 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-white transition-all duration-300">
@@ -274,10 +292,10 @@
             </div>
             <div>
               <div class="flex items-center gap-2 mb-1">
-                <h4 class="font-extrabold text-base text-gray-900 dark:text-white" id="inline-success-title">Message Sent Successfully!</h4>
+                <h4 class="font-extrabold text-base text-gray-900" id="inline-success-title">Message Sent Successfully!</h4>
                 <span class="text-[10px] font-mono font-bold text-brandGold bg-brandGold/15 px-2 py-0.5 rounded border border-brandGold/30" id="inline-success-badge">#AB-VERIFIED</span>
               </div>
-              <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed" id="inline-success-desc">
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed" id="inline-success-desc">
                 Thank you! Your submission has been securely registered in our system. A project director will reach out within 24 hours.
               </p>
             </div>
@@ -290,31 +308,31 @@
           <!-- Inquiry Tabs -->
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-4">
             <button type="button" id="tab-btn-contact" class="py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all bg-brandRed text-white shadow-sm flex items-center justify-center gap-2" role="tab">General Contact</button>
-            <button type="button" id="tab-btn-quote" class="py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 dark:text-gray-300 hover:text-white bg-gray-200 dark:bg-gray-800 flex items-center justify-center gap-2" role="tab">Request a Quote</button>
-            <button type="button" id="tab-btn-feedback" class="py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 dark:text-gray-300 hover:text-white bg-gray-200 dark:bg-gray-800 flex items-center justify-center gap-2" role="tab">Feedback/Suggestion</button>
+            <button type="button" id="tab-btn-quote" class="py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 hover:text-white bg-gray-200 flex items-center justify-center gap-2" role="tab">Request a Quote</button>
+            <button type="button" id="tab-btn-feedback" class="py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 hover:text-white bg-gray-200 flex items-center justify-center gap-2" role="tab">Feedback/Suggestion</button>
           </div>
 
           <!-- Quote Specific Fields (Visible in Quote mode) -->
-          <div id="quote-fields-container" class="hidden space-y-6 pt-2 pb-2 border-b border-gray-200 dark:border-gray-800">
+          <div id="quote-fields-container" class="hidden space-y-6 pt-2 pb-2 border-b border-gray-200">
             <!-- Service Selection -->
             <div>
               <label class="block text-xs font-bold text-brandGold uppercase tracking-wider mb-2.5">
                 Target Service <span class="text-brandRed">*</span>
               </label>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5" id="service-options-grid">
-                <label class="quote-option-label flex items-center gap-3 p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-brandNavyDark cursor-pointer hover:border-brandGold transition">
+                <label class="quote-option-label flex items-center gap-3 p-3 rounded-lg border border-gray-300 bg-white cursor-pointer hover:border-brandGold transition">
                   <input type="radio" name="target_service" value="Web Development & Software" checked class="accent-brandGold">
                   <span class="text-xs sm:text-sm font-semibold"><i class="fa-solid fa-code text-brandRed mr-1.5"></i> Web Development</span>
                 </label>
-                <label class="quote-option-label flex items-center gap-3 p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-brandNavyDark cursor-pointer hover:border-brandGold transition">
+                <label class="quote-option-label flex items-center gap-3 p-3 rounded-lg border border-gray-300 bg-white cursor-pointer hover:border-brandGold transition">
                   <input type="radio" name="target_service" value="UI/UX & Brand Design" class="accent-brandGold">
                   <span class="text-xs sm:text-sm font-semibold"><i class="fa-solid fa-pen-nib text-brandGold mr-1.5"></i> UI/UX & Branding</span>
                 </label>
-                <label class="quote-option-label flex items-center gap-3 p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-brandNavyDark cursor-pointer hover:border-brandGold transition">
+                <label class="quote-option-label flex items-center gap-3 p-3 rounded-lg border border-gray-300 bg-white cursor-pointer hover:border-brandGold transition">
                   <input type="radio" name="target_service" value="Digital Marketing & SEO" class="accent-brandGold">
                   <span class="text-xs sm:text-sm font-semibold"><i class="fa-solid fa-chart-line text-green-500 mr-1.5"></i> Digital Marketing</span>
                 </label>
-                <label class="quote-option-label flex items-center gap-3 p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-brandNavyDark cursor-pointer hover:border-brandGold transition">
+                <label class="quote-option-label flex items-center gap-3 p-3 rounded-lg border border-gray-300 bg-white cursor-pointer hover:border-brandGold transition">
                   <input type="radio" name="target_service" value="Full Enterprise Transformation" class="accent-brandGold">
                   <span class="text-xs sm:text-sm font-semibold"><i class="fa-solid fa-network-wired text-purple-400 mr-1.5"></i> Enterprise Suite</span>
                 </label>
@@ -327,22 +345,22 @@
                 Estimated Project Budget
               </label>
               <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                <label class="budget-option-label text-center p-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-brandNavyDark cursor-pointer hover:border-brandGold transition">
+                <label class="budget-option-label text-center p-2.5 rounded-lg border border-gray-300 bg-white cursor-pointer hover:border-brandGold transition">
                   <input type="radio" name="budget_tier" value="$499 - $1,500 (Basic)" class="hidden">
                   <span class="block text-xs font-bold">$499 - $1.5k</span>
                   <span class="text-[10px] text-gray-500">Starter</span>
                 </label>
-                <label class="budget-option-label text-center p-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-brandNavyDark cursor-pointer hover:border-brandGold transition">
+                <label class="budget-option-label text-center p-2.5 rounded-lg border border-gray-300 bg-white cursor-pointer hover:border-brandGold transition">
                   <input type="radio" name="budget_tier" value="$1,500 - $5,000 (Pro)" checked class="hidden">
                   <span class="block text-xs font-bold text-brandGold">$1.5k - $5k</span>
                   <span class="text-[10px] text-gray-500">Growth Pro</span>
                 </label>
-                <label class="budget-option-label text-center p-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-brandNavyDark cursor-pointer hover:border-brandGold transition">
+                <label class="budget-option-label text-center p-2.5 rounded-lg border border-gray-300 bg-white cursor-pointer hover:border-brandGold transition">
                   <input type="radio" name="budget_tier" value="$5,000 - $15,000 (Scale)" class="hidden">
                   <span class="block text-xs font-bold">$5k - $15k</span>
                   <span class="text-[10px] text-gray-500">Scale</span>
                 </label>
-                <label class="budget-option-label text-center p-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-brandNavyDark cursor-pointer hover:border-brandGold transition">
+                <label class="budget-option-label text-center p-2.5 rounded-lg border border-gray-300 bg-white cursor-pointer hover:border-brandGold transition">
                   <input type="radio" name="budget_tier" value="$15,000+ (Custom Enterprise)" class="hidden">
                   <span class="block text-xs font-bold">$15k+</span>
                   <span class="text-[10px] text-gray-500">Enterprise</span>
@@ -357,13 +375,13 @@
               <label class="block text-xs font-bold uppercase tracking-wider mb-2">
                 Full Name <span class="text-brandRed">*</span>
               </label>
-              <input type="text" id="contact-name" name="name" required class="w-full bg-white dark:bg-brandNavyDark border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brandGold focus:ring-1 focus:ring-brandGold transition" placeholder="e.g. Tariq Usman">
+              <input type="text" id="contact-name" name="name" required class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brandGold focus:ring-1 focus:ring-brandGold transition" placeholder="e.g. Tariq Usman">
             </div>
             <div>
               <label class="block text-xs font-bold uppercase tracking-wider mb-2">
                 Work Email <span class="text-brandRed">*</span>
               </label>
-              <input type="email" id="contact-email" name="email" required class="w-full bg-white dark:bg-brandNavyDark border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brandGold focus:ring-1 focus:ring-brandGold transition" placeholder="tariq@company.com">
+              <input type="email" id="contact-email" name="email" required class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brandGold focus:ring-1 focus:ring-brandGold transition" placeholder="tariq@company.com">
             </div>
           </div>
 
@@ -372,7 +390,7 @@
             <label class="block text-xs font-bold uppercase tracking-wider mb-2">
               Phone / WhatsApp <span class="text-gray-400 font-normal">(Optional for faster response)</span>
             </label>
-            <input type="tel" id="contact-phone" name="phone" class="w-full bg-white dark:bg-brandNavyDark border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brandGold focus:ring-1 focus:ring-brandGold transition" placeholder="+1 (501) 325-7990">
+            <input type="tel" id="contact-phone" name="phone" class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brandGold focus:ring-1 focus:ring-brandGold transition" placeholder="+1 (501) 325-7990">
           </div>
 
           <!-- Message / Scope -->
@@ -380,7 +398,7 @@
             <label class="block text-xs font-bold uppercase tracking-wider mb-2" id="message-label">
               Project Description & Requirements <span class="text-brandRed">*</span>
             </label>
-            <textarea id="contact-message" name="message" required rows="4" class="w-full bg-white dark:bg-brandNavyDark border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brandGold focus:ring-1 focus:ring-brandGold transition leading-relaxed" placeholder="Briefly describe your objectives, existing platform, tech preferences, or desired launch timeframe..."></textarea>
+            <textarea id="contact-message" name="message" required rows="4" class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brandGold focus:ring-1 focus:ring-brandGold transition leading-relaxed" placeholder="Briefly describe your objectives, existing platform, tech preferences, or desired launch timeframe..."></textarea>
           </div>
 
           <!-- Submit Button with Dynamic State & Subtle Check Transition -->
@@ -389,7 +407,7 @@
               <i class="fa-solid fa-paper-plane text-xs transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" id="btn-icon"></i>
               <span id="btn-label">Send Message</span>
             </button>
-            <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+            <div class="flex items-center gap-2 text-xs text-gray-500">
               <i class="fa-solid fa-lock text-brandGold"></i>
               <span>100% Confidential & Non-Disclosure Protected</span>
             </div>
@@ -402,7 +420,7 @@
 
   <!-- Interactive Floating Elements -->
   <!-- Back to Top Button -->
-  <button id="btt-btn" class="fixed bottom-24 right-6 z-40 w-12 h-12 bg-white dark:bg-brandNavyCard border border-gray-200 dark:border-gray-700 hover:border-brandGold dark:hover:border-brandGold text-gray-800 dark:text-white hover:text-brandGold dark:hover:text-brandGold rounded-full flex items-center justify-center text-xl shadow-lg opacity-0 pointer-events-none transition-all duration-300 focus:outline-none" aria-label="Back to Top">
+  <button id="btt-btn" class="fixed bottom-24 right-6 z-40 w-12 h-12 bg-white border border-gray-200 hover:border-brandGold:border-brandGold text-gray-800 hover:text-brandGold:text-brandGold rounded-full flex items-center justify-center text-xl shadow-lg opacity-0 pointer-events-none transition-all duration-300 focus:outline-none" aria-label="Back to Top">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
 
@@ -430,7 +448,7 @@
         
         <!-- Column 1: Brand -->
         <div class="lg:col-span-4">
-          <a href="/index.html" class="flex items-center gap-3 mb-6 group">
+          <a href="/" class="flex items-center gap-3 mb-6 group">
             <div class="relative w-12 h-12 flex items-center justify-center">
               <img src="/images/ransovie-logo.svg" alt="RanSovie Logo" class="w-full h-full object-contain filter drop-shadow-[0_2px_12px_rgba(212,175,55,0.4)]" />
             </div>
@@ -454,12 +472,12 @@
         <div class="lg:col-span-2 lg:col-start-6">
           <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Explore</h4>
           <ul class="space-y-4 text-gray-400 font-medium">
-            <li><a href="/index.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Home</a></li>
-            <li><a href="/services.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Services</a></li>
-            <li><a href="/about.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">About</a></li>
-            <li><a href="/portfolio.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Portfolio</a></li>
-            <li><a href="/blog.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Blog</a></li>
-            <li><a href="/contact.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Contact</a></li>
+            <li><a href="/" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Home</a></li>
+            <li><a href="/services" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Services</a></li>
+            <li><a href="/about" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">About</a></li>
+            <li><a href="/portfolio" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Portfolio</a></li>
+            <li><a href="/blog" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Blog</a></li>
+            <li><a href="/contact" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Contact</a></li>
           </ul>
         </div>
         
@@ -598,6 +616,7 @@
       const contactForm = document.getElementById('main-contact-form');
       const tabContact = document.getElementById('tab-btn-contact');
       const tabQuote = document.getElementById('tab-btn-quote');
+      const tabFeedback = document.getElementById('tab-btn-feedback');
       const quoteFields = document.getElementById('quote-fields-container');
       const inquiryTypeInput = document.getElementById('form-inquiry-type');
       const submitBtn = document.getElementById('contact-submit-btn');
@@ -619,11 +638,11 @@
             tabQuote.setAttribute('aria-selected', 'true');
           }
           if (tabContact) {
-            tabContact.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 dark:text-gray-300 hover:text-white bg-gray-200 dark:bg-gray-800 flex items-center justify-center gap-2';
+            tabContact.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 hover:text-white bg-gray-200 flex items-center justify-center gap-2';
             tabContact.setAttribute('aria-selected', 'false');
           }
           if (tabFeedback) {
-            tabFeedback.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 dark:text-gray-300 hover:text-white bg-gray-200 dark:bg-gray-800 flex items-center justify-center gap-2';
+            tabFeedback.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 hover:text-white bg-gray-200 flex items-center justify-center gap-2';
             tabFeedback.setAttribute('aria-selected', 'false');
           }
         } else if (mode === 'feedback') {
@@ -636,11 +655,11 @@
             tabFeedback.setAttribute('aria-selected', 'true');
           }
           if (tabContact) {
-            tabContact.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 dark:text-gray-300 hover:text-white bg-gray-200 dark:bg-gray-800 flex items-center justify-center gap-2';
+            tabContact.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 hover:text-white bg-gray-200 flex items-center justify-center gap-2';
             tabContact.setAttribute('aria-selected', 'false');
           }
           if (tabQuote) {
-            tabQuote.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 dark:text-gray-300 hover:text-white bg-gray-200 dark:bg-gray-800 flex items-center justify-center gap-2';
+            tabQuote.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 hover:text-white bg-gray-200 flex items-center justify-center gap-2';
             tabQuote.setAttribute('aria-selected', 'false');
           }
         } else {
@@ -653,11 +672,11 @@
             tabContact.setAttribute('aria-selected', 'true');
           }
           if (tabQuote) {
-            tabQuote.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 dark:text-gray-300 hover:text-white bg-gray-200 dark:bg-gray-800 flex items-center justify-center gap-2';
+            tabQuote.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 hover:text-white bg-gray-200 flex items-center justify-center gap-2';
             tabQuote.setAttribute('aria-selected', 'false');
           }
           if (tabFeedback) {
-            tabFeedback.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 dark:text-gray-300 hover:text-white bg-gray-200 dark:bg-gray-800 flex items-center justify-center gap-2';
+            tabFeedback.className = 'py-2.5 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all text-gray-700 hover:text-white bg-gray-200 flex items-center justify-center gap-2';
             tabFeedback.setAttribute('aria-selected', 'false');
           }
         }
@@ -786,5 +805,7 @@
   <script src="/theme-lang.js" defer></script>
   <!-- RanSovie IT Agency & Technology AI Assistant (RanSovie AI) -->
   <script src="/chatbot.js" defer></script>
+  <!-- RanSovie Live Search & Leadership Knowledge Panel -->
+  <script src="/search.js" defer></script>
 </body>
 </html>

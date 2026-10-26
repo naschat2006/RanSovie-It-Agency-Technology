@@ -1,0 +1,36 @@
+<section class="py-20 bg-slate-950">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <div class="space-y-4">
+      <div class="inline-flex items-center gap-2 bg-yellow-500/10 text-yellow-400 px-4 py-1.5 rounded-full text-xs font-semibold">
+        <i class="fa-solid fa-layer-group"></i> <%= lang === 'bn' ? 'সেবা বিবরণী' : 'Service Details' %>
+      </div>
+      <h1 class="text-4xl font-black text-white"><%= lang === 'bn' ? service.title_bn : service.title_en %></h1>
+      <p class="text-lg text-gray-300"><%= lang === 'bn' ? service.description_bn : service.description_en %></p>
+    </div>
+
+    <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl space-y-6 text-gray-300 leading-relaxed">
+      <h2 class="text-2xl font-bold text-white"><%= lang === 'bn' ? 'আমাদের কার্যপদ্ধতি ও সুবিধা' : 'Our Approach & Key Benefits' %></h2>
+      <p>
+        <%= lang === 'bn' ? 'র‍্যানসোভি আইটি এজেন্সিতে আমরা প্রতিটি প্রজেক্ট অত্যন্ত নিপুণভাবে কোডিং, সিকিউরিটি এবং অপ্টিমাইজেশন নিশ্চিত করে সম্পন্ন করি। ক্লায়েন্টের সন্তুষ্টিই আমাদের প্রধান লক্ষ্য।' : 'At RanSovie IT Agency, we ensure rigorous software engineering standards, clean architecture, bulletproof security, and stellar UI/UX for every client.' %>
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+          <h3 class="text-white font-bold mb-1"><%= lang === 'bn' ? 'আধুনিক প্রযুক্তি' : 'Modern Stack' %></h3>
+          <p class="text-xs text-gray-400"><%= lang === 'bn' ? 'লেটেস্ট এবং ফাস্ট টেকনোলজি ব্যবহার।' : 'Built with high-performance frameworks.' %></p>
+        </div>
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+          <h3 class="text-white font-bold mb-1"><%= lang === 'bn' ? '২৪/৭ ডেডিকেটেড সাপোর্ট' : '24/7 Dedicated Support' %></h3>
+          <p class="text-xs text-gray-400"><%= lang === 'bn' ? 'প্রয়োজনে আজীবন মেইনটেন্যান্স।' : 'Continuous maintenance and updates.' %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 border border-slate-800 p-8 rounded-2xl text-center space-y-6">
+      <h3 class="text-2xl font-bold text-white"><%= lang === 'bn' ? 'এই সেবাটি নিতে চান?' : 'Ready to Get Started?' %></h3>
+      <p class="text-gray-400 max-w-xl mx-auto"><%= lang === 'bn' ? 'আপনার রিকোয়ারমেন্ট আমাদের জানান, আমরা দিচ্ছি বেস্ট সলিউশন।' : 'Contact us today to discuss your project specifications and receive a free quote.' %></p>
+      <a href="/contact" class="inline-block bg-yellow-500 hover:bg-yellow-400 text-slate-950 px-8 py-3.5 rounded-xl font-bold transition">
+        <%= lang === 'bn' ? 'কনসালটেশন বুক করুন' : 'Book Consultation' %>
+      </a>
+    </div>
+  </div>
+</section>

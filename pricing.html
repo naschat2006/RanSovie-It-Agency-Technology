@@ -4,7 +4,7 @@
   
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ransovie.com/pricing.html" />
+  <meta property="og:url" content="https://ransovie.com/pricing" />
   <meta property="og:title" content="Transparent Pricing | RanSovie IT Agency" />
   <meta property="og:description" content="Transparent pricing and engagement models for business web portals, SaaS, and custom projects at RanSovie." />
   <meta property="og:image" content="https://ransovie.com/images/ransovie-logo.svg" />
@@ -86,77 +86,82 @@
   }
   </script>
 
+  <!-- Immediate Theme Initializer -->
+  <script>
+    document.documentElement.classList.remove('dark');
+    localStorage.theme = 'light';
+  </script>
 </head>
-<body class="bg-white text-gray-800 dark:bg-brandNavyDark dark:text-gray-100 transition-colors duration-300 antialiased overflow-x-hidden">
+<body class="bg-[#FAF9F6] text-gray-900 transition-colors duration-300 antialiased overflow-x-hidden">
 
   <!-- Navigation Bar -->
-  <nav id="navbar" class="bg-white dark:bg-brandNavyDark sticky top-0 z-50 shadow-sm border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <nav id="navbar" class="bg-[#FAF9F6]/95 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-gray-200/80 transition-colors duration-300">
+    <div class="w-full px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         <!-- Logo -->
-        <a href="/index.html" class="flex items-center gap-3 group">
+        <a href="/" class="flex items-center gap-3 group">
           <div class="relative w-11 h-11 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
             <img src="/images/ransovie-logo.svg" alt="RanSovie Logo" class="w-full h-full object-contain filter drop-shadow-[0_2px_8px_rgba(212,175,55,0.35)]" />
           </div>
           <div class="flex flex-col">
-            <span class="font-extrabold text-brandNavyDark dark:text-white text-lg tracking-tight leading-tight group-hover:text-brandGold transition-colors">RanSovie</span>
-            <span class="text-[9px] font-semibold text-gray-500 dark:text-brandGold tracking-widest uppercase">IT Agency & Technology</span>
+            <span class="font-extrabold text-brandNavyDark text-lg tracking-tight leading-tight group-hover:text-brandGold transition-colors">RanSovie</span>
+            <span class="text-[9px] font-semibold text-gray-600 tracking-widest uppercase">IT Agency & Technology</span>
           </div>
         </a>
         
         <!-- Desktop Links -->
         <div class="hidden lg:flex items-center space-x-7">
-          <a href="/index.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Home</a>
+          <a href="/" class="nav-link active text-brandNavyDark font-semibold text-sm hover:text-brandGold transition">Home</a>
           
           <!-- Services Dropdown (Clean, name-only without bulky paragraphs) -->
           <div class="relative group" id="services-nav-group">
-            <a href="/services.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition flex items-center gap-1.5 py-4">
+            <a href="/services" class="nav-link text-brandNavyDark font-semibold text-sm hover:text-brandGold transition flex items-center gap-1.5 py-4">
               <span>Services</span>
-              <i class="fa-solid fa-chevron-down text-[11px] transition-transform duration-200 group-hover:rotate-180 text-gray-400 group-hover:text-brandGold"></i>
+              <i class="fa-solid fa-chevron-down text-[11px] transition-transform duration-200 group-hover:rotate-180 text-gray-500 group-hover:text-brandGold"></i>
             </a>
             
             <!-- Clean Dropdown Menu -->
-            <div class="invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 absolute left-0 top-full w-72 bg-white dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800 rounded-2xl shadow-2xl p-3 z-50">
+            <div class="invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 absolute left-0 top-full w-72 bg-white border border-gray-200 rounded-2xl shadow-2xl p-3 z-50">
               <div class="space-y-1.5">
                 
                 <!-- 1. Web Development -->
-                <a href="/web-development.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-red-500/10 dark:hover:bg-red-500/15 group/item transition-colors">
+                <a href="/web-development" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-red-500/10 group/item transition-colors">
                   <div class="w-9 h-9 rounded-lg bg-red-500/10 text-brandRed flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brandRed group-hover/item:text-white transition-colors">
                     <i class="fa-solid fa-code"></i>
                   </div>
                   <div>
-                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-brandRed transition-colors">Web Development</div>
-                    <div class="text-[11px] text-gray-500 dark:text-gray-400">Custom Apps & Systems</div>
+                    <div class="text-sm font-bold text-gray-900 group-hover/item:text-brandRed transition-colors">Web Development</div>
+                    <div class="text-[11px] text-gray-500">Custom Apps & Systems</div>
                   </div>
                 </a>
 
                 <!-- 2. Graphic Design -->
-                <a href="/graphic-design.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-yellow-500/10 dark:hover:bg-yellow-500/15 group/item transition-colors">
+                <a href="/graphic-design" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-yellow-500/10 group/item transition-colors">
                   <div class="w-9 h-9 rounded-lg bg-yellow-500/10 text-brandGold flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brandGold group-hover/item:text-brandBlack transition-colors">
                     <i class="fa-solid fa-pen-nib"></i>
                   </div>
                   <div>
-                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-brandGold transition-colors">Graphic Design</div>
-                    <div class="text-[11px] text-gray-500 dark:text-gray-400">Brand Identity & UI/UX</div>
+                    <div class="text-sm font-bold text-gray-900 group-hover/item:text-brandGold transition-colors">Graphic Design</div>
+                    <div class="text-[11px] text-gray-500">Brand Identity & UI/UX</div>
                   </div>
                 </a>
 
                 <!-- 3. Digital Marketing -->
-                <a href="/digital-marketing.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-green-500/10 dark:hover:bg-green-500/15 group/item transition-colors">
-                  <div class="w-9 h-9 rounded-lg bg-green-500/10 text-green-500 flex items-center justify-center text-sm shrink-0 group-hover/item:bg-green-500 group-hover/item:text-white transition-colors">
+                <a href="/digital-marketing" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-green-500/10 group/item transition-colors">
+                  <div class="w-9 h-9 rounded-lg bg-green-500/10 text-green-600 flex items-center justify-center text-sm shrink-0 group-hover/item:bg-green-600 group-hover/item:text-white transition-colors">
                     <i class="fa-solid fa-chart-line"></i>
                   </div>
                   <div>
-                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-green-500 transition-colors">Digital Marketing</div>
-                    <div class="text-[11px] text-gray-500 dark:text-gray-400">SEO, Ads & Growth</div>
+                    <div class="text-sm font-bold text-gray-900 group-hover/item:text-green-600 transition-colors">Digital Marketing</div>
+                    <div class="text-[11px] text-gray-500">SEO, Ads & Growth</div>
                   </div>
                 </a>
 
               </div>
 
               <!-- Dropdown Footer -->
-              <div class="mt-2 pt-2 border-t border-gray-100 dark:border-gray-800">
-                <a href="/services.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-bold text-brandGold hover:bg-brandGold/10 transition-colors">
+              <div class="mt-2 pt-2 border-t border-gray-100">
+                <a href="/services" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-bold text-brandGold hover:bg-brandGold/10 transition-colors">
                   <span>View Services Hub</span>
                   <i class="fa-solid fa-arrow-right text-[10px]"></i>
                 </a>
@@ -164,25 +169,28 @@
             </div>
           </div>
 
-          <a href="/portfolio.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Portfolio</a>
-          <a href="/pricing.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Pricing</a>
-          <a href="/about.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">About Us</a>
-          <a href="/contact.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Contact Us</a>
-          <a href="/blog.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Blog</a>
+          <a href="/portfolio" class="nav-link text-brandNavyDark font-semibold text-sm hover:text-brandGold transition">Portfolio</a>
+          <a href="/pricing" class="nav-link text-brandNavyDark font-semibold text-sm hover:text-brandGold transition">Pricing</a>
+          <a href="/about" class="nav-link text-brandNavyDark font-semibold text-sm hover:text-brandGold transition">About Us</a>
+          <a href="/contact" class="nav-link text-brandNavyDark font-semibold text-sm hover:text-brandGold transition">Contact Us</a>
+          <a href="/blog" class="nav-link text-brandNavyDark font-semibold text-sm hover:text-brandGold transition">Blog</a>
         </div>
         
-        <!-- Actions (Language + Theme + CTA) -->
-        <div class="hidden lg:flex items-center space-x-4">
+        <!-- Actions (Search + Language + CTA) -->
+        <div class="hidden lg:flex items-center space-x-3">
+          <!-- Search Modal Trigger Button -->
+          <button id="search-modal-trigger" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-300 bg-white hover:border-brandGold hover:text-brandGold text-xs font-semibold text-gray-700 transition shadow-2xs group cursor-pointer" title="Search RanSovie & Leadership (Ctrl+K)">
+            <i class="fa-solid fa-magnifying-glass text-brandGold group-hover:scale-110 transition-transform"></i>
+            <span class="search-btn-label">Search...</span>
+            <kbd class="text-[10px] bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded border border-gray-200 font-mono">⌘K</kbd>
+          </button>
+
           <!-- Language Toggle (EN / BN) -->
-          <button id="lang-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-brandNavyCard text-xs font-bold transition-all shadow-sm hover:border-brandGold focus:outline-none" title="Switch Language / ভাষা পরিবর্তন (EN / BN)">
+          <button id="lang-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-300 bg-white text-xs font-bold transition-all shadow-sm hover:border-brandGold focus:outline-none" title="Switch Language / ভাষা পরিবর্তন (EN / BN)">
             <i class="fa-solid fa-globe text-[11px] text-brandGold"></i>
             <span id="lang-badge-en" class="text-brandGold font-black">EN</span>
             <span class="text-gray-400 text-[10px]">/</span>
-            <span id="lang-badge-bn" class="text-gray-500 dark:text-gray-400 font-medium">BN</span>
-          </button>
-          
-          <button id="theme-toggle" class="hover:text-brandGold transition-colors p-2.5 rounded-full bg-gray-100 dark:bg-brandNavyCard text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 shadow-inner focus:outline-none" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
-            <i id="theme-icon" class="fa-solid fa-sun w-4 h-4 flex items-center justify-center"></i>
+            <span id="lang-badge-bn" class="text-gray-500 font-medium">BN</span>
           </button>
 
           <a href="/contact.html?type=quote" class="bg-brandGold hover:bg-yellow-500 text-brandNavyDark font-bold px-5 py-2.5 rounded text-sm transition shadow-lg flex items-center gap-2">
@@ -190,17 +198,17 @@
           </a>
         </div>
         
-        <!-- Mobile Menu Toggle -->
+        <!-- Mobile Menu Toggle & Search -->
         <div class="lg:hidden flex items-center gap-2">
-          <button id="lang-toggle-mobile-header" class="flex items-center gap-1 px-2.5 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-brandNavyCard text-xs font-bold hover:text-brandGold transition-colors" title="Switch Language (EN / BN)">
+          <button id="search-modal-trigger-mobile" class="w-8 h-8 rounded-full border border-gray-300 bg-white flex items-center justify-center text-xs text-gray-700 hover:border-brandGold hover:text-brandGold transition cursor-pointer" title="Search Agency">
+            <i class="fa-solid fa-magnifying-glass text-brandGold"></i>
+          </button>
+          <button id="lang-toggle-mobile-header" class="flex items-center gap-1 px-2.5 py-1.5 rounded-full border border-gray-300 bg-white text-xs font-bold hover:text-brandGold transition-colors" title="Switch Language (EN / BN)">
             <span id="lang-badge-en-mobile" class="text-brandGold font-black">EN</span>
             <span class="text-gray-400 text-[10px]">/</span>
-            <span id="lang-badge-bn-mobile" class="text-gray-500 dark:text-gray-400 font-medium">BN</span>
+            <span id="lang-badge-bn-mobile" class="text-gray-500 font-medium">BN</span>
           </button>
-          <button id="theme-toggle-mobile" class="hover:text-brandGold transition-colors p-2 rounded-full bg-gray-100 dark:bg-brandNavyCard text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700" aria-label="Toggle Dark Mode">
-            <i id="theme-icon-mobile" class="fa-solid fa-sun w-4 h-4 flex items-center justify-center"></i>
-          </button>
-          <button id="mobile-menu-btn" class="p-1.5 text-2xl text-brandNavyDark dark:text-white focus:outline-none hover:text-brandGold transition-colors">
+          <button id="mobile-menu-btn" class="p-1.5 text-2xl text-brandNavyDark focus:outline-none hover:text-brandGold transition-colors">
             <i class="fa-solid fa-bars"></i>
           </button>
         </div>
@@ -208,23 +216,33 @@
     </div>
 
     <!-- Mobile Menu Dropdown -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-brandNavyCard border-b border-gray-200 dark:border-gray-800 shadow-xl px-4 py-6 space-y-3 transition-all">
-      <a href="/index.html" class="block px-4 py-2 text-brandGold font-bold rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Home</a>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 shadow-xl px-4 py-6 space-y-3 transition-all">
+      <!-- Mobile Search Button -->
+      <div class="px-2 pb-2">
+        <button id="search-modal-trigger-drawer" class="w-full flex items-center justify-between px-3.5 py-2.5 bg-gray-100 hover:bg-gray-200 border border-gray-200 rounded-xl text-xs font-semibold text-gray-700 transition">
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-magnifying-glass text-brandGold"></i>
+            <span>Search Agency & Leadership...</span>
+          </span>
+          <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-gray-300 font-mono">⌘K</span>
+        </button>
+      </div>
+      <a href="/" class="block px-4 py-2 text-brandGold font-bold rounded-lg hover:bg-gray-50:bg-gray-800">Home</a>
       <div class="px-4 py-2">
         <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Services</span>
         <div class="mt-2 space-y-1 pl-2 border-l-2 border-brandGold/40">
-          <a href="/web-development.html" class="block py-1 text-sm text-gray-700 dark:text-gray-300 hover:text-brandGold">Web Development</a>
-          <a href="/graphic-design.html" class="block py-1 text-sm text-gray-700 dark:text-gray-300 hover:text-brandGold">Graphic Design</a>
-          <a href="/digital-marketing.html" class="block py-1 text-sm text-gray-700 dark:text-gray-300 hover:text-brandGold">Digital Marketing</a>
-          <a href="/services.html" class="block py-1 text-xs text-brandGold font-semibold">View All Services →</a>
+          <a href="/web-development" class="block py-1 text-sm text-gray-700 hover:text-brandGold">Web Development</a>
+          <a href="/graphic-design" class="block py-1 text-sm text-gray-700 hover:text-brandGold">Graphic Design</a>
+          <a href="/digital-marketing" class="block py-1 text-sm text-gray-700 hover:text-brandGold">Digital Marketing</a>
+          <a href="/services" class="block py-1 text-xs text-brandGold font-semibold">View All Services →</a>
         </div>
       </div>
-      <a href="/portfolio.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">Portfolio</a>
-      <a href="/pricing.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">Pricing</a>
-      <a href="/about.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">About Us</a>
-      <a href="/contact.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">Contact Us</a>
-      <div class="pt-3 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between px-4">
-        <button id="lang-toggle-mobile" class="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-brandGold">
+      <a href="/portfolio" class="block px-4 py-2 font-semibold text-gray-800 hover:text-brandGold hover:bg-gray-50:bg-gray-800 rounded-lg">Portfolio</a>
+      <a href="/pricing" class="block px-4 py-2 font-semibold text-gray-800 hover:text-brandGold hover:bg-gray-50:bg-gray-800 rounded-lg">Pricing</a>
+      <a href="/about" class="block px-4 py-2 font-semibold text-gray-800 hover:text-brandGold hover:bg-gray-50:bg-gray-800 rounded-lg">About Us</a>
+      <a href="/contact" class="block px-4 py-2 font-semibold text-gray-800 hover:text-brandGold hover:bg-gray-50:bg-gray-800 rounded-lg">Contact Us</a>
+      <div class="pt-3 border-t border-gray-100 flex items-center justify-between px-4">
+        <button id="lang-toggle-mobile" class="flex items-center gap-2 text-sm font-semibold text-gray-700 hover:text-brandGold">
           <i class="fa-solid fa-globe text-brandGold"></i>
           <span>Language:</span>
           <span id="lang-badge-drawer" class="font-bold text-brandGold">EN / BN</span>
@@ -235,15 +253,15 @@
   </nav>
 
   <!-- Pricing Section -->
-  <section class="py-24 bg-gray-50 dark:bg-brandNavyDark transition-colors">
+  <section class="py-24 bg-gray-50 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h3 class="text-sm font-bold text-gray-500 dark:text-brandGold mb-2 uppercase tracking-widest">Pricing</h3>
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-brandNavyDark dark:text-white mb-16 tracking-tight">Simple, Transparent Pricing</h2>
+      <h3 class="text-sm font-bold text-gray-500 mb-2 uppercase tracking-widest">Pricing</h3>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-brandNavyDark mb-16 tracking-tight">Simple, Transparent Pricing</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white dark:bg-brandNavyCard p-10 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-lg transition">
-          <h3 class="text-xl font-bold text-brandNavyDark dark:text-white mb-2">Basic</h3>
+        <div class="bg-white p-10 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg transition">
+          <h3 class="text-xl font-bold text-brandNavyDark mb-2">Basic</h3>
           <p class="text-4xl font-extrabold text-brandGold mb-6">$499<span class="text-sm text-gray-400 font-medium">/mo</span></p>
-          <ul class="text-left space-y-4 mb-8 text-gray-600 dark:text-gray-300">
+          <ul class="text-left space-y-4 mb-8 text-gray-600">
             <li><i class="fa-solid fa-check text-brandGold mr-2"></i> Custom Web Design</li>
             <li><i class="fa-solid fa-check text-brandGold mr-2"></i> Basic SEO</li>
             <li><i class="fa-solid fa-check text-brandGold mr-2"></i> 1 Month Support</li>
@@ -262,10 +280,10 @@
           </ul>
           <a href="/contact.html?type=quote&plan=Professional" class="block w-full bg-brandGold text-brandNavyDark font-bold py-3 rounded hover:bg-white transition">Choose Plan</a>
         </div>
-        <div class="bg-white dark:bg-brandNavyCard p-10 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-lg transition">
-          <h3 class="text-xl font-bold text-brandNavyDark dark:text-white mb-2">Enterprise</h3>
+        <div class="bg-white p-10 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg transition">
+          <h3 class="text-xl font-bold text-brandNavyDark mb-2">Enterprise</h3>
           <p class="text-4xl font-extrabold text-brandGold mb-6">Custom</p>
-          <ul class="text-left space-y-4 mb-8 text-gray-600 dark:text-gray-300">
+          <ul class="text-left space-y-4 mb-8 text-gray-600">
             <li><i class="fa-solid fa-check text-brandGold mr-2"></i> Full-Stack Development</li>
             <li><i class="fa-solid fa-check text-brandGold mr-2"></i> Growth Marketing</li>
             <li><i class="fa-solid fa-check text-brandGold mr-2"></i> UI/UX Re-design</li>
@@ -284,7 +302,7 @@
       <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-10 tracking-tight leading-tight">
         READY TO TRANSFORM YOUR <br class="hidden md:block" /> BUSINESS DIGITALLY?
       </h2>
-      <a href="/contact.html" class="inline-flex items-center gap-2 bg-transparent border-2 border-brandGold text-brandGold font-bold px-10 py-3.5 rounded hover:bg-brandGold hover:text-brandNavyDark transition duration-300 shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-[0_0_25px_rgba(212,175,55,0.4)]">
+      <a href="/contact" class="inline-flex items-center gap-2 bg-transparent border-2 border-brandGold text-brandGold font-bold px-10 py-3.5 rounded hover:bg-brandGold hover:text-brandNavyDark transition duration-300 shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-[0_0_25px_rgba(212,175,55,0.4)]">
         Contact Us
       </a>
       <p class="text-brandGold mt-6 font-bold tracking-wide">+1 501 325-7990</p>
@@ -316,7 +334,7 @@
           <h4 class="text-white font-bold mb-5 uppercase tracking-widest text-xs">Site Map</h4>
           <ul class="space-y-3 text-sm text-gray-400 font-medium">
             <li><a href="/" class="hover:text-brandGold transition-colors">Home</a></li>
-            <li><a href="/services.html" class="hover:text-brandGold transition-colors">Services</a></li>
+            <li><a href="/services" class="hover:text-brandGold transition-colors">Services</a></li>
             <li><a href="#" class="hover:text-brandGold transition-colors">Pricing</a></li>
             <li><a href="#" class="hover:text-brandGold transition-colors">Companies</a></li>
             <li><a href="#" class="hover:text-brandGold transition-colors">Web Creators</a></li>
@@ -327,9 +345,9 @@
         <div>
           <h4 class="text-white font-bold mb-5 uppercase tracking-widest text-xs">Useful Links</h4>
           <ul class="space-y-3 text-sm text-gray-400 font-medium">
-            <li><a href="/about.html" class="hover:text-brandGold transition-colors">About Us</a></li>
-            <li><a href="/blog.html" class="hover:text-brandGold transition-colors">Blog</a></li>
-            <li><a href="/contact.html" class="hover:text-brandGold transition-colors">Contact Us</a></li>
+            <li><a href="/about" class="hover:text-brandGold transition-colors">About Us</a></li>
+            <li><a href="/blog" class="hover:text-brandGold transition-colors">Blog</a></li>
+            <li><a href="/contact" class="hover:text-brandGold transition-colors">Contact Us</a></li>
           </ul>
         </div>
 
@@ -362,5 +380,7 @@
   <script src="/theme-lang.js" defer></script>
   <!-- RanSovie IT Agency & Technology AI Assistant (RanSovie AI) -->
   <script src="/chatbot.js" defer></script>
+  <!-- RanSovie Live Search & Leadership Knowledge Panel -->
+  <script src="/search.js" defer></script>
 </body>
 </html>

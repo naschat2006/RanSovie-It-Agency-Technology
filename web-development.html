@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +10,7 @@
   
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ransovie.com/web-development.html" />
+  <meta property="og:url" content="https://ransovie.com/web-development" />
   <meta property="og:title" content="Custom Web Development Services | RanSovie IT Agency" />
   <meta property="og:description" content="RanSovie provides custom web development services: robust apps, innovative systems, and responsive websites." />
   <meta property="og:image" content="https://ransovie.com/images/ransovie-logo.svg" />
@@ -94,77 +94,82 @@
   }
   </script>
 
+  <!-- Immediate Theme Initializer -->
+  <script>
+    document.documentElement.classList.remove('dark');
+    localStorage.theme = 'light';
+  </script>
 </head>
-<body class="bg-gray-50 text-gray-900 dark:bg-brandNavyDark dark:text-white transition-colors duration-300 antialiased overflow-x-hidden selection:bg-brandGold selection:text-brandBlack">
+<body class="bg-[#FAF9F6] text-gray-900 transition-colors duration-300 antialiased overflow-x-hidden">
 
       <!-- Navigation Bar -->
-  <nav id="navbar" class="bg-white dark:bg-brandNavyDark sticky top-0 z-50 shadow-sm border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <nav id="navbar" class="bg-[#FAF9F6]/95 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-gray-200/80 transition-colors duration-300">
+    <div class="w-full px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         <!-- Logo -->
-        <a href="/index.html" class="flex items-center gap-3 group">
+        <a href="/" class="flex items-center gap-3 group">
           <div class="relative w-11 h-11 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
             <img src="/images/ransovie-logo.svg" alt="RanSovie Logo" class="w-full h-full object-contain filter drop-shadow-[0_2px_8px_rgba(212,175,55,0.35)]" />
           </div>
           <div class="flex flex-col">
-            <span class="font-extrabold text-brandNavyDark dark:text-white text-lg tracking-tight leading-tight group-hover:text-brandGold transition-colors">RanSovie</span>
-            <span class="text-[9px] font-semibold text-gray-500 dark:text-brandGold tracking-widest uppercase">IT Agency & Technology</span>
+            <span class="font-extrabold text-brandNavyDark text-lg tracking-tight leading-tight group-hover:text-brandGold transition-colors">RanSovie</span>
+            <span class="text-[9px] font-semibold text-gray-600 tracking-widest uppercase">IT Agency & Technology</span>
           </div>
         </a>
         
         <!-- Desktop Links -->
         <div class="hidden lg:flex items-center space-x-7">
-          <a href="/index.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Home</a>
+          <a href="/" class="nav-link active text-brandNavyDark font-semibold text-sm hover:text-brandGold transition">Home</a>
           
           <!-- Services Dropdown (Clean, name-only without bulky paragraphs) -->
           <div class="relative group" id="services-nav-group">
-            <a href="/services.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition flex items-center gap-1.5 py-4">
+            <a href="/services" class="nav-link text-brandNavyDark font-semibold text-sm hover:text-brandGold transition flex items-center gap-1.5 py-4">
               <span>Services</span>
-              <i class="fa-solid fa-chevron-down text-[11px] transition-transform duration-200 group-hover:rotate-180 text-gray-400 group-hover:text-brandGold"></i>
+              <i class="fa-solid fa-chevron-down text-[11px] transition-transform duration-200 group-hover:rotate-180 text-gray-500 group-hover:text-brandGold"></i>
             </a>
             
             <!-- Clean Dropdown Menu -->
-            <div class="invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 absolute left-0 top-full w-72 bg-white dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800 rounded-2xl shadow-2xl p-3 z-50">
+            <div class="invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 absolute left-0 top-full w-72 bg-white border border-gray-200 rounded-2xl shadow-2xl p-3 z-50">
               <div class="space-y-1.5">
                 
                 <!-- 1. Web Development -->
-                <a href="/web-development.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-red-500/10 dark:hover:bg-red-500/15 group/item transition-colors">
+                <a href="/web-development" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-red-500/10 group/item transition-colors">
                   <div class="w-9 h-9 rounded-lg bg-red-500/10 text-brandRed flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brandRed group-hover/item:text-white transition-colors">
                     <i class="fa-solid fa-code"></i>
                   </div>
                   <div>
-                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-brandRed transition-colors">Web Development</div>
-                    <div class="text-[11px] text-gray-500 dark:text-gray-400">Custom Apps & Systems</div>
+                    <div class="text-sm font-bold text-gray-900 group-hover/item:text-brandRed transition-colors">Web Development</div>
+                    <div class="text-[11px] text-gray-500">Custom Apps & Systems</div>
                   </div>
                 </a>
 
                 <!-- 2. Graphic Design -->
-                <a href="/graphic-design.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-yellow-500/10 dark:hover:bg-yellow-500/15 group/item transition-colors">
+                <a href="/graphic-design" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-yellow-500/10 group/item transition-colors">
                   <div class="w-9 h-9 rounded-lg bg-yellow-500/10 text-brandGold flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brandGold group-hover/item:text-brandBlack transition-colors">
                     <i class="fa-solid fa-pen-nib"></i>
                   </div>
                   <div>
-                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-brandGold transition-colors">Graphic Design</div>
-                    <div class="text-[11px] text-gray-500 dark:text-gray-400">Brand Identity & UI/UX</div>
+                    <div class="text-sm font-bold text-gray-900 group-hover/item:text-brandGold transition-colors">Graphic Design</div>
+                    <div class="text-[11px] text-gray-500">Brand Identity & UI/UX</div>
                   </div>
                 </a>
 
                 <!-- 3. Digital Marketing -->
-                <a href="/digital-marketing.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-green-500/10 dark:hover:bg-green-500/15 group/item transition-colors">
-                  <div class="w-9 h-9 rounded-lg bg-green-500/10 text-green-500 flex items-center justify-center text-sm shrink-0 group-hover/item:bg-green-500 group-hover/item:text-white transition-colors">
+                <a href="/digital-marketing" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-green-500/10 group/item transition-colors">
+                  <div class="w-9 h-9 rounded-lg bg-green-500/10 text-green-600 flex items-center justify-center text-sm shrink-0 group-hover/item:bg-green-600 group-hover/item:text-white transition-colors">
                     <i class="fa-solid fa-chart-line"></i>
                   </div>
                   <div>
-                    <div class="text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-green-500 transition-colors">Digital Marketing</div>
-                    <div class="text-[11px] text-gray-500 dark:text-gray-400">SEO, Ads & Growth</div>
+                    <div class="text-sm font-bold text-gray-900 group-hover/item:text-green-600 transition-colors">Digital Marketing</div>
+                    <div class="text-[11px] text-gray-500">SEO, Ads & Growth</div>
                   </div>
                 </a>
 
               </div>
 
               <!-- Dropdown Footer -->
-              <div class="mt-2 pt-2 border-t border-gray-100 dark:border-gray-800">
-                <a href="/services.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-bold text-brandGold hover:bg-brandGold/10 transition-colors">
+              <div class="mt-2 pt-2 border-t border-gray-100">
+                <a href="/services" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-bold text-brandGold hover:bg-brandGold/10 transition-colors">
                   <span>View Services Hub</span>
                   <i class="fa-solid fa-arrow-right text-[10px]"></i>
                 </a>
@@ -172,25 +177,28 @@
             </div>
           </div>
 
-          <a href="/portfolio.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Portfolio</a>
-          <a href="/pricing.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Pricing</a>
-          <a href="/about.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">About Us</a>
-          <a href="/contact.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Contact Us</a>
-          <a href="/blog.html" class="text-brandNavyDark dark:text-gray-200 font-semibold text-sm hover:text-brandGold transition">Blog</a>
+          <a href="/portfolio" class="nav-link text-brandNavyDark font-semibold text-sm hover:text-brandGold transition">Portfolio</a>
+          <a href="/pricing" class="nav-link text-brandNavyDark font-semibold text-sm hover:text-brandGold transition">Pricing</a>
+          <a href="/about" class="nav-link text-brandNavyDark font-semibold text-sm hover:text-brandGold transition">About Us</a>
+          <a href="/contact" class="nav-link text-brandNavyDark font-semibold text-sm hover:text-brandGold transition">Contact Us</a>
+          <a href="/blog" class="nav-link text-brandNavyDark font-semibold text-sm hover:text-brandGold transition">Blog</a>
         </div>
         
-        <!-- Actions (Language + Theme + CTA) -->
-        <div class="hidden lg:flex items-center space-x-4">
+        <!-- Actions (Search + Language + CTA) -->
+        <div class="hidden lg:flex items-center space-x-3">
+          <!-- Search Modal Trigger Button -->
+          <button id="search-modal-trigger" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-300 bg-white hover:border-brandGold hover:text-brandGold text-xs font-semibold text-gray-700 transition shadow-2xs group cursor-pointer" title="Search RanSovie & Leadership (Ctrl+K)">
+            <i class="fa-solid fa-magnifying-glass text-brandGold group-hover:scale-110 transition-transform"></i>
+            <span class="search-btn-label">Search...</span>
+            <kbd class="text-[10px] bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded border border-gray-200 font-mono">⌘K</kbd>
+          </button>
+
           <!-- Language Toggle (EN / BN) -->
-          <button id="lang-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-brandNavyCard text-xs font-bold transition-all shadow-sm hover:border-brandGold focus:outline-none" title="Switch Language / ভাষা পরিবর্তন (EN / BN)">
+          <button id="lang-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-300 bg-white text-xs font-bold transition-all shadow-sm hover:border-brandGold focus:outline-none" title="Switch Language / ভাষা পরিবর্তন (EN / BN)">
             <i class="fa-solid fa-globe text-[11px] text-brandGold"></i>
             <span id="lang-badge-en" class="text-brandGold font-black">EN</span>
             <span class="text-gray-400 text-[10px]">/</span>
-            <span id="lang-badge-bn" class="text-gray-500 dark:text-gray-400 font-medium">BN</span>
-          </button>
-          
-          <button id="theme-toggle" class="hover:text-brandGold transition-colors p-2.5 rounded-full bg-gray-100 dark:bg-brandNavyCard text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 shadow-inner focus:outline-none" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
-            <i id="theme-icon" class="fa-solid fa-sun w-4 h-4 flex items-center justify-center"></i>
+            <span id="lang-badge-bn" class="text-gray-500 font-medium">BN</span>
           </button>
 
           <a href="/contact.html?type=quote" class="bg-brandGold hover:bg-yellow-500 text-brandNavyDark font-bold px-5 py-2.5 rounded text-sm transition shadow-lg flex items-center gap-2">
@@ -198,17 +206,17 @@
           </a>
         </div>
         
-        <!-- Mobile Menu Toggle -->
+        <!-- Mobile Menu Toggle & Search -->
         <div class="lg:hidden flex items-center gap-2">
-          <button id="lang-toggle-mobile-header" class="flex items-center gap-1 px-2.5 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-brandNavyCard text-xs font-bold hover:text-brandGold transition-colors" title="Switch Language (EN / BN)">
+          <button id="search-modal-trigger-mobile" class="w-8 h-8 rounded-full border border-gray-300 bg-white flex items-center justify-center text-xs text-gray-700 hover:border-brandGold hover:text-brandGold transition cursor-pointer" title="Search Agency">
+            <i class="fa-solid fa-magnifying-glass text-brandGold"></i>
+          </button>
+          <button id="lang-toggle-mobile-header" class="flex items-center gap-1 px-2.5 py-1.5 rounded-full border border-gray-300 bg-white text-xs font-bold hover:text-brandGold transition-colors" title="Switch Language (EN / BN)">
             <span id="lang-badge-en-mobile" class="text-brandGold font-black">EN</span>
             <span class="text-gray-400 text-[10px]">/</span>
-            <span id="lang-badge-bn-mobile" class="text-gray-500 dark:text-gray-400 font-medium">BN</span>
+            <span id="lang-badge-bn-mobile" class="text-gray-500 font-medium">BN</span>
           </button>
-          <button id="theme-toggle-mobile" class="hover:text-brandGold transition-colors p-2 rounded-full bg-gray-100 dark:bg-brandNavyCard text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700" aria-label="Toggle Dark Mode">
-            <i id="theme-icon-mobile" class="fa-solid fa-sun w-4 h-4 flex items-center justify-center"></i>
-          </button>
-          <button id="mobile-menu-btn" class="p-1.5 text-2xl text-brandNavyDark dark:text-white focus:outline-none hover:text-brandGold transition-colors">
+          <button id="mobile-menu-btn" class="p-1.5 text-2xl text-brandNavyDark focus:outline-none hover:text-brandGold transition-colors">
             <i class="fa-solid fa-bars"></i>
           </button>
         </div>
@@ -216,23 +224,33 @@
     </div>
 
     <!-- Mobile Menu Dropdown -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-brandNavyCard border-b border-gray-200 dark:border-gray-800 shadow-xl px-4 py-6 space-y-3 transition-all">
-      <a href="/index.html" class="block px-4 py-2 text-brandGold font-bold rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Home</a>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 shadow-xl px-4 py-6 space-y-3 transition-all">
+      <!-- Mobile Search Button -->
+      <div class="px-2 pb-2">
+        <button id="search-modal-trigger-drawer" class="w-full flex items-center justify-between px-3.5 py-2.5 bg-gray-100 hover:bg-gray-200 border border-gray-200 rounded-xl text-xs font-semibold text-gray-700 transition">
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-magnifying-glass text-brandGold"></i>
+            <span>Search Agency & Leadership...</span>
+          </span>
+          <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-gray-300 font-mono">⌘K</span>
+        </button>
+      </div>
+      <a href="/" class="block px-4 py-2 text-brandGold font-bold rounded-lg hover:bg-gray-50:bg-gray-800">Home</a>
       <div class="px-4 py-2">
         <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Services</span>
         <div class="mt-2 space-y-1 pl-2 border-l-2 border-brandGold/40">
-          <a href="/web-development.html" class="block py-1 text-sm text-gray-700 dark:text-gray-300 hover:text-brandGold">Web Development</a>
-          <a href="/graphic-design.html" class="block py-1 text-sm text-gray-700 dark:text-gray-300 hover:text-brandGold">Graphic Design</a>
-          <a href="/digital-marketing.html" class="block py-1 text-sm text-gray-700 dark:text-gray-300 hover:text-brandGold">Digital Marketing</a>
-          <a href="/services.html" class="block py-1 text-xs text-brandGold font-semibold">View All Services →</a>
+          <a href="/web-development" class="block py-1 text-sm text-gray-700 hover:text-brandGold">Web Development</a>
+          <a href="/graphic-design" class="block py-1 text-sm text-gray-700 hover:text-brandGold">Graphic Design</a>
+          <a href="/digital-marketing" class="block py-1 text-sm text-gray-700 hover:text-brandGold">Digital Marketing</a>
+          <a href="/services" class="block py-1 text-xs text-brandGold font-semibold">View All Services →</a>
         </div>
       </div>
-      <a href="/portfolio.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">Portfolio</a>
-      <a href="/pricing.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">Pricing</a>
-      <a href="/about.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">About Us</a>
-      <a href="/contact.html" class="block px-4 py-2 font-semibold text-gray-800 dark:text-gray-200 hover:text-brandGold hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">Contact Us</a>
-      <div class="pt-3 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between px-4">
-        <button id="lang-toggle-mobile" class="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-brandGold">
+      <a href="/portfolio" class="block px-4 py-2 font-semibold text-gray-800 hover:text-brandGold hover:bg-gray-50:bg-gray-800 rounded-lg">Portfolio</a>
+      <a href="/pricing" class="block px-4 py-2 font-semibold text-gray-800 hover:text-brandGold hover:bg-gray-50:bg-gray-800 rounded-lg">Pricing</a>
+      <a href="/about" class="block px-4 py-2 font-semibold text-gray-800 hover:text-brandGold hover:bg-gray-50:bg-gray-800 rounded-lg">About Us</a>
+      <a href="/contact" class="block px-4 py-2 font-semibold text-gray-800 hover:text-brandGold hover:bg-gray-50:bg-gray-800 rounded-lg">Contact Us</a>
+      <div class="pt-3 border-t border-gray-100 flex items-center justify-between px-4">
+        <button id="lang-toggle-mobile" class="flex items-center gap-2 text-sm font-semibold text-gray-700 hover:text-brandGold">
           <i class="fa-solid fa-globe text-brandGold"></i>
           <span>Language:</span>
           <span id="lang-badge-drawer" class="font-bold text-brandGold">EN / BN</span>
@@ -243,14 +261,14 @@
   </nav>
 
   <!-- Main Content: Web Development Dedicated Page -->
-  <section class="py-24 px-4 sm:px-6 lg:px-8 relative z-10 bg-white dark:bg-brandNavyDark min-h-screen pt-36">
+  <section class="py-24 px-4 sm:px-6 lg:px-8 relative z-10 bg-white min-h-screen pt-36">
     <div class="max-w-7xl mx-auto">
       
       <!-- Breadcrumb -->
       <div class="flex items-center gap-2 text-xs font-semibold text-gray-500 mb-8">
-        <a href="/index.html" class="hover:text-brandGold">Home</a>
+        <a href="/" class="hover:text-brandGold">Home</a>
         <span>/</span>
-        <a href="/services.html" class="hover:text-brandGold">Services</a>
+        <a href="/services" class="hover:text-brandGold">Services</a>
         <span>/</span>
         <span class="text-brandRed">Web Development</span>
       </div>
@@ -265,37 +283,37 @@
             Web Development & <br/>
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandRed to-orange-500">Full-Stack Solutions</span>
           </h1>
-          <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-medium mb-8">
+          <p class="text-base sm:text-lg text-gray-600 leading-relaxed font-medium mb-8">
             We engineer secure, scalable, and ultra-fast web applications designed to support enterprise workloads and deliver seamless digital experiences.
           </p>
           <div class="flex flex-wrap gap-4 items-center">
-            <a href="/contact.html" class="px-8 py-4 bg-brandRed hover:bg-red-600 text-white rounded-xl font-bold text-base transition-all shadow-xl shadow-brandRed/30">
+            <a href="/contact" class="px-8 py-4 bg-brandRed hover:bg-red-600 text-white rounded-xl font-bold text-base transition-all shadow-xl shadow-brandRed/30">
               Start Web Project
             </a>
-            <a href="/portfolio.html" class="px-8 py-4 border border-gray-300 dark:border-gray-700 hover:border-brandRed rounded-xl font-bold text-base transition-all">
+            <a href="/portfolio" class="px-8 py-4 border border-gray-300 hover:border-brandRed rounded-xl font-bold text-base transition-all">
               View Dev Portfolio
             </a>
           </div>
         </div>
         <div class="lg:col-span-5">
-          <div class="p-8 rounded-3xl bg-gray-50 dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800 shadow-xl">
+          <div class="p-8 rounded-3xl bg-gray-50 border border-gray-200 shadow-xl">
             <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
               <i class="fa-solid fa-microchip text-brandRed"></i> Key Technical Standards
             </h3>
             <div class="space-y-3 text-sm">
-              <div class="p-3.5 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-800 flex justify-between items-center">
+              <div class="p-3.5 rounded-xl bg-white border border-gray-200 flex justify-between items-center">
                 <span>Architecture</span>
                 <span class="font-bold text-brandRed">Modular / Jamstack / SSR</span>
               </div>
-              <div class="p-3.5 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-800 flex justify-between items-center">
+              <div class="p-3.5 rounded-xl bg-white border border-gray-200 flex justify-between items-center">
                 <span>Performance Score</span>
                 <span class="font-bold text-green-500">95+ PageSpeed & Core Vitals</span>
               </div>
-              <div class="p-3.5 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-800 flex justify-between items-center">
+              <div class="p-3.5 rounded-xl bg-white border border-gray-200 flex justify-between items-center">
                 <span>Security</span>
                 <span class="font-bold text-brandGold">SSL, OWASP Compliant, Auth</span>
               </div>
-              <div class="p-3.5 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-800 flex justify-between items-center">
+              <div class="p-3.5 rounded-xl bg-white border border-gray-200 flex justify-between items-center">
                 <span>API Protocol</span>
                 <span class="font-bold text-gray-400">RESTful & GraphQL</span>
               </div>
@@ -309,42 +327,42 @@
         <h2 class="text-2xl sm:text-3xl font-extrabold mb-8 text-center sm:text-left">Detailed Capabilities</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <div class="p-7 rounded-2xl bg-gray-50 dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800">
+          <div class="p-7 rounded-2xl bg-gray-50 border border-gray-200">
             <div class="w-12 h-12 rounded-xl bg-red-500/10 text-brandRed flex items-center justify-center text-xl mb-5">
               <i class="fa-solid fa-laptop-code"></i>
             </div>
             <h3 class="text-lg font-bold mb-2">Custom SaaS & SPAs</h3>
-            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
               Full-featured web platforms with dashboards, authentication, subscriptions, and database syncing.
             </p>
           </div>
 
-          <div class="p-7 rounded-2xl bg-gray-50 dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800">
+          <div class="p-7 rounded-2xl bg-gray-50 border border-gray-200">
             <div class="w-12 h-12 rounded-xl bg-red-500/10 text-brandRed flex items-center justify-center text-xl mb-5">
               <i class="fa-solid fa-cart-shopping"></i>
             </div>
             <h3 class="text-lg font-bold mb-2">E-Commerce Platforms</h3>
-            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
               Custom Shopify storefronts, WooCommerce setups, and bespoke checkout flows with payment integrations.
             </p>
           </div>
 
-          <div class="p-7 rounded-2xl bg-gray-50 dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800">
+          <div class="p-7 rounded-2xl bg-gray-50 border border-gray-200">
             <div class="w-12 h-12 rounded-xl bg-red-500/10 text-brandRed flex items-center justify-center text-xl mb-5">
               <i class="fa-solid fa-network-wired"></i>
             </div>
             <h3 class="text-lg font-bold mb-2">Backend & APIs</h3>
-            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
               High-throughput RESTful & GraphQL APIs, database architecture in PostgreSQL, and cloud deployments.
             </p>
           </div>
 
-          <div class="p-7 rounded-2xl bg-gray-50 dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800">
+          <div class="p-7 rounded-2xl bg-gray-50 border border-gray-200">
             <div class="w-12 h-12 rounded-xl bg-red-500/10 text-brandRed flex items-center justify-center text-xl mb-5">
               <i class="fa-solid fa-gauge-high"></i>
             </div>
             <h3 class="text-lg font-bold mb-2">Speed & CMS Builds</h3>
-            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
               Headless WordPress, Strapi CMS, code refactoring, asset minimization, and sub-second load times.
             </p>
           </div>
@@ -356,16 +374,16 @@
       <div class="mb-20">
         <div class="text-center mb-10">
           <h2 class="text-2xl sm:text-3xl font-extrabold mb-4">Project Delivery Tracker</h2>
-          <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Transparent timelines from kickoff to deployment. We believe in keeping you updated at every stage of the engineering cycle.</p>
+          <p class="text-gray-600 max-w-2xl mx-auto">Transparent timelines from kickoff to deployment. We believe in keeping you updated at every stage of the engineering cycle.</p>
         </div>
 
         <!-- Tabs Navigation -->
         <div class="flex justify-center mb-8">
-          <div class="inline-flex bg-gray-100 dark:bg-brandNavyDark p-1.5 rounded-xl border border-gray-200 dark:border-gray-800">
-            <button id="tab-btn-ongoing" class="px-6 py-2.5 rounded-lg text-sm font-bold transition-all bg-white dark:bg-brandNavyCard shadow-sm text-brandRed" onclick="switchTab('ongoing')">
+          <div class="inline-flex bg-gray-100 p-1.5 rounded-xl border border-gray-200">
+            <button id="tab-btn-ongoing" class="px-6 py-2.5 rounded-lg text-sm font-bold transition-all bg-white shadow-sm text-brandRed" onclick="switchTab('ongoing')">
               🟢 Ongoing Projects
             </button>
-            <button id="tab-btn-delivered" class="px-6 py-2.5 rounded-lg text-sm font-bold transition-all text-gray-500 hover:text-gray-900 dark:hover:text-white" onclick="switchTab('delivered')">
+            <button id="tab-btn-delivered" class="px-6 py-2.5 rounded-lg text-sm font-bold transition-all text-gray-500 hover:text-gray-900:text-white" onclick="switchTab('delivered')">
               🏆 Successful Deliveries
             </button>
           </div>
@@ -378,24 +396,24 @@
           <div id="tab-ongoing" class="grid grid-cols-1 md:grid-cols-2 gap-6 transition-all duration-300 opacity-100 scale-100">
             
             <!-- Ongoing Card 1 -->
-            <div class="p-7 rounded-2xl bg-gray-50 dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800 flex flex-col justify-between hover:border-brandRed transition-colors">
+            <div class="p-7 rounded-2xl bg-gray-50 border border-gray-200 flex flex-col justify-between hover:border-brandRed transition-colors">
               <div>
                 <div class="flex justify-between items-start mb-4">
                   <div>
                     <h3 class="text-lg font-bold">FinTech Dashboard UI & API</h3>
-                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Enterprise Financial Client</p>
+                    <p class="text-xs text-gray-500 mt-1">Enterprise Financial Client</p>
                   </div>
                   <span class="px-2.5 py-1 rounded bg-blue-500/10 text-blue-500 text-[10px] font-bold uppercase tracking-wider animate-pulse flex items-center gap-1.5">
                     <span class="w-1.5 h-1.5 rounded-full bg-blue-500 block"></span> In Dev
                   </span>
                 </div>
                 <!-- Timeline -->
-                <div class="flex items-center justify-between text-xs font-medium text-gray-600 dark:text-gray-300 mb-6 bg-white dark:bg-brandNavyDark p-3 rounded-lg border border-gray-100 dark:border-gray-700">
+                <div class="flex items-center justify-between text-xs font-medium text-gray-600 mb-6 bg-white p-3 rounded-lg border border-gray-100">
                   <div>
                     <span class="block text-gray-400 text-[10px] uppercase mb-0.5">Started</span> 
                     <span class="font-bold">July 15, 2026</span>
                   </div>
-                  <i class="fa-solid fa-arrow-right text-gray-300 dark:text-gray-600"></i>
+                  <i class="fa-solid fa-arrow-right text-gray-300"></i>
                   <div class="text-right">
                     <span class="block text-gray-400 text-[10px] uppercase mb-0.5">Est. Launch</span> 
                     <span class="font-bold">Sept 20, 2026</span>
@@ -408,31 +426,31 @@
                   <span>Sprint 4 / Backend Integration</span>
                   <span class="text-brandRed">75%</span>
                 </div>
-                <div class="h-2 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+                <div class="h-2 rounded-full bg-gray-200 overflow-hidden">
                   <div class="h-full bg-brandRed rounded-full transition-all duration-1000" style="width: 75%;"></div>
                 </div>
               </div>
             </div>
 
             <!-- Ongoing Card 2 -->
-            <div class="p-7 rounded-2xl bg-gray-50 dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800 flex flex-col justify-between hover:border-brandRed transition-colors">
+            <div class="p-7 rounded-2xl bg-gray-50 border border-gray-200 flex flex-col justify-between hover:border-brandRed transition-colors">
               <div>
                 <div class="flex justify-between items-start mb-4">
                   <div>
                     <h3 class="text-lg font-bold">Global E-Commerce Migration</h3>
-                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Retail Brand</p>
+                    <p class="text-xs text-gray-500 mt-1">Retail Brand</p>
                   </div>
                   <span class="px-2.5 py-1 rounded bg-orange-500/10 text-orange-500 text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5">
                     <span class="w-1.5 h-1.5 rounded-full bg-orange-500 block animate-pulse"></span> Testing
                   </span>
                 </div>
                 <!-- Timeline -->
-                <div class="flex items-center justify-between text-xs font-medium text-gray-600 dark:text-gray-300 mb-6 bg-white dark:bg-brandNavyDark p-3 rounded-lg border border-gray-100 dark:border-gray-700">
+                <div class="flex items-center justify-between text-xs font-medium text-gray-600 mb-6 bg-white p-3 rounded-lg border border-gray-100">
                   <div>
                     <span class="block text-gray-400 text-[10px] uppercase mb-0.5">Started</span> 
                     <span class="font-bold">August 05, 2026</span>
                   </div>
-                  <i class="fa-solid fa-arrow-right text-gray-300 dark:text-gray-600"></i>
+                  <i class="fa-solid fa-arrow-right text-gray-300"></i>
                   <div class="text-right">
                     <span class="block text-gray-400 text-[10px] uppercase mb-0.5">Est. Launch</span> 
                     <span class="font-bold">Sept 05, 2026</span>
@@ -445,7 +463,7 @@
                   <span>QA & Performance Checks</span>
                   <span class="text-brandRed">90%</span>
                 </div>
-                <div class="h-2 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+                <div class="h-2 rounded-full bg-gray-200 overflow-hidden">
                   <div class="h-full bg-brandRed rounded-full transition-all duration-1000" style="width: 90%;"></div>
                 </div>
               </div>
@@ -457,90 +475,90 @@
           <div id="tab-delivered" class="hidden grid-cols-1 md:grid-cols-2 gap-6 transition-all duration-300 opacity-0 scale-95">
             
             <!-- Delivered Card 1 -->
-            <div class="p-7 rounded-2xl bg-gray-50 dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800 flex flex-col justify-between hover:border-green-500 transition-colors">
+            <div class="p-7 rounded-2xl bg-gray-50 border border-gray-200 flex flex-col justify-between hover:border-green-500 transition-colors">
               <div>
                 <div class="flex justify-between items-start mb-4">
                   <div>
                     <h3 class="text-lg font-bold">HealthTech Patient Portal</h3>
-                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Medical Provider Network</p>
+                    <p class="text-xs text-gray-500 mt-1">Medical Provider Network</p>
                   </div>
                   <span class="px-2.5 py-1 rounded bg-green-500/10 text-green-500 text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5">
                     <i class="fa-solid fa-check-circle"></i> Delivered
                   </span>
                 </div>
                 <!-- Timeline -->
-                <div class="flex items-center justify-between text-xs font-medium text-gray-600 dark:text-gray-300 mb-6 bg-white dark:bg-brandNavyDark p-3 rounded-lg border border-green-500/10 dark:border-green-500/20">
+                <div class="flex items-center justify-between text-xs font-medium text-gray-600 mb-6 bg-white p-3 rounded-lg border border-green-500/10">
                   <div>
                     <span class="block text-gray-400 text-[10px] uppercase mb-0.5">Kickoff</span> 
                     <span class="font-bold">March 10, 2026</span>
                   </div>
                   <div class="text-center">
-                    <span class="inline-block px-2 py-0.5 bg-green-500/10 text-green-600 dark:text-green-400 rounded-full text-[10px] font-bold">
+                    <span class="inline-block px-2 py-0.5 bg-green-500/10 text-green-600 rounded-full text-[10px] font-bold">
                       60 Days
                     </span>
                   </div>
                   <div class="text-right">
                     <span class="block text-gray-400 text-[10px] uppercase mb-0.5">Deployed</span> 
-                    <span class="font-bold text-green-600 dark:text-green-400">May 10, 2026</span>
+                    <span class="font-bold text-green-600">May 10, 2026</span>
                   </div>
                 </div>
               </div>
               <!-- Metrics -->
-              <div class="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
+              <div class="flex items-center justify-between pt-4 border-t border-gray-200">
                 <div class="flex items-center gap-1 text-brandGold text-xs">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
-                  <span class="text-gray-600 dark:text-gray-300 font-bold ml-1">5.0</span>
+                  <span class="text-gray-600 font-bold ml-1">5.0</span>
                 </div>
-                <span class="text-[11px] font-bold text-gray-500 dark:text-gray-400 flex items-center gap-1">
+                <span class="text-[11px] font-bold text-gray-500 flex items-center gap-1">
                    <i class="fa-solid fa-clock-rotate-left text-brandRed"></i> 100% On-Time
                 </span>
               </div>
             </div>
 
             <!-- Delivered Card 2 -->
-            <div class="p-7 rounded-2xl bg-gray-50 dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800 flex flex-col justify-between hover:border-green-500 transition-colors">
+            <div class="p-7 rounded-2xl bg-gray-50 border border-gray-200 flex flex-col justify-between hover:border-green-500 transition-colors">
               <div>
                 <div class="flex justify-between items-start mb-4">
                   <div>
                     <h3 class="text-lg font-bold">Real Estate Listing Platform</h3>
-                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Property Agency HQ</p>
+                    <p class="text-xs text-gray-500 mt-1">Property Agency HQ</p>
                   </div>
                   <span class="px-2.5 py-1 rounded bg-green-500/10 text-green-500 text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5">
                     <i class="fa-solid fa-check-circle"></i> Delivered
                   </span>
                 </div>
                 <!-- Timeline -->
-                <div class="flex items-center justify-between text-xs font-medium text-gray-600 dark:text-gray-300 mb-6 bg-white dark:bg-brandNavyDark p-3 rounded-lg border border-green-500/10 dark:border-green-500/20">
+                <div class="flex items-center justify-between text-xs font-medium text-gray-600 mb-6 bg-white p-3 rounded-lg border border-green-500/10">
                   <div>
                     <span class="block text-gray-400 text-[10px] uppercase mb-0.5">Kickoff</span> 
                     <span class="font-bold">January 05, 2026</span>
                   </div>
                   <div class="text-center">
-                    <span class="inline-block px-2 py-0.5 bg-green-500/10 text-green-600 dark:text-green-400 rounded-full text-[10px] font-bold">
+                    <span class="inline-block px-2 py-0.5 bg-green-500/10 text-green-600 rounded-full text-[10px] font-bold">
                       45 Days
                     </span>
                   </div>
                   <div class="text-right">
                     <span class="block text-gray-400 text-[10px] uppercase mb-0.5">Deployed</span> 
-                    <span class="font-bold text-green-600 dark:text-green-400">Feb 19, 2026</span>
+                    <span class="font-bold text-green-600">Feb 19, 2026</span>
                   </div>
                 </div>
               </div>
               <!-- Metrics -->
-              <div class="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
+              <div class="flex items-center justify-between pt-4 border-t border-gray-200">
                 <div class="flex items-center gap-1 text-brandGold text-xs">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
-                  <span class="text-gray-600 dark:text-gray-300 font-bold ml-1">4.9</span>
+                  <span class="text-gray-600 font-bold ml-1">4.9</span>
                 </div>
-                <span class="text-[11px] font-bold text-gray-500 dark:text-gray-400 flex items-center gap-1">
+                <span class="text-[11px] font-bold text-gray-500 flex items-center gap-1">
                    <i class="fa-solid fa-clock-rotate-left text-brandRed"></i> 100% On-Time
                 </span>
               </div>
@@ -551,27 +569,27 @@
       </div>
 
       <!-- Tech Stack -->
-      <div class="mb-20 p-8 sm:p-10 rounded-3xl bg-gray-50 dark:bg-brandNavyCard border border-gray-200 dark:border-gray-800">
+      <div class="mb-20 p-8 sm:p-10 rounded-3xl bg-gray-50 border border-gray-200">
         <h3 class="text-xl font-bold mb-6">Technologies & Frameworks</h3>
         <div class="flex flex-wrap gap-3">
-          <span class="px-4 py-2 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-700 text-xs sm:text-sm font-semibold">React.js</span>
-          <span class="px-4 py-2 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-700 text-xs sm:text-sm font-semibold">Next.js</span>
-          <span class="px-4 py-2 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-700 text-xs sm:text-sm font-semibold">TypeScript</span>
-          <span class="px-4 py-2 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-700 text-xs sm:text-sm font-semibold">Node.js</span>
-          <span class="px-4 py-2 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-700 text-xs sm:text-sm font-semibold">Tailwind CSS</span>
-          <span class="px-4 py-2 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-700 text-xs sm:text-sm font-semibold">PostgreSQL</span>
-          <span class="px-4 py-2 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-700 text-xs sm:text-sm font-semibold">GraphQL</span>
-          <span class="px-4 py-2 rounded-xl bg-white dark:bg-brandNavyDark border border-gray-200 dark:border-gray-700 text-xs sm:text-sm font-semibold">Docker & CI/CD</span>
+          <span class="px-4 py-2 rounded-xl bg-white border border-gray-200 text-xs sm:text-sm font-semibold">React.js</span>
+          <span class="px-4 py-2 rounded-xl bg-white border border-gray-200 text-xs sm:text-sm font-semibold">Next.js</span>
+          <span class="px-4 py-2 rounded-xl bg-white border border-gray-200 text-xs sm:text-sm font-semibold">TypeScript</span>
+          <span class="px-4 py-2 rounded-xl bg-white border border-gray-200 text-xs sm:text-sm font-semibold">Node.js</span>
+          <span class="px-4 py-2 rounded-xl bg-white border border-gray-200 text-xs sm:text-sm font-semibold">Tailwind CSS</span>
+          <span class="px-4 py-2 rounded-xl bg-white border border-gray-200 text-xs sm:text-sm font-semibold">PostgreSQL</span>
+          <span class="px-4 py-2 rounded-xl bg-white border border-gray-200 text-xs sm:text-sm font-semibold">GraphQL</span>
+          <span class="px-4 py-2 rounded-xl bg-white border border-gray-200 text-xs sm:text-sm font-semibold">Docker & CI/CD</span>
         </div>
       </div>
 
       <!-- CTA -->
       <div class="rounded-3xl bg-brandRed/10 border border-brandRed/30 p-10 text-center">
         <h3 class="text-2xl sm:text-3xl font-extrabold mb-4">Ready to Build Your Web Solution?</h3>
-        <p class="text-gray-600 dark:text-gray-300 max-w-xl mx-auto mb-8 text-sm sm:text-base">
+        <p class="text-gray-600 max-w-xl mx-auto mb-8 text-sm sm:text-base">
           Contact our development team today for a technical roadmap and transparent estimate.
         </p>
-        <a href="/contact.html" class="px-8 py-4 bg-brandRed hover:bg-red-600 text-white font-bold rounded-xl shadow-lg transition-all inline-block">
+        <a href="/contact" class="px-8 py-4 bg-brandRed hover:bg-red-600 text-white font-bold rounded-xl shadow-lg transition-all inline-block">
           Hire Our Developers
         </a>
       </div>
@@ -581,7 +599,7 @@
 
   <!-- Interactive Floating Elements -->
   <!-- Back to Top Button -->
-  <button id="btt-btn" class="fixed bottom-24 right-6 z-40 w-12 h-12 bg-white dark:bg-brandNavyCard border border-gray-200 dark:border-gray-700 hover:border-brandGold dark:hover:border-brandGold text-gray-800 dark:text-white hover:text-brandGold dark:hover:text-brandGold rounded-full flex items-center justify-center text-xl shadow-lg opacity-0 pointer-events-none transition-all duration-300 focus:outline-none" aria-label="Back to Top">
+  <button id="btt-btn" class="fixed bottom-24 right-6 z-40 w-12 h-12 bg-white border border-gray-200 hover:border-brandGold:border-brandGold text-gray-800 hover:text-brandGold:text-brandGold rounded-full flex items-center justify-center text-xl shadow-lg opacity-0 pointer-events-none transition-all duration-300 focus:outline-none" aria-label="Back to Top">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
 
@@ -609,7 +627,7 @@
         
         <!-- Column 1: Brand -->
         <div class="lg:col-span-4">
-          <a href="/index.html" class="flex items-center gap-3 mb-6 group">
+          <a href="/" class="flex items-center gap-3 mb-6 group">
             <div class="relative w-12 h-12 flex items-center justify-center">
               <img src="/images/ransovie-logo.svg" alt="RanSovie Logo" class="w-full h-full object-contain filter drop-shadow-[0_2px_12px_rgba(212,175,55,0.4)]" />
             </div>
@@ -633,12 +651,12 @@
         <div class="lg:col-span-2 lg:col-start-6">
           <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Explore</h4>
           <ul class="space-y-4 text-gray-400 font-medium">
-            <li><a href="/index.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Home</a></li>
-            <li><a href="/services.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Services</a></li>
-            <li><a href="/about.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">About</a></li>
-            <li><a href="/portfolio.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Portfolio</a></li>
-            <li><a href="/blog.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Blog</a></li>
-            <li><a href="/contact.html" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Contact</a></li>
+            <li><a href="/" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Home</a></li>
+            <li><a href="/services" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Services</a></li>
+            <li><a href="/about" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">About</a></li>
+            <li><a href="/portfolio" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Portfolio</a></li>
+            <li><a href="/blog" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Blog</a></li>
+            <li><a href="/contact" class="hover:text-brandGold transition-colors inline-block hover:translate-x-1 transform duration-200">Contact</a></li>
           </ul>
         </div>
         
@@ -755,8 +773,8 @@
         if (!ongoingTab || !deliveredTab) return;
 
         // Reset classes
-        ongoingBtn.className = "px-6 py-2.5 rounded-lg text-sm font-bold transition-all text-gray-500 hover:text-gray-900 dark:hover:text-white";
-        deliveredBtn.className = "px-6 py-2.5 rounded-lg text-sm font-bold transition-all text-gray-500 hover:text-gray-900 dark:hover:text-white";
+        ongoingBtn.className = "px-6 py-2.5 rounded-lg text-sm font-bold transition-all text-gray-500 hover:text-gray-900:text-white";
+        deliveredBtn.className = "px-6 py-2.5 rounded-lg text-sm font-bold transition-all text-gray-500 hover:text-gray-900:text-white";
         
         ongoingTab.classList.remove('opacity-100', 'scale-100');
         ongoingTab.classList.add('opacity-0', 'scale-95');
@@ -765,7 +783,7 @@
 
         setTimeout(() => {
           if (tabName === 'ongoing') {
-            ongoingBtn.className = "px-6 py-2.5 rounded-lg text-sm font-bold transition-all bg-white dark:bg-brandNavyCard shadow-sm text-brandRed";
+            ongoingBtn.className = "px-6 py-2.5 rounded-lg text-sm font-bold transition-all bg-white shadow-sm text-brandRed";
             
             ongoingTab.classList.remove('hidden');
             deliveredTab.classList.add('hidden');
@@ -776,7 +794,7 @@
             }, 50);
             
           } else {
-            deliveredBtn.className = "px-6 py-2.5 rounded-lg text-sm font-bold transition-all bg-white dark:bg-brandNavyCard shadow-sm text-green-500";
+            deliveredBtn.className = "px-6 py-2.5 rounded-lg text-sm font-bold transition-all bg-white shadow-sm text-green-500";
             
             deliveredTab.classList.remove('hidden');
             ongoingTab.classList.add('hidden');
@@ -882,5 +900,7 @@
   </script>
   <!-- RanSovie IT Agency & Technology AI Assistant (RanSovie AI) -->
   <script src="/chatbot.js" defer></script>
+  <!-- RanSovie Live Search & Leadership Knowledge Panel -->
+  <script src="/search.js" defer></script>
 </body>
 </html>

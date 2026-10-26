@@ -1,0 +1,29 @@
+<div class="space-y-6">
+  <div class="flex items-center justify-between">
+    <h1 class="text-2xl font-black text-white">Global Settings (Bilingual EN / BN)</h1>
+  </div>
+
+  <% if (success) { %>
+  <div class="bg-emerald-500/10 border border-emerald-500/50 text-emerald-400 p-3 rounded-xl text-xs font-semibold">
+    Settings updated successfully!
+  </div>
+  <% } %>
+
+  <form action="/rsadminn/settings" method="POST" class="bg-slate-900 border border-slate-800 p-8 rounded-2xl space-y-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <% settings.forEach(s => { %>
+      <div class="space-y-2">
+        <label class="block text-xs font-semibold text-gray-300 uppercase"><%= s.key.replace('_', ' ') %> (EN)</label>
+        <input type="text" name="settings_en[<%= s.key %>]" value="<%= s.value_en %>" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-yellow-500">
+      </div>
+      <div class="space-y-2">
+        <label class="block text-xs font-semibold text-gray-300 uppercase"><%= s.key.replace('_', ' ') %> (BN)</label>
+        <input type="text" name="settings_bn[<%= s.key %>]" value="<%= s.value_bn %>" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-yellow-500">
+      </div>
+      <% }) %>
+    </div>
+    <button type="submit" class="bg-yellow-500 hover:bg-yellow-400 text-slate-950 font-bold px-8 py-3 rounded-xl transition text-sm shadow-lg">
+      Save All Settings
+    </button>
+  </form>
+</div>
